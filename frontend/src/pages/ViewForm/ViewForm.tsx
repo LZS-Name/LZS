@@ -1,13 +1,18 @@
-import React from "react";
 import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import SampleForm from "../../components/SampleForm";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
-const HomeAdmin = () => {
-  // fetch('http://localhost:3001/api/application/string1').then(res => {
-  fetch("/api/application/string1")
+const ViewForm = () => {
+  const { formId } = useParams();
+  const [formValues, setFormValues] = useState({});
+  // fetch(`/api/application/form/${formId}`)
+  fetch("/api/application/form/6208b395415b0a8c87e40c58")
+    .then((res) => res.json())
     .then((res) => {
       console.log(res);
+      setFormValues(res.data);
     })
     .catch((err) => {
       console.log(err);
@@ -16,11 +21,11 @@ const HomeAdmin = () => {
     <PageLayout title={"Borang Aplikasi"}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <SampleForm />
+          <SampleForm formValues={formValues} />
         </Grid>
       </Grid>
     </PageLayout>
   );
 };
 
-export default HomeAdmin;
+export default ViewForm;

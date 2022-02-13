@@ -1,13 +1,17 @@
 import "./App.css";
 import { useRoutes } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+
+// Pages
 import Home from "./pages/Home";
 import HomeAdmin from "./pages/HomeAdmin";
-import CssBaseline from "@mui/material/CssBaseline";
+import ViewForm from "./pages/ViewForm";
 
 function App() {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/admin", element: <HomeAdmin /> },
+    { path: "/admin/application/:formId", element: <ViewForm /> },
   ]);
   return (
     <>

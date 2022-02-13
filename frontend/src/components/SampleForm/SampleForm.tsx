@@ -55,7 +55,14 @@ const SampleForm = () => {
     },
   });
   const { name, ic_number, submitter_relationship, income } = formik.values;
-  const { handleChange, handleBlur, setFieldValue, touched, errors } = formik;
+  const {
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    setFieldValue,
+    touched,
+    errors,
+  } = formik;
   return (
     <Card
       sx={{
@@ -66,7 +73,7 @@ const SampleForm = () => {
         p: 2,
       }}
     >
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
