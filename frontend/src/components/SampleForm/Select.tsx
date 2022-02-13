@@ -5,9 +5,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-
+interface OptionObj {
+  title: string;
+  value: string;
+}
 interface BasicSelectProps {
-  options: string[];
+  options: OptionObj[];
   label: string;
   value: string;
   name: string;
@@ -15,6 +18,7 @@ interface BasicSelectProps {
   touched: boolean | undefined;
   handleChange: (event: SelectChangeEvent) => void;
   handleBlur: (event: React.FocusEvent<any, Element>) => void;
+  disabled?: boolean;
 }
 export default function BasicSelect({
   label,
@@ -25,6 +29,7 @@ export default function BasicSelect({
   touched,
   handleChange,
   handleBlur,
+  disabled,
 }: BasicSelectProps) {
   // const handleChange = (event: React.FormEvent<HTMLSelectElement>) => {
   // const handleChange = (event: SelectChangeEvent<string>) => {
@@ -43,10 +48,11 @@ export default function BasicSelect({
           name={name}
           onChange={handleChange}
           onBlur={handleBlur}
+          disabled={disabled}
         >
-          {options.map((option: string, idx: number) => (
-            <MenuItem value={option} key={idx}>
-              {option}
+          {options.map((option: OptionObj, idx: number) => (
+            <MenuItem value={option.value} key={idx}>
+              {option.title}
             </MenuItem>
           ))}
         </Select>

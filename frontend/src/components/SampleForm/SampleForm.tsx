@@ -23,14 +23,23 @@ const validationSchema = yup.object({
     .required("Required")
     .nullable(),
 });
-
-const SampleForm = () => {
+interface SampleFormProps {
+  formValues: {
+    name?: string;
+    ic_number?: string;
+    submitter_relationship?: string;
+    income?: string;
+  };
+}
+const SampleForm = ({ formValues = {} }: SampleFormProps) => {
+  const formDisabled = Object.keys(formValues).length !== 0;
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
-      name: "test name",
-      ic_number: "111222333444",
-      submitter_relationship: "",
-      income: 0,
+      name: formValues.name || "test name",
+      ic_number: formValues.ic_number || "111222333444",
+      submitter_relationship: formValues.submitter_relationship || "",
+      income: formValues.income ? parseInt(formValues.income) : 0,
       payslip: [],
     },
     validationSchema: validationSchema,
@@ -85,6 +94,7 @@ const SampleForm = () => {
               value={name}
               error={touched.name && Boolean(errors.name)}
               helperText={touched.name && errors.name}
+              disabled={formDisabled}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -97,18 +107,24 @@ const SampleForm = () => {
               value={ic_number}
               error={touched.ic_number && Boolean(errors.ic_number)}
               helperText={touched.ic_number && errors.ic_number}
+              disabled={formDisabled}
             />
           </Grid>
           <Grid item xs={12}>
             <BasicSelect
               label="Orang yang menghantar borang ini"
-              options={["Sama dengan atas", "Ahli Keluarga/Relatif", "Jiran"]}
+              options={[
+                { title: "Sama dengan atas", value: "SELF" },
+                { title: "Ahli Keluarga/Relatif", value: "FAMILY_RELATIVE" },
+                { title: "Jiran", value: "NEIGHBOUR" },
+              ]}
               value={submitter_relationship}
               handleChange={handleChange}
               handleBlur={handleBlur}
               name="submitter_relationship"
               error={errors["submitter_relationship"]}
               touched={touched["submitter_relationship"]}
+              disabled={formDisabled}
             />
           </Grid>
 
@@ -122,6 +138,7 @@ const SampleForm = () => {
               value={income}
               error={touched.income && Boolean(errors.income)}
               helperText={touched.income && errors.income}
+              disabled={formDisabled}
             />
           </Grid>
           <Grid item xs={6}>
@@ -129,7 +146,11 @@ const SampleForm = () => {
               fullWidth
               error={errors.payslip && touched.payslip ? true : false}
             >
-              <Button variant="contained" component="label">
+              <Button
+                variant="contained"
+                component="label"
+                disabled={formDisabled}
+              >
                 Muat Naik Slip Gaji
                 <input
                   type="file"
@@ -152,19 +173,27 @@ const SampleForm = () => {
             </FormControl>
           </Grid>
           <Grid item xs={6}>
-            <Button variant="contained" component="label">
+            <Button
+              variant="contained"
+              component="label"
+              disabled={formDisabled}
+            >
               Muat Naik Sijil Perkahwinan
               <input type="file" hidden />
             </Button>
           </Grid>
           <Grid item xs={6}>
-            <Button variant="contained" component="label">
+            <Button
+              variant="contained"
+              component="label"
+              disabled={formDisabled}
+            >
               Muat Naik Borang Lain
               <input type="file" hidden />
             </Button>
           </Grid>
           <Grid item xs={12} container justifyContent="flex-end">
-            <Button variant="contained" type="submit">
+            <Button variant="contained" type="submit" disabled={formDisabled}>
               Hantar
             </Button>
           </Grid>
