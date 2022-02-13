@@ -1,0 +1,112 @@
+[
+    {
+    "name": "Sutheaswari a/l Hiresh",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Kumutha Goundar a/l Ramadass",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Tay Thew Jie",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Eddie Teh Keu Leet",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Noor Arissa Muqriz",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Loo Lak Mong",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Nurzafira Saifulzakher binti Ekhsan",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Nguei Yeu Sit",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Hjh Iman Hazlin",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  },
+    {
+    "name": "Nuur Lisa Norhisam binti Syed Syed",
+    "ic_number": "991011-10-0717",
+    "submitter_id": "string1",
+    "submitter_relationship": "SELF",
+    "income": 10000,
+    "payslip": "base64str",
+    "additional_document": "base64str",
+    "application_type": "BANJIR",
+    "status": "PENDING_FIRST_APPROVAL"
+  }
+]
