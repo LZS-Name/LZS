@@ -3,7 +3,7 @@ import { Route, Routes, useRoutes } from "react-router-dom";
 import Home from "./pages/Home";
 import CssBaseline from "@mui/material/CssBaseline";
 
-function App()  {
+function App() {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     // ...
@@ -12,9 +12,6 @@ function App()  {
     <>
       <CssBaseline />
       {routes}
-      {/* <Routes>
-        <Route path={"/"} element={<Home />} />
-      </Routes> */}
     </>
   );
 }
