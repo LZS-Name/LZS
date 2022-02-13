@@ -11,13 +11,13 @@ import * as yup from "yup";
 
 const validationSchema = yup.object({
   name: yup.string().required("Name is required"),
-  ic: yup
+  ic_number: yup
     .string()
     .length(12, "IC should be of 12 characters length")
     .required("IC is required"),
-  submitter: yup.string().required("Submitter is required"),
-  income: yup.number().required("Income is required"),
-  paySlip: yup
+  submitter_relationship: yup.string().required("Submitter is required"),
+  income: yup.number().moreThan(-1).required("Income is required"),
+  payslip: yup
     .array()
     .length(1, "1 file must be uploaded")
     .required("Required")
@@ -27,18 +27,34 @@ const validationSchema = yup.object({
 const SampleForm = () => {
   const formik = useFormik({
     initialValues: {
-      name: "",
-      ic: "",
-      submitter: "",
-      income: undefined,
-      paySlip: [],
+      name: "test name",
+      ic_number: "111222333444",
+      submitter_relationship: "",
+      income: 0,
+      payslip: [],
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log("formValues", values);
+      fetch("/api/application/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          payslip: "",
+          additonal_document: "",
+          application_type: "Created by front end",
+        }),
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => console.log);
     },
   });
-  const { name, ic, submitter, income, paySlip } = formik.values;
+  const { name, ic_number, submitter_relationship, income } = formik.values;
   const { handleChange, handleBlur, setFieldValue, touched, errors } = formik;
   return (
     <Card
@@ -66,26 +82,26 @@ const SampleForm = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
-              id="ic"
-              name="ic"
+              id="ic_number"
+              name="ic_number"
               label="IC"
               variant="outlined"
               onChange={handleChange}
-              value={ic}
-              error={touched.ic && Boolean(errors.ic)}
-              helperText={touched.ic && errors.ic}
+              value={ic_number}
+              error={touched.ic_number && Boolean(errors.ic_number)}
+              helperText={touched.ic_number && errors.ic_number}
             />
           </Grid>
           <Grid item xs={12}>
             <BasicSelect
               label="Orang yang menghantar borang ini"
               options={["Sama dengan atas", "Ahli Keluarga/Relatif", "Jiran"]}
-              value={submitter}
+              value={submitter_relationship}
               handleChange={handleChange}
               handleBlur={handleBlur}
-              name="submitter"
-              error={errors["submitter"]}
-              touched={touched["submitter"]}
+              name="submitter_relationship"
+              error={errors["submitter_relationship"]}
+              touched={touched["submitter_relationship"]}
             />
           </Grid>
 
@@ -104,26 +120,26 @@ const SampleForm = () => {
           <Grid item xs={6}>
             <FormControl
               fullWidth
-              error={errors.paySlip && touched.paySlip ? true : false}
+              error={errors.payslip && touched.payslip ? true : false}
             >
               <Button variant="contained" component="label">
                 Muat Naik Slip Gaji
                 <input
                   type="file"
-                  name="paySlip"
+                  name="payslip"
                   hidden
                   onChange={(event) => {
                     if (event.target !== null && event.target.files !== null) {
                       const file = event.target.files[0];
                       console.log(file);
-                      setFieldValue("paySlip", [file]);
+                      setFieldValue("payslip", [file]);
                     }
                   }}
                 />
               </Button>
-              {errors.paySlip && touched.paySlip && (
+              {errors.payslip && touched.payslip && (
                 <FormHelperText id="" error={true}>
-                  {errors.paySlip}
+                  {errors.payslip}
                 </FormHelperText>
               )}
             </FormControl>

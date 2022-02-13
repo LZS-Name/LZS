@@ -57,7 +57,7 @@ const SideBarList = ({ toggleDrawer = () => () => {} }: SideBarListProps) => {
 
   return (
     <>
-      <Grid container spacing={2} sx={{ px: 2 }}>
+      <Grid container spacing={2} sx={{ px: 2, pt: { xs: 2, sm: 1 } }}>
         <Grid item xs={12}>
           <RoleController />
         </Grid>

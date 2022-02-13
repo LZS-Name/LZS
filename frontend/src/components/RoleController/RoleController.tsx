@@ -16,7 +16,6 @@ export default function BasicSelect() {
     setRole(event.target.value as string);
     if (event.target.value === "admin") {
       setUserIsAdminFn(true);
-      console.log("set to admin");
       navigate("/admin");
     } else {
       setUserIsAdminFn(false);
