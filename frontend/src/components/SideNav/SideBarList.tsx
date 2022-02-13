@@ -7,7 +7,12 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import PaidIcon from "@mui/icons-material/Paid";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
+import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 import { useNavigate } from "react-router";
+
+import RoleController from "../RoleController";
+import { useUserContext } from "../../contexts/UserContext";
+import { Grid } from "@mui/material";
 
 interface SideBarListProps {
   toggleDrawer?: (
@@ -16,29 +21,47 @@ interface SideBarListProps {
     arg0: React.MouseEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>
   ) => void;
 }
+const userList = [
+  {
+    link: "/",
+    label: "Home",
+    icon: <HomeIcon />,
+  },
+  {
+    link: "/",
+    label: "My Applications",
+    icon: <TextSnippetIcon />,
+  },
+];
+const adminList = [
+  {
+    link: "/",
+    label: "Home",
+    icon: <HomeIcon />,
+  },
+  {
+    link: "/",
+    label: "Payment",
+    icon: <PaidIcon />,
+  },
+  {
+    link: null,
+    label: "Analytics",
+    icon: <EqualizerIcon />,
+  },
+];
 const SideBarList = ({ toggleDrawer = () => () => {} }: SideBarListProps) => {
   const navigate = useNavigate();
-
-  const navigations = [
-    {
-      link: "/",
-      label: "Home",
-      icon: <HomeIcon />,
-    },
-    {
-      link: "/",
-      label: "Payment",
-      icon: <PaidIcon />,
-    },
-    {
-      link: null,
-      label: "Analytics",
-      icon: <EqualizerIcon />,
-    },
-  ];
+  const { userIsAdmin } = useUserContext();
+  const navigations = !userIsAdmin ? userList : adminList;
 
   return (
     <>
+      <Grid container spacing={2} sx={{ px: 2 }}>
+        <Grid item xs={12}>
+          <RoleController />
+        </Grid>
+      </Grid>
       <Box
         component="div"
         sx={{ width: { xs: 250, sm: "auto" } }}
