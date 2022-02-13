@@ -5,6 +5,14 @@ import "./Home.scss";
 import SampleForm from "../../components/SampleForm";
 
 const Home = () => {
+  // fetch('http://localhost:3001/api/application/string1').then(res => {
+  fetch("/api/application/string1")
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   return (
     <PageLayout title={"Borang Aplikasi"}>
       <Grid container spacing={2}>
