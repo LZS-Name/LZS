@@ -1,5 +1,3 @@
-const express = require("express");
-const router = express.Router();
 import { Request, Response } from "express";
 import {
   approveApplication,
@@ -9,6 +7,33 @@ import {
   getApplicationByStatusAndApplicationType,
   rejectApplication,
 } from "../services/application";
+import { FileObj } from "../models/FileObj";
+
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function (
+    req: Request,
+    file: FileObj,
+    cb: (error: Error | null, filePath: string) => {}
+  ) {
+    cb(null, "./uploads/");
+  },
+  filename: function (
+    req: Request,
+    file: FileObj,
+    cb: (error: Error | null, fileName: string) => {}
+  ) {
+    //req.body is empty...
+    //How could I get the new_file_name property sent from client here?
+    cb(null, file.originalname + "-" + Date.now() + ".pdf");
+  },
+});
+const upload = multer({
+  // dest: "uploads/",
+  storage: storage,
+});
 
 // Getting Application by sumitter id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
@@ -38,16 +63,22 @@ router.get("/:submitter_id", async (req: Request, res: Response) => {
 });
 
 // Creating one
-router.post("/create", async (req: Request, res: Response) => {
-  try {
-    const newApplication = createApplication(req.body);
-    res
-      .status(201)
-      .send({ status: true, message: "Created", data: newApplication });
-  } catch (err: any) {
-    res.status(400).send({ message: err.message });
+router.post(
+  "/create",
+  upload.any(),
+  async (req: Request & { file: any; files: any }, res: Response) => {
+    try {
+      console.log("req.body", req.body);
+      console.log("req.files", req.files);
+      const newApplication = createApplication(req.body);
+      res
+        .status(201)
+        .send({ status: true, message: "Created", data: newApplication });
+    } catch (err: any) {
+      res.status(400).send({ message: err.message });
+    }
   }
-});
+);
 
 // Getting Filtered Application [ADMIN]
 router.get("/filter", async (req: Request, res: Response) => {
