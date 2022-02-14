@@ -14,8 +14,8 @@ interface BasicSelectProps {
   label: string;
   value: string;
   name: string;
-  error: string | undefined;
-  touched: boolean | undefined;
+  error?: string | undefined;
+  touched?: boolean | undefined;
   handleChange: (event: SelectChangeEvent) => void;
   handleBlur: (event: React.FocusEvent<any, Element>) => void;
   disabled?: boolean;

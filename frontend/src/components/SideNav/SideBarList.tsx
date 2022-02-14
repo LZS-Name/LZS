@@ -8,6 +8,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PaidIcon from "@mui/icons-material/Paid";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import { useNavigate } from "react-router";
 
 import RoleController from "../RoleController";
@@ -38,6 +39,11 @@ const adminList = [
     link: "/",
     label: "Home",
     icon: <HomeIcon />,
+  },
+  {
+    link: "/admin/dashboard",
+    label: "Dashboard",
+    icon: <DashboardIcon />,
   },
   {
     link: "/",

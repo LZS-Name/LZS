@@ -50,6 +50,13 @@ function getApplicationByStatusAndApplicationType(
   status: string,
   application_type: string
 ) {
+  if (status === "ALL" && application_type === "ALL") {
+    return Application.find().exec();
+  } else if (status === "ALL") {
+    return Application.find({ application_type }).exec();
+  } else if (application_type === "ALL") {
+    return Application.find({ status }).exec();
+  }
   return Application.find({ status, application_type }).exec();
 }
 
