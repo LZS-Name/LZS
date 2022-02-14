@@ -13,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
-import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
@@ -22,6 +21,7 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 import Application from "../../models/application.model";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 interface Data {
   _id: string;
@@ -181,10 +181,54 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 
 interface EnhancedTableToolbarProps {
   numSelected: number;
+  application_type: string;
+  status: string;
+  selected: readonly string[];
 }
 
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
-  const { numSelected } = props;
+  const { numSelected, application_type, status, selected } = props;
+
+  const handleExport = () => {
+    fetch("/api/application/download-selected", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        selected,
+      }),
+    })
+      .then((res) => res.blob())
+      .then((blob) => {
+        const downloadUrl = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.setAttribute("download", "Applications.csv"); //any other extension
+        link.click();
+      });
+  };
+
+  const handleExportAll = () => {
+    fetch("/api/application/download", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        application_type,
+        status,
+      }),
+    })
+      .then((res) => res.blob())
+      .then((blob) => {
+        const downloadUrl = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.setAttribute("download", "Applications.csv"); //any other extension
+        link.click();
+      });
+  };
 
   return (
     <Toolbar
@@ -202,7 +246,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
     >
       {numSelected > 0 ? (
         <Typography
-          sx={{ flex: "1 1 100%" }}
+          sx={{ flex: "1" }}
           color="inherit"
           variant="subtitle1"
           component="div"
@@ -211,7 +255,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
         </Typography>
       ) : (
         <Typography
-          sx={{ flex: "1 1 100%" }}
+          sx={{ flex: "1" }}
           variant="h6"
           id="tableTitle"
           component="div"
@@ -221,15 +265,11 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
       )}
       {numSelected > 0 ? (
         <Tooltip title="Delete">
-          <IconButton>
-            <DeleteIcon />
-          </IconButton>
+          <Button onClick={handleExport}>Export</Button>
         </Tooltip>
       ) : (
         <Tooltip title="Filter list">
-          <IconButton>
-            <FilterListIcon />
-          </IconButton>
+          <Button onClick={handleExportAll}>Export All</Button>
         </Tooltip>
       )}
     </Toolbar>
@@ -238,8 +278,12 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
 
 export default function ApplicationTable({
   applications,
+  application_type,
+  status,
 }: {
   applications: Application[];
+  application_type: string;
+  status: string;
 }) {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("ic_number");
@@ -260,7 +304,8 @@ export default function ApplicationTable({
       status: application.status,
     }));
     setRows(applicationData);
-  }, [applications]);
+    console.log(selected);
+  }, [applications, selected]);
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
@@ -273,7 +318,7 @@ export default function ApplicationTable({
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelecteds = rows.map((n) => n.name);
+      const newSelecteds = rows.map((n) => n._id);
       setSelected(newSelecteds);
       return;
     }
@@ -284,12 +329,12 @@ export default function ApplicationTable({
     navigate(`/admin/application/${_id}`);
   };
 
-  const handleSelect = (event: React.MouseEvent<unknown>, name: string) => {
-    const selectedIndex = selected.indexOf(name);
+  const handleSelect = (event: React.MouseEvent<unknown>, _id: string) => {
+    const selectedIndex = selected.indexOf(_id);
     let newSelected: readonly string[] = [];
 
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
+      newSelected = newSelected.concat(selected, _id);
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1));
     } else if (selectedIndex === selected.length - 1) {
@@ -319,7 +364,7 @@ export default function ApplicationTable({
     setDense(event.target.checked);
   };
 
-  const isSelected = (name: string) => selected.indexOf(name) !== -1;
+  const isSelected = (_id: string) => selected.indexOf(_id) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -328,7 +373,12 @@ export default function ApplicationTable({
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
+        <EnhancedTableToolbar
+          numSelected={selected.length}
+          application_type={application_type}
+          status={status}
+          selected={selected}
+        />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -349,7 +399,7 @@ export default function ApplicationTable({
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
+                  const isItemSelected = isSelected(row._id);
                   const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
@@ -359,7 +409,7 @@ export default function ApplicationTable({
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.name}
+                      key={row._id}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -369,7 +419,7 @@ export default function ApplicationTable({
                           inputProps={{
                             "aria-labelledby": labelId,
                           }}
-                          onClick={(event) => handleSelect(event, row.name)}
+                          onClick={(event) => handleSelect(event, row._id)}
                         />
                       </TableCell>
                       <TableCell

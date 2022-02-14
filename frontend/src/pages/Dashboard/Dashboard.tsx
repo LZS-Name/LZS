@@ -133,7 +133,11 @@ function Dashboard() {
             </Grid>
           </Grid>
         </form>
-        <ApplicationTable applications={applications} />
+        <ApplicationTable
+          applications={applications}
+          application_type={application_type}
+          status={status}
+        />
       </>
     </PageLayout>
   );

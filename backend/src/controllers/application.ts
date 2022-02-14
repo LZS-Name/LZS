@@ -8,6 +8,8 @@ import {
   getApplicationsBySubmitterId,
   getApplicationByStatusAndApplicationType,
   rejectApplication,
+  exportCSV,
+  exportSelectedCSV,
 } from "../services/application";
 
 // Getting Application by sumitter id
@@ -57,6 +59,30 @@ router.post("/filter", async (req: Request, res: Response) => {
       req.body.application_type
     );
     return res.status(200).send({ data: [...application] });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
+// Download CSV [ADMIN]
+router.post("/download", async (req: Request, res: Response) => {
+  try {
+    const csv = await exportCSV(req.body.status, req.body.application_type);
+    res.header("Content-Type", "text/csv");
+    res.attachment("Applications.csv");
+    return res.send(csv);
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
+// Download CSV [ADMIN]
+router.post("/download-selected", async (req: Request, res: Response) => {
+  try {
+    const csv = await exportSelectedCSV(req.body.selected);
+    res.header("Content-Type", "text/csv");
+    res.attachment("Applications.csv");
+    return res.send(csv);
   } catch (err: any) {
     res.status(400).send({ message: err.message });
   }
