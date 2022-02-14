@@ -9,7 +9,7 @@ interface ApplicationInterface {
   income: number;
   payslip: string;
   marriage_cert?: string;
-  additional_document: Buffer;
+  additional_document: string;
   application_type: string;
   approval_date?: string;
   first_approver?: string;
@@ -50,7 +50,7 @@ const applicationSchema = new mongoose.Schema<ApplicationInterface>(
       type: String,
     },
     additional_document: {
-      type: Buffer,
+      type: String,
     },
     application_type: {
       type: String,

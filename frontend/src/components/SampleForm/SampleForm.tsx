@@ -26,8 +26,8 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
       ic_number: formValues.ic_number || "111222333444",
       submitter_relationship: formValues.submitter_relationship || "SELF",
       income: formValues.income ? parseInt(formValues.income) : 0,
-      payslip: {},
-      additional_document: {},
+      payslip: undefined,
+      additional_document: undefined,
       application_type: "Created by front end",
     },
     validationSchema: validationSchema,
@@ -36,22 +36,22 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
       // construct formData
       const body = new FormData();
       Object.keys(values).forEach((key) => {
+        if (key === "payslip") {
+          body.append("payslipFile", (values as any)[key]);
+          body.append(key, (values as any)[key].name);
+          return;
+        }
         body.append(key, (values as any)[key]);
       });
 
       fetch("/api/application/create", {
         method: "POST",
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
-        // body: JSON.stringify({
-        //   ...values,
-        // }),
         body: body,
       })
         .then((res) => res.json())
         .then((res) => {
           console.log(res);
+          alert("Borang telah dihantar");
         })
         .catch((err) => console.log);
     },
