@@ -43,13 +43,13 @@ router.post("/create", async (req: Request, res: Response) => {
 });
 
 // Getting Filtered Application [ADMIN]
-router.get("/filter", async (req: Request, res: Response) => {
+router.post("/filter", async (req: Request, res: Response) => {
   try {
     const application = await getApplicationByStatusAndApplicationType(
       req.body.status,
-      req.body.applicationType
+      req.body.application_type
     );
-    return res.status(200).send({ data: { ...application } });
+    return res.status(200).send({ data: [...application] });
   } catch (err: any) {
     res.status(400).send({ message: err.message });
   }
