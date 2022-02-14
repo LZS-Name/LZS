@@ -7,22 +7,8 @@ import FormHelperText from "@mui/material/FormHelperText";
 
 import BasicSelect from "./Select";
 import { useFormik } from "formik";
-import * as yup from "yup";
+import validationSchema from "./validation";
 
-const validationSchema = yup.object({
-  name: yup.string().required("Name is required"),
-  ic_number: yup
-    .string()
-    .length(12, "IC should be of 12 characters length")
-    .required("IC is required"),
-  submitter_relationship: yup.string().required("Submitter is required"),
-  income: yup.number().moreThan(-1).required("Income is required"),
-  payslip: yup
-    .array()
-    .length(1, "1 file must be uploaded")
-    .required("Required")
-    .nullable(),
-});
 interface SampleFormProps {
   formValues: {
     name?: string;
@@ -38,32 +24,40 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
     initialValues: {
       name: formValues.name || "test name",
       ic_number: formValues.ic_number || "111222333444",
-      submitter_relationship: formValues.submitter_relationship || "",
+      submitter_relationship: formValues.submitter_relationship || "SELF",
       income: formValues.income ? parseInt(formValues.income) : 0,
-      payslip: [],
+      payslip: {},
+      additional_document: {},
+      application_type: "Created by front end",
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log("formValues", values);
+      // construct formData
+      const body = new FormData();
+      Object.keys(values).forEach((key) => {
+        body.append(key, (values as any)[key]);
+      });
+
       fetch("/api/application/create", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...values,
-          payslip: "",
-          additonal_document: "",
-          application_type: "Created by front end",
-        }),
+        // headers: {
+        //   "Content-Type": "application/json",
+        // },
+        // body: JSON.stringify({
+        //   ...values,
+        // }),
+        body: body,
       })
+        .then((res) => res.json())
         .then((res) => {
           console.log(res);
         })
         .catch((err) => console.log);
     },
   });
-  const { name, ic_number, submitter_relationship, income } = formik.values;
+  const { name, ic_number, submitter_relationship, income, application_type } =
+    formik.values;
   const {
     handleChange,
     handleBlur,
@@ -82,7 +76,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
         p: 2,
       }}
     >
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -142,6 +136,21 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
             />
           </Grid>
           <Grid item xs={6}>
+            <TextField
+              id="application_type"
+              name="application_type"
+              label="Application Type"
+              variant="outlined"
+              onChange={handleChange}
+              value={application_type}
+              error={
+                touched.application_type && Boolean(errors.application_type)
+              }
+              helperText={touched.application_type && errors.application_type}
+              disabled={formDisabled}
+            />
+          </Grid>
+          <Grid item xs={6}>
             <FormControl
               fullWidth
               error={errors.payslip && touched.payslip ? true : false}
@@ -154,13 +163,14 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
                 Muat Naik Slip Gaji
                 <input
                   type="file"
+                  // accept="application/pdf"
                   name="payslip"
                   hidden
                   onChange={(event) => {
                     if (event.target !== null && event.target.files !== null) {
                       const file = event.target.files[0];
                       console.log(file);
-                      setFieldValue("payslip", [file]);
+                      setFieldValue("payslip", file);
                     }
                   }}
                 />
@@ -172,6 +182,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
               )}
             </FormControl>
           </Grid>
+
           <Grid item xs={6}>
             <Button
               variant="contained"
@@ -179,18 +190,40 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
               disabled={formDisabled}
             >
               Muat Naik Sijil Perkahwinan
-              <input type="file" hidden />
+              <input type="file" hidden accept="application/pdf" />
             </Button>
           </Grid>
           <Grid item xs={6}>
-            <Button
-              variant="contained"
-              component="label"
-              disabled={formDisabled}
+            <FormControl
+              fullWidth
+              error={errors.payslip && touched.payslip ? true : false}
             >
-              Muat Naik Borang Lain
-              <input type="file" hidden />
-            </Button>
+              <Button
+                variant="contained"
+                component="label"
+                disabled={formDisabled}
+              >
+                Muat Naik Borang Lain
+                <input
+                  type="file"
+                  hidden
+                  accept="application/pdf"
+                  name="additional_document"
+                  onChange={(event) => {
+                    if (event.target !== null && event.target.files !== null) {
+                      const file = event.target.files[0];
+                      console.log(file);
+                      setFieldValue("additional_document", file);
+                    }
+                  }}
+                />
+              </Button>
+              {errors.additional_document && touched.additional_document && (
+                <FormHelperText id="" error={true}>
+                  {errors.additional_document}
+                </FormHelperText>
+              )}
+            </FormControl>
           </Grid>
           <Grid item xs={12} container justifyContent="flex-end">
             <Button variant="contained" type="submit" disabled={formDisabled}>

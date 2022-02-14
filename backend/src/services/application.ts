@@ -1,6 +1,9 @@
+const formidable = require("formidable");
+
 import ApplicationConstant from "../constant/application.constant";
 import { Application, ApplicationInterface } from "../models/Application";
 const { Parser } = require("json2csv");
+import { FileObj } from "../models/FileObj";
 
 async function getApplicationByFormId(form_id: string) {
   return Application.findById(form_id).exec();
@@ -12,10 +15,35 @@ function getApplicationsBySubmitterId(submitter_id: string) {
 async function createApplication(applicationInfo: ApplicationInterface) {
   const application = new Application({ ...applicationInfo });
   try {
-    await application.save();
+    return await application.save();
   } catch (err) {
     console.log("Error [CREATE USER]: ", err);
+    throw err;
   }
+}
+
+async function saveFile(fileObj: File) {
+  return new Promise((resolve, reject) => {
+    // var form = new formidable.IncomingForm();
+
+    // form.parse(fileObj);
+
+    // form.on("fileBegin", function (name: any, file: File & FileObj) {
+    //   console.log("__dirname", __dirname);
+    //   file.path = __dirname + "\\uploads\\" + file.originalname;
+    //   file.filename = file.originalname;
+    //   file.filepath = __dirname + "\\uploads\\" + file.originalname;
+    // });
+
+    // form.on("file", function (name: any, file: File & FileObj) {
+    //   // console.log(file)
+    //   console.log("Uploaded " + file.originalname);
+    //   // console.log('path ' + file.path);
+    //   console.log("filepath " + file.filepath);
+    //   resolve("Uploaded " + file.originalname);
+    // });
+    resolve("test");
+  });
 }
 
 // Admin only
