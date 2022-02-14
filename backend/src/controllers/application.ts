@@ -10,6 +10,8 @@ import {
   exportSelectedCSV,
 } from "../services/application";
 import { FileObj } from "../models/FileObj";
+import * as fs from "fs";
+import * as path from "path";
 
 const express = require("express");
 const router = express.Router();
@@ -27,13 +29,10 @@ const storage = multer.diskStorage({
     file: FileObj,
     cb: (error: Error | null, fileName: string) => {}
   ) {
-    //req.body is empty...
-    //How could I get the new_file_name property sent from client here?
     cb(null, file.originalname + "-" + Date.now() + ".pdf");
   },
 });
 const upload = multer({
-  // dest: "uploads/",
   storage: storage,
 });
 
@@ -70,9 +69,9 @@ router.post(
   upload.any(),
   async (req: Request & { file: any; files: any }, res: Response) => {
     try {
+      console.log(__dirname);
       console.log("req.body", req.body);
-      console.log("req.files", req.files);
-      const newApplication = createApplication(req.body);
+      const newApplication = await createApplication(req.body);
       res
         .status(201)
         .send({ status: true, message: "Created", data: newApplication });
@@ -81,6 +80,14 @@ router.post(
     }
   }
 );
+
+router.get("/forms/:formId", (req: Request, res: Response) => {
+  const formId = req.params.formId;
+  console.log("formId", formId);
+  const directoryPath = __dirname + "../../../../uploads/";
+  const filePath = directoryPath + "test.pdf";
+  res.sendFile(path.resolve(filePath));
+});
 
 // Getting Filtered Application [ADMIN]
 router.post("/filter", async (req: Request, res: Response) => {

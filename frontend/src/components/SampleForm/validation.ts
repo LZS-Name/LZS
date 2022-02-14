@@ -10,11 +10,7 @@ const validationSchema = yup.object({
   income: yup.number().moreThan(-1).required("Income is required"),
   payslip: yup
     .mixed()
-    .test(
-      "fileSize",
-      "1 PDF file is required",
-      (value) => value.size !== undefined
-    )
+    .test("fileSize", "1 PDF file is required", (value) => value !== undefined)
     .test(
       "fileSize",
       "File Size is too large",
@@ -27,11 +23,11 @@ const validationSchema = yup.object({
     .mixed()
     .test("fileSize", "File Size is too large", (value) => {
       // if file not exists
-      if (value.size === undefined) return true;
+      if (value === undefined) return true;
       return value.size <= 16000000;
     })
     .test("fileType", "Unsupported File Format", (value) => {
-      if (value.size === undefined) return true;
+      if (value === undefined) return true;
       return ["application/pdf"].includes(value.type);
     }),
   application_type: yup.string().required("Application Type is required"),
