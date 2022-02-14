@@ -14,6 +14,11 @@ import {
 router.get("/form/:form_id", async (req: Request, res: Response) => {
   try {
     const application = await getApplicationByFormId(req.params.form_id);
+    if (application == null) {
+      return res
+        .status(404)
+        .send({ status: false, message: "Cannot find application" });
+    }
     return res.status(200).send({ data: application });
   } catch (err: any) {
     res.status(400).send({ message: err.message });
@@ -36,7 +41,9 @@ router.get("/:submitter_id", async (req: Request, res: Response) => {
 router.post("/create", async (req: Request, res: Response) => {
   try {
     const newApplication = createApplication(req.body);
-    res.status(200).send({ status: true, message: "Created" });
+    res
+      .status(201)
+      .send({ status: true, message: "Created", data: newApplication });
   } catch (err: any) {
     res.status(400).send({ message: err.message });
   }
