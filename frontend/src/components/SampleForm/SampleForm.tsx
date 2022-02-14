@@ -230,6 +230,36 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
               Hantar
             </Button>
           </Grid>
+          <Grid item xs={12} container justifyContent="flex-end">
+            <Button
+              variant="contained"
+              onClick={() => {
+                fetch("/api/application/forms/10")
+                  .then((x) => x.blob())
+                  .then((b) => {
+                    const url = window.URL.createObjectURL(b);
+                    var a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.href = url;
+                    a.download = "a.pdf";
+                    a.click();
+                  })
+                  .catch((err) => console.log);
+              }}
+            >
+              Download
+            </Button>
+          </Grid>
+          <Grid item xs={12} container justifyContent="flex-end">
+            <a
+              href={"http://localhost:3001/test.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black body2 pt-3"
+            >
+              <small className="">{`download by anchor tag`}</small>
+            </a>
+          </Grid>
         </Grid>
       </form>
     </Card>

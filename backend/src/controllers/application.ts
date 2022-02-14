@@ -8,6 +8,8 @@ import {
   rejectApplication,
 } from "../services/application";
 import { FileObj } from "../models/FileObj";
+import * as fs from "fs";
+import * as path from "path";
 
 const express = require("express");
 const router = express.Router();
@@ -65,6 +67,7 @@ router.post(
   upload.any(),
   async (req: Request & { file: any; files: any }, res: Response) => {
     try {
+      console.log(__dirname);
       console.log("req.body", req.body);
       const newApplication = await createApplication(req.body);
       res
@@ -75,6 +78,14 @@ router.post(
     }
   }
 );
+
+router.get("/forms/:formId", (req: Request, res: Response) => {
+  const formId = req.params.formId;
+  console.log("formId", formId);
+  const directoryPath = __dirname + "../../../../uploads/";
+  const filePath = directoryPath + "test.pdf";
+  res.sendFile(path.resolve(filePath));
+});
 
 // Getting Filtered Application [ADMIN]
 router.post("/filter", async (req: Request, res: Response) => {
