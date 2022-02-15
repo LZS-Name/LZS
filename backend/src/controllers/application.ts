@@ -78,6 +78,18 @@ router.post(
     }
   }
 );
+// Create multiple applications (bulk submission)
+router.post(
+  "/bulk-create",
+  upload.any(),
+  async (req: Request & { file: any; files: any }, res: Response) => {
+    try {
+      res.status(201).send({ status: true, message: "Created" });
+    } catch (err: any) {
+      res.status(400).send({ message: err.message });
+    }
+  }
+);
 
 // Download one document from the application
 router.get("/form/download/:formId", (req: Request, res: Response) => {

@@ -1,0 +1,118 @@
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+
+import { useFormik } from "formik";
+import Button from "@mui/material/Button";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
+import * as yup from "yup";
+
+const validationSchema = yup.object({
+  forms: yup
+    .mixed()
+    .test("fileSize", "1 PDF file is required", (value) => {
+      return value !== undefined;
+    })
+    .test("fileSize", "File Size is too large", (value) => {
+      if (value === undefined) return true;
+      return value.size <= 16000000;
+    })
+    .test("fileType", "Unsupported File Format", (value) => {
+      if (value === undefined) return true;
+      return ["application/x-zip-compressed"].includes(value.type);
+    }),
+});
+
+const BulkSumissionForm = () => {
+  const formik = useFormik({
+    initialValues: {
+      forms: undefined,
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log("formValues", values);
+      // construct formData
+      const body = new FormData();
+      Object.keys(values).forEach((key) => {
+        // let backend get the field as key + datetime + file name
+        const value = (values as any)[key];
+        if (value && key === "forms") {
+          const fileName =
+            key + "-" + Date.now() + "-" + (values as any)[key].name;
+          const newFile = new File([value], fileName, { type: value.type });
+          console.log("edited", newFile);
+          body.append(key + "File", newFile);
+          body.append(key, fileName);
+          return;
+        }
+        body.append(key, (values as any)[key]);
+      });
+
+      fetch("/api/application/bulk-create", {
+        method: "POST",
+        body: body,
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          alert("Borang-borang telah dihantar");
+        })
+        .catch((err) => console.log);
+    },
+  });
+
+  const onFileSubmit =
+    (fieldKey: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (event.target !== null && event.target.files !== null) {
+        const file = event.target.files[0];
+        // console.log(fieldKey, file);
+        setFieldValue(fieldKey, file);
+      }
+    };
+
+  const { handleSubmit, setFieldValue, touched, errors } = formik;
+  return (
+    <Card
+      sx={{
+        // height: "100%",
+        bgcolor: "background.paper",
+        borderRadius: "0.75rem",
+        // boxShadow: md,
+        p: 2,
+      }}
+    >
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <FormControl
+              fullWidth
+              error={errors.forms && touched.forms ? true : false}
+            >
+              <Button variant="contained" component="label">
+                Muat Naik Borang-borang
+                <input
+                  type="file"
+                  accept=".zip,.rar,.7zip"
+                  name="forms"
+                  hidden
+                  onChange={onFileSubmit("forms")}
+                />
+              </Button>
+              {errors.forms && touched.forms && (
+                <FormHelperText id="" error={true}>
+                  {errors.forms}
+                </FormHelperText>
+              )}
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} container justifyContent="flex-end">
+            <Button variant="contained" type="submit">
+              Hantar
+            </Button>
+          </Grid>
+        </Grid>
+      </form>
+    </Card>
+  );
+};
+
+export default BulkSumissionForm;
