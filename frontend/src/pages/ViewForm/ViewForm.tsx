@@ -9,7 +9,7 @@ const ViewForm = () => {
   const [formValues, setFormValues] = useState({});
   // fetch(`/api/application/form/${formId}`)
   useEffect(() => {
-    fetch("/api/application/form/6208b395415b0a8c87e40c58")
+    fetch(`/api/application/form/${formId}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../contexts/UserContext";
 
 export default function BasicSelect() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { userIsAdmin, setUserIsAdminFn } = useUserContext();
-  const [role, setRole] = useState(userIsAdmin ? "admin" : "user");
+
+  useEffect(() => {
+    if (location.pathname.startsWith("/admin")) {
+      setUserIsAdminFn(true);
+    }
+  }, []);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setRole(event.target.value as string);
     if (event.target.value === "admin") {
       setUserIsAdminFn(true);
       navigate("/admin");
@@ -30,7 +35,7 @@ export default function BasicSelect() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={role}
+          value={userIsAdmin ? "admin" : "user"}
           label="Role"
           onChange={handleChange}
         >
