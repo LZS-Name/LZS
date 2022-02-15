@@ -20,12 +20,13 @@ import { visuallyHidden } from "@mui/utils";
 import Application from "../../models/application.model";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { formatDateToDateMonthYear } from "../../utils/formatDate";
 
 interface Data {
   _id: string;
   ic_number: number;
   approval_date: number;
-  application_type: number;
+  application_type: string;
   name: string;
   status: number;
 }
@@ -93,19 +94,19 @@ const headCells: readonly HeadCell[] = [
   },
   {
     id: "application_type",
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: "Jenis Permohonan",
   },
   {
     id: "approval_date",
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: "Tarikh Pengesahan",
   },
   {
     id: "status",
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: "Status",
   },
@@ -293,14 +294,16 @@ export default function ApplicationTable({
   let navigate = useNavigate();
 
   React.useEffect(() => {
-    const applicationData: Data[] = applications.map((application: any) => ({
-      _id: application._id,
-      name: application.name,
-      ic_number: application.ic_number,
-      application_type: application.application_type,
-      approval_date: application.name,
-      status: application.status,
-    }));
+    const applicationData: Data[] = applications.map((application: any) => {
+      return {
+        _id: application._id,
+        name: application.name,
+        ic_number: application.ic_number,
+        application_type: application.application_type,
+        approval_date: application.approval_date,
+        status: application.status,
+      };
+    });
     setRows(applicationData);
     console.log(selected);
   }, [applications, selected]);
@@ -399,7 +402,6 @@ export default function ApplicationTable({
                 .map((row, index) => {
                   const isItemSelected = isSelected(row._id);
                   const labelId = `enhanced-table-checkbox-${index}`;
-
                   return (
                     <TableRow
                       hover
@@ -432,7 +434,9 @@ export default function ApplicationTable({
                       <TableCell align="right">
                         {row.application_type}
                       </TableCell>
-                      <TableCell align="right">{row.approval_date}</TableCell>
+                      <TableCell align="right">
+                        {formatDateToDateMonthYear(row.approval_date)}
+                      </TableCell>
                       <TableCell align="right">{row.status}</TableCell>
                     </TableRow>
                   );

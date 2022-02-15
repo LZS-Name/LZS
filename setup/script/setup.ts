@@ -1,6 +1,9 @@
 require("dotenv").config();
 
-import { Application } from "../../backend/src/models/Application";
+import {
+  Application,
+  ApplicationInterface,
+} from "../../backend/src/models/Application";
 import application_mock from "../mock_data/application.mock.json";
 const mongoose = require("mongoose");
 
@@ -15,6 +18,10 @@ db.on("disconnected", () =>
 
 //Application
 Application.collection.drop();
-Application.insertMany(application_mock).then(() => {
+let applications = application_mock.map((application: ApplicationInterface) => {
+  application.approval_date = Date.now();
+  return application;
+});
+Application.insertMany(applications).then(() => {
   mongoose.disconnect();
 });

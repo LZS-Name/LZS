@@ -9,11 +9,12 @@ interface Application {
   marriage_cert?: string;
   additional_document: string;
   application_type: string;
-  approval_date?: string;
+  approval_date?: number;
   first_approver?: string;
   second_approver?: string;
   status?: string;
   bank_name?: string;
+  bank_account_no?: string;
 }
 
 export default Application;
