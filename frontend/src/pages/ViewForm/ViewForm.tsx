@@ -24,7 +24,7 @@ const ViewForm = () => {
     <PageLayout title={"Borang Aplikasi"}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
-          <SampleForm formValues={formValues} />
+          <SampleForm formValues={formValues} formId={formId} />
         </Grid>
       </Grid>
     </PageLayout>

@@ -7,49 +7,43 @@ import { FormikErrors, FormikTouched } from "formik";
 import ApplicationModel from "../../models/application.model";
 
 interface FilesSectionProps {
-  formId: string | undefined;
   formDisabled: boolean;
   errors: FormikErrors<ApplicationModel>;
   touched: FormikTouched<ApplicationModel>;
-  setFieldValue: (
-    field: string,
-    value: any,
-    shouldValidate?: boolean | undefined
-  ) => Promise<void> | Promise<FormikErrors<ApplicationModel>>;
   onFileSubmit: (
     fieldKey: string
   ) => (event: React.ChangeEvent<HTMLInputElement>) => void;
+  formValues: ApplicationModel | undefined;
 }
 const FilesSection = ({
-  formId,
+  formValues,
   formDisabled,
   errors,
   touched,
-  setFieldValue,
   onFileSubmit,
 }: FilesSectionProps) => {
   // if admin viewing the form
-  if (formDisabled) {
+  if (formDisabled && formValues !== undefined) {
     return (
       <>
         <Grid item xs={12} container justifyContent="flex-end">
           <Button
             variant="contained"
             onClick={() => {
-              fetch(`/api/application/form/download-${formId}`)
+              fetch(`/api/application/form/download/${formValues.payslip}`)
                 .then((x) => x.blob())
                 .then((b) => {
                   const url = window.URL.createObjectURL(b);
                   var a = document.createElement("a");
                   document.body.appendChild(a);
                   a.href = url;
-                  a.download = "a.pdf";
+                  a.download = formValues.payslip;
                   a.click();
                 })
                 .catch((err) => console.log);
             }}
           >
-            Download
+            Download Slip Gaji
           </Button>
         </Grid>
       </>

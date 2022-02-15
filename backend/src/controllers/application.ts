@@ -28,14 +28,15 @@ const storage = multer.diskStorage({
     file: FileObj,
     cb: (error: Error | null, fileName: string) => {}
   ) {
-    cb(null, file.originalname + "-" + Date.now() + ".pdf");
+    // cb(null, file.originalname + "-" + Date.now() + ".pdf");
+    cb(null, file.originalname);
   },
 });
 const upload = multer({
   storage: storage,
 });
 
-// Getting Application by form id
+// Getting Application Detail by form id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
   try {
     const application = await getApplicationByFormId(req.params.form_id);
@@ -68,8 +69,6 @@ router.post(
   upload.any(),
   async (req: Request & { file: any; files: any }, res: Response) => {
     try {
-      console.log(__dirname);
-      console.log("req.body", req.body);
       const newApplication = await createApplication(req.body);
       res
         .status(201)
@@ -81,12 +80,16 @@ router.post(
 );
 
 // Download one document from the application
-router.get("/form/download-:formId", (req: Request, res: Response) => {
-  const formId = req.params.formId;
-  console.log("formId", formId);
-  const directoryPath = __dirname + "../../../../uploads/";
-  const filePath = directoryPath + formId + ".pdf";
-  res.sendFile(path.resolve(filePath));
+router.get("/form/download/:formId", (req: Request, res: Response) => {
+  try {
+    const formId = req.params.formId;
+    // console.log("formId", formId);
+    const directoryPath = __dirname + "../../../../uploads/";
+    const filePath = directoryPath + formId;
+    res.sendFile(path.resolve(filePath));
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
 });
 
 // Getting Filtered Application [ADMIN]

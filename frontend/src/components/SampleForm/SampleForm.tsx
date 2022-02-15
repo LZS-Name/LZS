@@ -4,28 +4,30 @@ import TextField from "@mui/material/TextField";
 
 import BasicSelect from "./Select";
 import { useFormik } from "formik";
-import { useParams } from "react-router-dom";
 import validationSchema from "./validation";
 import FilesSection from "./FilesSection";
+import ApplicationModel from "../../models/application.model";
 
 interface SampleFormProps {
-  formValues: {
-    name?: string;
-    ic_number?: string;
-    submitter_relationship?: string;
-    income?: string;
-  };
+  formValues:
+    | ApplicationModel
+    | {
+        name?: undefined;
+        ic_number?: undefined;
+        submitter_relationship?: undefined;
+        income?: undefined;
+      };
+  formId: string | undefined;
 }
-const SampleForm = ({ formValues = {} }: SampleFormProps) => {
-  const formDisabled = Object.keys(formValues).length !== 0;
-  const { formId } = useParams();
+const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
+  const formDisabled = formId !== undefined;
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
       name: formValues.name || "test name",
       ic_number: formValues.ic_number || "111222333444",
       submitter_relationship: formValues.submitter_relationship || "SELF",
-      income: formValues.income ? parseInt(formValues.income) : 0,
+      income: formValues.income || 0,
       payslip: undefined,
       marriage_cert: undefined,
       additional_document: undefined,
@@ -37,9 +39,20 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
       // construct formData
       const body = new FormData();
       Object.keys(values).forEach((key) => {
-        if (key === "payslip") {
-          body.append("payslipFile", (values as any)[key]);
-          body.append(key, (values as any)[key].name);
+        // let backend get the field as key + datetime + file name
+        const value = (values as any)[key];
+        if (
+          value &&
+          (key === "payslip" ||
+            key === "marriage_cert" ||
+            key === "additional_document")
+        ) {
+          const fileName =
+            key + "-" + Date.now() + "-" + (values as any)[key].name;
+          const newFile = new File([value], fileName, { type: value.type });
+          console.log("edited", newFile);
+          body.append(key + "File", newFile);
+          body.append(key, fileName);
           return;
         }
         body.append(key, (values as any)[key]);
@@ -51,7 +64,6 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
           alert("Borang telah dihantar");
         })
         .catch((err) => console.log);
@@ -62,7 +74,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
     (fieldKey: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
       if (event.target !== null && event.target.files !== null) {
         const file = event.target.files[0];
-        console.log(fieldKey, file);
+        // console.log(fieldKey, file);
         setFieldValue(fieldKey, file);
       }
     };
@@ -163,11 +175,10 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
             />
           </Grid>
           <FilesSection
-            formId={formId}
+            formValues={formValues as ApplicationModel}
             formDisabled={formDisabled}
             errors={errors}
             touched={touched}
-            setFieldValue={setFieldValue}
             onFileSubmit={onFileSubmit}
           />
         </Grid>

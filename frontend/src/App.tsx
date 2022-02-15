@@ -12,7 +12,6 @@ function App() {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/admin/dashboard", element: <Dashboard /> },
-    { path: "/admin", element: <HomeAdmin /> },
     { path: "/admin/application/:formId", element: <ViewForm /> },
   ]);
   return (

@@ -22,7 +22,7 @@ export default function BasicSelect() {
   const handleChange = (event: SelectChangeEvent) => {
     if (event.target.value === "admin") {
       setUserIsAdminFn(true);
-      navigate("/admin");
+      navigate("/admin/dashboard");
     } else {
       setUserIsAdminFn(false);
       navigate("/");
