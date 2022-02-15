@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 const ViewForm = () => {
   const { formId } = useParams();
   const [formValues, setFormValues] = useState({});
-  // fetch(`/api/application/form/${formId}`)
+
   useEffect(() => {
     fetch(`/api/application/form/${formId}`)
       .then((res) => res.json())
@@ -18,12 +18,12 @@ const ViewForm = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [formId]);
 
   return (
     <PageLayout title={"Borang Aplikasi"}>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={8}>
           <SampleForm formValues={formValues} />
         </Grid>
       </Grid>

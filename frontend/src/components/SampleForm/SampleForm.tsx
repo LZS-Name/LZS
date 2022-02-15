@@ -8,6 +8,7 @@ import FormHelperText from "@mui/material/FormHelperText";
 import BasicSelect from "./Select";
 import { useFormik } from "formik";
 import validationSchema from "./validation";
+import FilesSection from "./FilesSection";
 
 interface SampleFormProps {
   formValues: {
@@ -78,7 +79,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
     >
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <TextField
               id="name"
               name="name"
@@ -150,106 +151,12 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
               disabled={formDisabled}
             />
           </Grid>
-          <Grid item xs={6}>
-            <FormControl
-              fullWidth
-              error={errors.payslip && touched.payslip ? true : false}
-            >
-              <Button
-                variant="contained"
-                component="label"
-                disabled={formDisabled}
-              >
-                Muat Naik Slip Gaji
-                <input
-                  type="file"
-                  // accept="application/pdf"
-                  name="payslip"
-                  hidden
-                  onChange={(event) => {
-                    if (event.target !== null && event.target.files !== null) {
-                      const file = event.target.files[0];
-                      console.log(file);
-                      setFieldValue("payslip", file);
-                    }
-                  }}
-                />
-              </Button>
-              {errors.payslip && touched.payslip && (
-                <FormHelperText id="" error={true}>
-                  {errors.payslip}
-                </FormHelperText>
-              )}
-            </FormControl>
-          </Grid>
-
-          <Grid item xs={6}>
-            <Button
-              variant="contained"
-              component="label"
-              disabled={formDisabled}
-            >
-              Muat Naik Sijil Perkahwinan
-              <input type="file" hidden accept="application/pdf" />
-            </Button>
-          </Grid>
-          <Grid item xs={6}>
-            <FormControl
-              fullWidth
-              error={errors.payslip && touched.payslip ? true : false}
-            >
-              <Button
-                variant="contained"
-                component="label"
-                disabled={formDisabled}
-              >
-                Muat Naik Borang Lain
-                <input
-                  type="file"
-                  hidden
-                  accept="application/pdf"
-                  name="additional_document"
-                  onChange={(event) => {
-                    if (event.target !== null && event.target.files !== null) {
-                      const file = event.target.files[0];
-                      console.log(file);
-                      setFieldValue("additional_document", file);
-                    }
-                  }}
-                />
-              </Button>
-              {errors.additional_document && touched.additional_document && (
-                <FormHelperText id="" error={true}>
-                  {errors.additional_document}
-                </FormHelperText>
-              )}
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} container justifyContent="flex-end">
-            <Button variant="contained" type="submit" disabled={formDisabled}>
-              Hantar
-            </Button>
-          </Grid>
-          <Grid item xs={12} container justifyContent="flex-end">
-            <Button
-              variant="contained"
-              onClick={() => {
-                fetch("/api/application/forms/10")
-                  .then((x) => x.blob())
-                  .then((b) => {
-                    const url = window.URL.createObjectURL(b);
-                    var a = document.createElement("a");
-                    document.body.appendChild(a);
-                    a.href = url;
-                    a.download = "a.pdf";
-                    a.click();
-                  })
-                  .catch((err) => console.log);
-              }}
-            >
-              Download
-            </Button>
-          </Grid>
+          <FilesSection
+            formDisabled={formDisabled}
+            errors={errors}
+            touched={touched}
+            setFieldValue={setFieldValue}
+          />
         </Grid>
       </form>
     </Card>

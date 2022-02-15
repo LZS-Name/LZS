@@ -16,6 +16,7 @@ export default function BasicSelect() {
     if (location.pathname.startsWith("/admin")) {
       setUserIsAdminFn(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (event: SelectChangeEvent) => {
