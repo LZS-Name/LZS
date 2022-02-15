@@ -13,6 +13,7 @@ interface Application {
   first_approver?: string;
   second_approver?: string;
   status?: string;
+  bank_name?: string;
 }
 
 export default Application;

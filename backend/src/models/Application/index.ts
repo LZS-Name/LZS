@@ -15,6 +15,8 @@ interface ApplicationInterface {
   first_approver?: string;
   second_approver?: string;
   status?: string;
+  bank_name?: string;
+  bank_account_no?: string;
 }
 
 const applicationSchema = new mongoose.Schema<ApplicationInterface>(
@@ -65,6 +67,13 @@ const applicationSchema = new mongoose.Schema<ApplicationInterface>(
       type: String,
     },
     status: {
+      type: String,
+      default: "PENDING_FIRST_APPROVAL",
+    },
+    bank_name: {
+      type: String,
+    },
+    bank_account_no: {
       type: String,
     },
   },

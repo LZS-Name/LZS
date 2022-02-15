@@ -17,11 +17,11 @@ const ApplicationConstant = {
     },
     {
       label: "Nama Bank",
-      value: "status",
+      value: "bank_name",
     },
     {
       label: "Nombor Akaun Bank",
-      value: "status",
+      value: "bank_account_no",
     },
     {
       label: "Jenis Bantuan",
