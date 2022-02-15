@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 import { Application } from "../../backend/src/models/Application";
-import application_mock from '../mock_data/application.mock.json';
+import application_mock from "../mock_data/application.mock.json";
 const mongoose = require("mongoose");
 
 // Database Connection
@@ -14,7 +14,7 @@ db.on("disconnected", () =>
 );
 
 //Application
-Application.insertMany(application_mock).then(()=>{
-    mongoose.disconnect();
-})
-
+Application.collection.drop();
+Application.insertMany(application_mock).then(() => {
+  mongoose.disconnect();
+});
