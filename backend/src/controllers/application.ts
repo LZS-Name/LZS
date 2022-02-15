@@ -80,11 +80,12 @@ router.post(
   }
 );
 
-router.get("/forms/:formId", (req: Request, res: Response) => {
+// Download one document from the application
+router.get("/form/download-:formId", (req: Request, res: Response) => {
   const formId = req.params.formId;
   console.log("formId", formId);
   const directoryPath = __dirname + "../../../../uploads/";
-  const filePath = directoryPath + "test.pdf";
+  const filePath = directoryPath + formId + ".pdf";
   res.sendFile(path.resolve(filePath));
 });
 

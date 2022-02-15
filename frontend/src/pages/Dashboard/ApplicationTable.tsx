@@ -16,8 +16,6 @@ import Checkbox from "@mui/material/Checkbox";
 import Tooltip from "@mui/material/Tooltip";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import DeleteIcon from "@mui/icons-material/Delete";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 import Application from "../../models/application.model";
 import { useNavigate } from "react-router-dom";
@@ -264,11 +262,11 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
         </Typography>
       )}
       {numSelected > 0 ? (
-        <Tooltip title="Delete">
+        <Tooltip title="Export selected application(s)">
           <Button onClick={handleExport}>Export</Button>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
+        <Tooltip title="Export all applications in the system">
           <Button onClick={handleExportAll}>Export All</Button>
         </Tooltip>
       )}

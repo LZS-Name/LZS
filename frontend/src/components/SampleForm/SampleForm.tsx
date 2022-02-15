@@ -1,12 +1,10 @@
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import FormControl from "@mui/material/FormControl";
-import FormHelperText from "@mui/material/FormHelperText";
 
 import BasicSelect from "./Select";
 import { useFormik } from "formik";
+import { useParams } from "react-router-dom";
 import validationSchema from "./validation";
 import FilesSection from "./FilesSection";
 
@@ -20,6 +18,7 @@ interface SampleFormProps {
 }
 const SampleForm = ({ formValues = {} }: SampleFormProps) => {
   const formDisabled = Object.keys(formValues).length !== 0;
+  const { formId } = useParams();
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -28,6 +27,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
       submitter_relationship: formValues.submitter_relationship || "SELF",
       income: formValues.income ? parseInt(formValues.income) : 0,
       payslip: undefined,
+      marriage_cert: undefined,
       additional_document: undefined,
       application_type: "Created by front end",
     },
@@ -57,6 +57,16 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
         .catch((err) => console.log);
     },
   });
+
+  const onFileSubmit =
+    (fieldKey: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (event.target !== null && event.target.files !== null) {
+        const file = event.target.files[0];
+        console.log(fieldKey, file);
+        setFieldValue(fieldKey, file);
+      }
+    };
+
   const { name, ic_number, submitter_relationship, income, application_type } =
     formik.values;
   const {
@@ -81,6 +91,7 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <TextField
+              fullWidth
               id="name"
               name="name"
               label="Nama"
@@ -152,10 +163,12 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
             />
           </Grid>
           <FilesSection
+            formId={formId}
             formDisabled={formDisabled}
             errors={errors}
             touched={touched}
             setFieldValue={setFieldValue}
+            onFileSubmit={onFileSubmit}
           />
         </Grid>
       </form>
