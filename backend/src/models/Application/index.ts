@@ -11,7 +11,7 @@ interface ApplicationInterface {
   marriage_cert?: string;
   additional_document: string;
   application_type: string;
-  approval_date?: string;
+  approval_date?: number;
   first_approver?: string;
   second_approver?: string;
   status?: string;
@@ -58,7 +58,7 @@ const applicationSchema = new mongoose.Schema<ApplicationInterface>(
       type: String,
     },
     approval_date: {
-      type: String,
+      type: Number,
     },
     first_approver: {
       type: String,
