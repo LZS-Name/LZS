@@ -250,16 +250,6 @@ const SampleForm = ({ formValues = {} }: SampleFormProps) => {
               Download
             </Button>
           </Grid>
-          <Grid item xs={12} container justifyContent="flex-end">
-            <a
-              href={"http://localhost:3001/test.pdf"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black body2 pt-3"
-            >
-              <small className="">{`download by anchor tag`}</small>
-            </a>
-          </Grid>
         </Grid>
       </form>
     </Card>
