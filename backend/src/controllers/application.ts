@@ -10,7 +10,6 @@ import {
   exportSelectedCSV,
 } from "../services/application";
 import { FileObj } from "../models/FileObj";
-import * as fs from "fs";
 import * as path from "path";
 
 const express = require("express");
@@ -36,7 +35,7 @@ const upload = multer({
   storage: storage,
 });
 
-// Getting Application by sumitter id
+// Getting Application by form id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
   try {
     const application = await getApplicationByFormId(req.params.form_id);

@@ -30,11 +30,6 @@ const userList = [
 ];
 const adminList = [
   {
-    link: "/",
-    label: "Home",
-    icon: <HomeIcon />,
-  },
-  {
     link: "/admin/dashboard",
     label: "Dashboard",
     icon: <DashboardIcon />,
