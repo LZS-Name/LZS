@@ -35,6 +35,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
 });
+const extract = require("extract-zip");
 
 // Getting Application Detail by form id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
@@ -73,6 +74,23 @@ router.post(
       res
         .status(201)
         .send({ status: true, message: "Created", data: newApplication });
+    } catch (err: any) {
+      res.status(400).send({ message: err.message });
+    }
+  }
+);
+// Create multiple applications (bulk submission)
+router.post(
+  "/bulk-create",
+  upload.any(),
+  async (req: Request & { file: any; files: any }, res: Response) => {
+    try {
+      const path = __dirname + "../../../../uploads/";
+      // console.log(req.files);
+      const fileName = req.files[0].filename;
+      await extract(path + fileName, { dir: path + fileName.split(".")[0] });
+      console.log("Extraction complete");
+      res.status(201).send({ status: true, message: "Created" });
     } catch (err: any) {
       res.status(400).send({ message: err.message });
     }
