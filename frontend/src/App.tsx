@@ -7,12 +7,14 @@ import Home from "./pages/Home";
 import HomeAdmin from "./pages/HomeAdmin";
 import ViewForm from "./pages/ViewForm";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Analytics from "./pages/Analytics/Analytics";
 
 function App() {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/admin/dashboard", element: <Dashboard /> },
     { path: "/admin/application/:formId", element: <ViewForm /> },
+    { path: "/admin/analytics", element: <Analytics /> },
   ]);
   return (
     <>
