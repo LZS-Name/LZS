@@ -40,7 +40,7 @@ const adminList = [
     icon: <PaidIcon />,
   },
   {
-    link: null,
+    link: "/admin/analytics",
     label: "Analytics",
     icon: <EqualizerIcon />,
   },
