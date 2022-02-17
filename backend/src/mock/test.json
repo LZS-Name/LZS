@@ -1,0 +1,5809 @@
+{
+  "apiVersion": "2022-01-30-preview",
+  "modelId": "zakat-second",
+  "content": "VERSI: 01/2019\nLEMBAGA\nZAKAT SELANGOR\nMAJLIS AGAMLA ISLAM SELANGOR\nAKUAN KONFLIK KEPENTINGAN\nLEMBAGA ZAKAT SELANGOR (MAIS)\nBangunan Zakat Selangor, 3-0-1, Presint ALAMi, Pusat Perniagaan Worldwide 2,\nPersiaran Akuatik, Seksyen 13, 40100 Shah Alam, Selangor Darul Ehsan.\nTel: 03-8314 2222 . Faks: 03-8314 2233/2244 . http://www.zakatselangor.com.my . Talian Zakat Selangor: 1 300 88 4343\nPENTING : Sebelum melengkapkan maklumat anda, sila rujuk Nolis Perlindungan Data Peribadi kami (\"Notis\"). Dengan memberikan data peribadi\nserta menandatangani borang ini. anda menyatakan kebenaran dan persetujuan anda kepada kami terhadap terma-terma yang terkandung di dalam\nNotis tersebut. Notis tersebut boleh didapati di laman web kami di www.zakatselangor.com.my atau di semua cawangan kami di seluruh Selangor.\nPENGAKUAN PEMOHON\nNama Pemohon\nKUMUTHA GOUNDAR A/L RAMADASS\nNo. K/P (baru)/Polis/Tentera/No. Pasport :\n990102102666\nAdakah anda (pemohon) mempunyai hubungan kekeluargaan dengan kakitangan Lembaga Zakat Selangor (MAIS)?\nYa\nTidak\nJika YA, sila nyatakan di bawah :\nNo.\nNama Kakitangan\nJawatan\nPejabat\nHubungan\n1\nMUTHU A/L GOUNDAR\nGURU\nSMK INTAN\nABANG\n2.\nIMAN HAZLIN\nGURU BESAR\nSMK INTAN\nBAPA\n3\n4.\n5\n6\n7.\n8.\n9\n10.\nTarih22.03.2020\nTandatangan Asnaf/Pemohon :\nwww.zakatselangor.com.my\n:selected:\n:unselected:",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "angle": -0.5958,
+      "width": 8.3333,
+      "height": 11.4583,
+      "unit": "inch",
+      "spans": [
+        {
+          "offset": 0,
+          "length": 1306
+        }
+      ],
+      "words": [
+        {
+          "content": "VERSI:",
+          "boundingBox": [
+            7.1301, 0.5122, 7.4781, 0.5122, 7.4732, 0.6217, 7.1301, 0.6167
+          ],
+          "span": {
+            "offset": 0,
+            "length": 6
+          },
+          "confidence": 0.97
+        },
+        {
+          "content": "01/2019",
+          "boundingBox": [
+            7.498, 0.5122, 7.8908, 0.5122, 7.8908, 0.6217, 7.498, 0.6217
+          ],
+          "span": {
+            "offset": 7,
+            "length": 7
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "LEMBAGA",
+          "boundingBox": [
+            3.9678, 0.8355, 4.3506, 0.8355, 4.3506, 0.92, 3.9678, 0.92
+          ],
+          "span": {
+            "offset": 15,
+            "length": 7
+          },
+          "confidence": 0.735
+        },
+        {
+          "content": "ZAKAT",
+          "boundingBox": [
+            3.9379, 0.9101, 4.4053, 0.9101, 4.4053, 1.0394, 3.9429, 1.0444
+          ],
+          "span": {
+            "offset": 23,
+            "length": 5
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": "SELANGOR",
+          "boundingBox": [
+            4.46, 0.9101, 5.2257, 0.9002, 5.2208, 1.0344, 4.46, 1.0394
+          ],
+          "span": {
+            "offset": 29,
+            "length": 8
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "MAJLIS",
+          "boundingBox": [
+            4.2711, 1.0494, 4.4799, 1.0494, 4.4799, 1.1339, 4.2711, 1.1389
+          ],
+          "span": {
+            "offset": 38,
+            "length": 6
+          },
+          "confidence": 0.824
+        },
+        {
+          "content": "AGAMLA",
+          "boundingBox": [
+            4.4998, 1.0494, 4.7235, 1.0494, 4.7235, 1.1339, 4.4998, 1.1339
+          ],
+          "span": {
+            "offset": 45,
+            "length": 6
+          },
+          "confidence": 0.449
+        },
+        {
+          "content": "ISLAM",
+          "boundingBox": [
+            4.7385, 1.0494, 4.9175, 1.0444, 4.9175, 1.1289, 4.7385, 1.1339
+          ],
+          "span": {
+            "offset": 52,
+            "length": 5
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "SELANGOR",
+          "boundingBox": [
+            4.9423, 1.0444, 5.2755, 1.0344, 5.2804, 1.124, 4.9423, 1.1289
+          ],
+          "span": {
+            "offset": 58,
+            "length": 8
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "AKUAN",
+          "boundingBox": [
+            2.3817, 1.5318, 3.1523, 1.5218, 3.1523, 1.7257, 2.3817, 1.7257
+          ],
+          "span": {
+            "offset": 67,
+            "length": 5
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": "KONFLIK",
+          "boundingBox": [
+            3.2767, 1.5218, 4.291, 1.5119, 4.291, 1.7207, 3.2816, 1.7257
+          ],
+          "span": {
+            "offset": 73,
+            "length": 7
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "KEPENTINGAN",
+          "boundingBox": [
+            4.3854, 1.5119, 6.0611, 1.4969, 6.0611, 1.6959, 4.3904, 1.7158
+          ],
+          "span": {
+            "offset": 81,
+            "length": 11
+          },
+          "confidence": 0.979
+        },
+        {
+          "content": "LEMBAGA",
+          "boundingBox": [
+            3.2568, 1.7854, 3.8037, 1.7804, 3.8037, 1.8948, 3.2617, 1.8998
+          ],
+          "span": {
+            "offset": 93,
+            "length": 7
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "ZAKAT",
+          "boundingBox": [
+            3.8435, 1.7804, 4.2214, 1.7754, 4.2214, 1.8898, 3.8435, 1.8898
+          ],
+          "span": {
+            "offset": 101,
+            "length": 5
+          },
+          "confidence": 0.97
+        },
+        {
+          "content": "SELANGOR",
+          "boundingBox": [
+            4.2462, 1.7754, 4.8479, 1.7705, 4.8479, 1.8799, 4.2462, 1.8898
+          ],
+          "span": {
+            "offset": 107,
+            "length": 8
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "(MAIS)",
+          "boundingBox": [
+            4.8976, 1.7655, 5.2655, 1.7655, 5.2655, 1.8799, 4.8976, 1.8799
+          ],
+          "span": {
+            "offset": 116,
+            "length": 6
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": "Bangunan",
+          "boundingBox": [
+            2.2474, 1.9197, 2.7546, 1.9197, 2.7595, 2.044, 2.2524, 2.049
+          ],
+          "span": {
+            "offset": 123,
+            "length": 8
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "Zakat",
+          "boundingBox": [
+            2.7944, 1.9197, 3.0827, 1.9147, 3.0827, 2.039, 2.7944, 2.044
+          ],
+          "span": {
+            "offset": 132,
+            "length": 5
+          },
+          "confidence": 0.977
+        },
+        {
+          "content": "Selangor,",
+          "boundingBox": [
+            3.1026, 1.9147, 3.5849, 1.9147, 3.5849, 2.0341, 3.1076, 2.039
+          ],
+          "span": {
+            "offset": 138,
+            "length": 9
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "3-0-1,",
+          "boundingBox": [
+            3.6098, 1.9147, 3.9031, 1.9097, 3.9081, 2.0291, 3.6098, 2.0341
+          ],
+          "span": {
+            "offset": 148,
+            "length": 6
+          },
+          "confidence": 0.99
+        },
+        {
+          "content": "Presint",
+          "boundingBox": [
+            3.928, 1.9097, 4.281, 1.9047, 4.281, 2.0241, 3.928, 2.0291
+          ],
+          "span": {
+            "offset": 155,
+            "length": 7
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "ALAMi,",
+          "boundingBox": [
+            4.3059, 1.9047, 4.6639, 1.8998, 4.6639, 2.0191, 4.3059, 2.0241
+          ],
+          "span": {
+            "offset": 163,
+            "length": 6
+          },
+          "confidence": 0.892
+        },
+        {
+          "content": "Pusat",
+          "boundingBox": [
+            4.6887, 1.8998, 4.9771, 1.8948, 4.9771, 2.0191, 4.6887, 2.0191
+          ],
+          "span": {
+            "offset": 170,
+            "length": 5
+          },
+          "confidence": 0.976
+        },
+        {
+          "content": "Perniagaan",
+          "boundingBox": [
+            5.002, 1.8948, 5.5738, 1.8898, 5.5738, 2.0092, 5.002, 2.0191
+          ],
+          "span": {
+            "offset": 176,
+            "length": 10
+          },
+          "confidence": 0.985
+        },
+        {
+          "content": "Worldwide",
+          "boundingBox": [
+            5.5986, 1.8898, 6.1257, 1.8799, 6.1257, 1.9992, 5.6036, 2.0092
+          ],
+          "span": {
+            "offset": 187,
+            "length": 9
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "2,",
+          "boundingBox": [
+            6.1506, 1.8799, 6.25, 1.8749, 6.255, 1.9992, 6.1506, 1.9992
+          ],
+          "span": {
+            "offset": 197,
+            "length": 2
+          },
+          "confidence": 0.974
+        },
+        {
+          "content": "Persiaran",
+          "boundingBox": [
+            2.4314, 2.0539, 2.9037, 2.049, 2.9087, 2.1683, 2.4314, 2.1683
+          ],
+          "span": {
+            "offset": 200,
+            "length": 9
+          },
+          "confidence": 0.965
+        },
+        {
+          "content": "Akuatik,",
+          "boundingBox": [
+            2.9336, 2.049, 3.3413, 2.044, 3.3413, 2.1683, 2.9336, 2.1683
+          ],
+          "span": {
+            "offset": 210,
+            "length": 8
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Seksyen",
+          "boundingBox": [
+            3.3612, 2.044, 3.7938, 2.044, 3.7938, 2.1634, 3.3612, 2.1683
+          ],
+          "span": {
+            "offset": 219,
+            "length": 7
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "13,",
+          "boundingBox": [
+            3.8335, 2.039, 3.9827, 2.039, 3.9827, 2.1634, 3.8335, 2.1634
+          ],
+          "span": {
+            "offset": 227,
+            "length": 3
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "40100",
+          "boundingBox": [
+            4.0076, 2.039, 4.3208, 2.0341, 4.3208, 2.1584, 4.0076, 2.1634
+          ],
+          "span": {
+            "offset": 231,
+            "length": 5
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": "Shah",
+          "boundingBox": [
+            4.3506, 2.0341, 4.6042, 2.0341, 4.6042, 2.1584, 4.3457, 2.1584
+          ],
+          "span": {
+            "offset": 237,
+            "length": 4
+          },
+          "confidence": 0.993
+        },
+        {
+          "content": "Alam,",
+          "boundingBox": [
+            4.634, 2.0341, 4.9224, 2.0291, 4.9175, 2.1534, 4.634, 2.1584
+          ],
+          "span": {
+            "offset": 242,
+            "length": 5
+          },
+          "confidence": 0.967
+        },
+        {
+          "content": "Selangor",
+          "boundingBox": [
+            4.9423, 2.0291, 5.3898, 2.0241, 5.3898, 2.1435, 4.9423, 2.1534
+          ],
+          "span": {
+            "offset": 248,
+            "length": 8
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "Darul",
+          "boundingBox": [
+            5.4147, 2.0241, 5.6931, 2.0191, 5.6881, 2.1385, 5.4097, 2.1435
+          ],
+          "span": {
+            "offset": 257,
+            "length": 5
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "Ehsan.",
+          "boundingBox": [
+            5.713, 2.0191, 6.071, 2.0142, 6.066, 2.1285, 5.713, 2.1385
+          ],
+          "span": {
+            "offset": 263,
+            "length": 6
+          },
+          "confidence": 0.928
+        },
+        {
+          "content": "Tel:",
+          "boundingBox": [
+            1.2033, 2.1783, 1.3773, 2.1783, 1.3823, 2.2976, 1.2082, 2.2927
+          ],
+          "span": {
+            "offset": 270,
+            "length": 4
+          },
+          "confidence": 0.993
+        },
+        {
+          "content": "03-8314",
+          "boundingBox": [
+            1.4021, 2.1783, 1.8248, 2.1783, 1.8298, 2.2976, 1.4071, 2.2976
+          ],
+          "span": {
+            "offset": 275,
+            "length": 7
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "2222",
+          "boundingBox": [
+            1.8546, 2.1783, 2.1082, 2.1783, 2.1082, 2.2976, 1.8546, 2.2976
+          ],
+          "span": {
+            "offset": 283,
+            "length": 4
+          },
+          "confidence": 0.992
+        },
+        {
+          "content": ".",
+          "boundingBox": [
+            2.1331, 2.1783, 2.1728, 2.1783, 2.1728, 2.2976, 2.1331, 2.2976
+          ],
+          "span": {
+            "offset": 288,
+            "length": 1
+          },
+          "confidence": 0.741
+        },
+        {
+          "content": "Faks:",
+          "boundingBox": [
+            2.1977, 2.1783, 2.4911, 2.1783, 2.4911, 2.2976, 2.1977, 2.2976
+          ],
+          "span": {
+            "offset": 290,
+            "length": 5
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "03-8314",
+          "boundingBox": [
+            2.5109, 2.1783, 2.9435, 2.1783, 2.9435, 2.2976, 2.5159, 2.2976
+          ],
+          "span": {
+            "offset": 296,
+            "length": 7
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "2233/2244",
+          "boundingBox": [
+            2.9733, 2.1783, 3.5054, 2.1783, 3.5054, 2.2976, 2.9733, 2.2976
+          ],
+          "span": {
+            "offset": 304,
+            "length": 9
+          },
+          "confidence": 0.985
+        },
+        {
+          "content": ".",
+          "boundingBox": [
+            3.5352, 2.1783, 3.565, 2.1783, 3.565, 2.2976, 3.5352, 2.2976
+          ],
+          "span": {
+            "offset": 314,
+            "length": 1
+          },
+          "confidence": 0.926
+        },
+        {
+          "content": "http://www.zakatselangor.com.my",
+          "boundingBox": [
+            3.5899, 2.1783, 5.2705, 2.1584, 5.2705, 2.2777, 3.5899, 2.2976
+          ],
+          "span": {
+            "offset": 316,
+            "length": 31
+          },
+          "confidence": 0.752
+        },
+        {
+          "content": ".",
+          "boundingBox": [
+            5.2953, 2.1584, 5.3401, 2.1534, 5.3401, 2.2777, 5.2904, 2.2777
+          ],
+          "span": {
+            "offset": 348,
+            "length": 1
+          },
+          "confidence": 0.768
+        },
+        {
+          "content": "Talian",
+          "boundingBox": [
+            5.365, 2.1534, 5.6683, 2.1484, 5.6683, 2.2728, 5.365, 2.2777
+          ],
+          "span": {
+            "offset": 350,
+            "length": 6
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "Zakat",
+          "boundingBox": [
+            5.708, 2.1484, 5.9964, 2.1435, 5.9964, 2.2678, 5.7031, 2.2728
+          ],
+          "span": {
+            "offset": 357,
+            "length": 5
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "Selangor:",
+          "boundingBox": [
+            6.0213, 2.1435, 6.5434, 2.1335, 6.5434, 2.2529, 6.0213, 2.2678
+          ],
+          "span": {
+            "offset": 363,
+            "length": 9
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "1",
+          "boundingBox": [
+            6.5682, 2.1335, 6.6229, 2.1285, 6.6229, 2.2529, 6.5682, 2.2529
+          ],
+          "span": {
+            "offset": 373,
+            "length": 1
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "300",
+          "boundingBox": [
+            6.6478, 2.1285, 6.8367, 2.1236, 6.8317, 2.2479, 6.6478, 2.2529
+          ],
+          "span": {
+            "offset": 375,
+            "length": 3
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "88",
+          "boundingBox": [
+            6.8616, 2.1236, 6.9859, 2.1236, 6.9809, 2.2429, 6.8616, 2.2479
+          ],
+          "span": {
+            "offset": 379,
+            "length": 2
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "4343",
+          "boundingBox": [
+            7.0107, 2.1186, 7.2643, 2.1136, 7.2593, 2.238, 7.0107, 2.2429
+          ],
+          "span": {
+            "offset": 382,
+            "length": 4
+          },
+          "confidence": 0.993
+        },
+        {
+          "content": "PENTING",
+          "boundingBox": [
+            0.5171, 2.5314, 1.0093, 2.5314, 1.0093, 2.6607, 0.5221, 2.6607
+          ],
+          "span": {
+            "offset": 387,
+            "length": 7
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": ":",
+          "boundingBox": [
+            1.0541, 2.5314, 1.0988, 2.5264, 1.1038, 2.6607, 1.0591, 2.6607
+          ],
+          "span": {
+            "offset": 395,
+            "length": 1
+          },
+          "confidence": 0.967
+        },
+        {
+          "content": "Sebelum",
+          "boundingBox": [
+            1.1237, 2.5264, 1.5414, 2.5264, 1.5463, 2.6607, 1.1287, 2.6607
+          ],
+          "span": {
+            "offset": 397,
+            "length": 7
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "melengkapkan",
+          "boundingBox": [
+            1.601, 2.5264, 2.3618, 2.5214, 2.3618, 2.6557, 1.601, 2.6607
+          ],
+          "span": {
+            "offset": 405,
+            "length": 12
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "maklumat",
+          "boundingBox": [
+            2.3866, 2.5214, 2.8988, 2.5214, 2.8988, 2.6557, 2.3866, 2.6557
+          ],
+          "span": {
+            "offset": 418,
+            "length": 8
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "anda,",
+          "boundingBox": [
+            2.9236, 2.5214, 3.217, 2.5165, 3.217, 2.6507, 2.9236, 2.6557
+          ],
+          "span": {
+            "offset": 427,
+            "length": 5
+          },
+          "confidence": 0.93
+        },
+        {
+          "content": "sila",
+          "boundingBox": [
+            3.2418, 2.5165, 3.4258, 2.5165, 3.4258, 2.6507, 3.2418, 2.6507
+          ],
+          "span": {
+            "offset": 433,
+            "length": 4
+          },
+          "confidence": 0.96
+        },
+        {
+          "content": "rujuk",
+          "boundingBox": [
+            3.4507, 2.5165, 3.6993, 2.5165, 3.6993, 2.6507, 3.4507, 2.6507
+          ],
+          "span": {
+            "offset": 438,
+            "length": 5
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Nolis",
+          "boundingBox": [
+            3.7241, 2.5115, 3.9926, 2.5115, 3.9926, 2.6458, 3.7241, 2.6458
+          ],
+          "span": {
+            "offset": 444,
+            "length": 5
+          },
+          "confidence": 0.903
+        },
+        {
+          "content": "Perlindungan",
+          "boundingBox": [
+            4.0225, 2.5115, 4.6887, 2.5015, 4.6887, 2.6358, 4.0225, 2.6458
+          ],
+          "span": {
+            "offset": 450,
+            "length": 12
+          },
+          "confidence": 0.985
+        },
+        {
+          "content": "Data",
+          "boundingBox": [
+            4.7186, 2.5015, 4.9622, 2.5015, 4.9622, 2.6358, 4.7186, 2.6358
+          ],
+          "span": {
+            "offset": 463,
+            "length": 4
+          },
+          "confidence": 0.991
+        },
+        {
+          "content": "Peribadi",
+          "boundingBox": [
+            4.9871, 2.5015, 5.4047, 2.4916, 5.3998, 2.6259, 4.9871, 2.6358
+          ],
+          "span": {
+            "offset": 468,
+            "length": 8
+          },
+          "confidence": 0.68
+        },
+        {
+          "content": "kami",
+          "boundingBox": [
+            5.4296, 2.4916, 5.6782, 2.4916, 5.6782, 2.6209, 5.4296, 2.6259
+          ],
+          "span": {
+            "offset": 477,
+            "length": 4
+          },
+          "confidence": 0.885
+        },
+        {
+          "content": "(\"Notis\").",
+          "boundingBox": [
+            5.708, 2.4916, 6.1655, 2.4816, 6.1605, 2.6159, 5.7031, 2.6209
+          ],
+          "span": {
+            "offset": 482,
+            "length": 10
+          },
+          "confidence": 0.686
+        },
+        {
+          "content": "Dengan",
+          "boundingBox": [
+            6.1903, 2.4816, 6.5981, 2.4767, 6.5931, 2.606, 6.1854, 2.6159
+          ],
+          "span": {
+            "offset": 493,
+            "length": 6
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "memberikan",
+          "boundingBox": [
+            6.6229, 2.4767, 7.2345, 2.4618, 7.2295, 2.596, 6.6179, 2.606
+          ],
+          "span": {
+            "offset": 500,
+            "length": 10
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "data",
+          "boundingBox": [
+            7.2643, 2.4618, 7.498, 2.4568, 7.493, 2.5861, 7.2593, 2.5911
+          ],
+          "span": {
+            "offset": 511,
+            "length": 4
+          },
+          "confidence": 0.944
+        },
+        {
+          "content": "peribadi",
+          "boundingBox": [
+            7.5229, 2.4568, 7.9306, 2.4518, 7.9256, 2.5761, 7.5179, 2.5861
+          ],
+          "span": {
+            "offset": 516,
+            "length": 8
+          },
+          "confidence": 0.969
+        },
+        {
+          "content": "serta",
+          "boundingBox": [
+            0.5221, 2.6706, 0.7657, 2.6706, 0.7707, 2.795, 0.5221, 2.795
+          ],
+          "span": {
+            "offset": 525,
+            "length": 5
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "menandatangani",
+          "boundingBox": [
+            0.7906, 2.6706, 1.6458, 2.6706, 1.6508, 2.79, 0.7955, 2.795
+          ],
+          "span": {
+            "offset": 531,
+            "length": 14
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "borang",
+          "boundingBox": [
+            1.6706, 2.6706, 2.0436, 2.6657, 2.0436, 2.79, 1.6706, 2.79
+          ],
+          "span": {
+            "offset": 546,
+            "length": 6
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "ini.",
+          "boundingBox": [
+            2.0684, 2.6657, 2.2226, 2.6657, 2.2226, 2.79, 2.0684, 2.79
+          ],
+          "span": {
+            "offset": 553,
+            "length": 4
+          },
+          "confidence": 0.777
+        },
+        {
+          "content": "anda",
+          "boundingBox": [
+            2.2474, 2.6657, 2.5109, 2.6657, 2.5109, 2.785, 2.2474, 2.79
+          ],
+          "span": {
+            "offset": 558,
+            "length": 4
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "menyatakan",
+          "boundingBox": [
+            2.5358, 2.6657, 3.1523, 2.6607, 3.1523, 2.78, 2.5358, 2.785
+          ],
+          "span": {
+            "offset": 563,
+            "length": 10
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "kebenaran",
+          "boundingBox": [
+            3.1772, 2.6607, 3.7192, 2.6557, 3.7192, 2.7751, 3.1772, 2.78
+          ],
+          "span": {
+            "offset": 574,
+            "length": 9
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "dan",
+          "boundingBox": [
+            3.744, 2.6557, 3.9429, 2.6507, 3.9379, 2.7751, 3.744, 2.7751
+          ],
+          "span": {
+            "offset": 584,
+            "length": 3
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "persetujuan",
+          "boundingBox": [
+            3.9678, 2.6507, 4.5495, 2.6458, 4.5495, 2.7701, 3.9628, 2.7751
+          ],
+          "span": {
+            "offset": 588,
+            "length": 11
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "anda",
+          "boundingBox": [
+            4.5744, 2.6458, 4.8379, 2.6408, 4.8329, 2.7651, 4.5694, 2.7701
+          ],
+          "span": {
+            "offset": 600,
+            "length": 4
+          },
+          "confidence": 0.991
+        },
+        {
+          "content": "kepada",
+          "boundingBox": [
+            4.8628, 2.6408, 5.2407, 2.6358, 5.2357, 2.7601, 4.8578, 2.7651
+          ],
+          "span": {
+            "offset": 605,
+            "length": 6
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": "kami",
+          "boundingBox": [
+            5.2655, 2.6358, 5.5042, 2.6308, 5.4992, 2.7552, 5.2605, 2.7601
+          ],
+          "span": {
+            "offset": 612,
+            "length": 4
+          },
+          "confidence": 0.99
+        },
+        {
+          "content": "terhadap",
+          "boundingBox": [
+            5.529, 2.6308, 5.9815, 2.6209, 5.9815, 2.7502, 5.5241, 2.7552
+          ],
+          "span": {
+            "offset": 617,
+            "length": 8
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "terma-terma",
+          "boundingBox": [
+            6.0113, 2.6209, 6.6229, 2.6109, 6.6179, 2.7403, 6.0064, 2.7502
+          ],
+          "span": {
+            "offset": 626,
+            "length": 11
+          },
+          "confidence": 0.941
+        },
+        {
+          "content": "yang",
+          "boundingBox": [
+            6.6428, 2.6109, 6.8864, 2.606, 6.8815, 2.7353, 6.6428, 2.7403
+          ],
+          "span": {
+            "offset": 638,
+            "length": 4
+          },
+          "confidence": 0.993
+        },
+        {
+          "content": "terkandung",
+          "boundingBox": [
+            6.9163, 2.606, 7.4732, 2.5911, 7.4682, 2.7253, 6.9113, 2.7353
+          ],
+          "span": {
+            "offset": 643,
+            "length": 10
+          },
+          "confidence": 0.991
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            7.498, 2.5911, 7.5975, 2.5911, 7.5925, 2.7204, 7.493, 2.7253
+          ],
+          "span": {
+            "offset": 654,
+            "length": 2
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "dalam",
+          "boundingBox": [
+            7.6223, 2.5911, 7.9008, 2.5861, 7.8908, 2.7154, 7.6173, 2.7204
+          ],
+          "span": {
+            "offset": 657,
+            "length": 5
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "Notis",
+          "boundingBox": [
+            0.5171, 2.7999, 0.7757, 2.7999, 0.7757, 2.9193, 0.5171, 2.9193
+          ],
+          "span": {
+            "offset": 663,
+            "length": 5
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "tersebut.",
+          "boundingBox": [
+            0.8005, 2.7999, 1.248, 2.7999, 1.248, 2.9193, 0.8005, 2.9193
+          ],
+          "span": {
+            "offset": 669,
+            "length": 9
+          },
+          "confidence": 0.988
+        },
+        {
+          "content": "Notis",
+          "boundingBox": [
+            1.2729, 2.7999, 1.5414, 2.7999, 1.5364, 2.9193, 1.2729, 2.9193
+          ],
+          "span": {
+            "offset": 679,
+            "length": 5
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "tersebut",
+          "boundingBox": [
+            1.5662, 2.7999, 1.9889, 2.7999, 1.9839, 2.9193, 1.5613, 2.9193
+          ],
+          "span": {
+            "offset": 685,
+            "length": 8
+          },
+          "confidence": 0.851
+        },
+        {
+          "content": "boleh",
+          "boundingBox": [
+            2.0137, 2.795, 2.3071, 2.795, 2.3071, 2.9193, 2.0088, 2.9193
+          ],
+          "span": {
+            "offset": 694,
+            "length": 5
+          },
+          "confidence": 0.979
+        },
+        {
+          "content": "didapati",
+          "boundingBox": [
+            2.3369, 2.795, 2.7595, 2.795, 2.7595, 2.9193, 2.3369, 2.9193
+          ],
+          "span": {
+            "offset": 700,
+            "length": 8
+          },
+          "confidence": 0.951
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            2.7844, 2.795, 2.8839, 2.79, 2.8839, 2.9193, 2.7844, 2.9193
+          ],
+          "span": {
+            "offset": 709,
+            "length": 2
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "laman",
+          "boundingBox": [
+            2.9087, 2.79, 3.217, 2.79, 3.212, 2.9143, 2.9087, 2.9193
+          ],
+          "span": {
+            "offset": 712,
+            "length": 5
+          },
+          "confidence": 0.857
+        },
+        {
+          "content": "web",
+          "boundingBox": [
+            3.2418, 2.79, 3.4606, 2.785, 3.4606, 2.9143, 3.2369, 2.9143
+          ],
+          "span": {
+            "offset": 718,
+            "length": 3
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "kami",
+          "boundingBox": [
+            3.4905, 2.785, 3.7291, 2.785, 3.7291, 2.9093, 3.4855, 2.9143
+          ],
+          "span": {
+            "offset": 722,
+            "length": 4
+          },
+          "confidence": 0.964
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            3.754, 2.785, 3.8534, 2.785, 3.8534, 2.9093, 3.754, 2.9093
+          ],
+          "span": {
+            "offset": 727,
+            "length": 2
+          },
+          "confidence": 0.985
+        },
+        {
+          "content": "www.zakatselangor.com.my",
+          "boundingBox": [
+            3.8783, 2.78, 5.355, 2.7651, 5.355, 2.8944, 3.8783, 2.9093
+          ],
+          "span": {
+            "offset": 730,
+            "length": 24
+          },
+          "confidence": 0.98
+        },
+        {
+          "content": "atau",
+          "boundingBox": [
+            5.3799, 2.7601, 5.6036, 2.7601, 5.6036, 2.8894, 5.3799, 2.8944
+          ],
+          "span": {
+            "offset": 755,
+            "length": 4
+          },
+          "confidence": 0.985
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            5.6285, 2.7601, 5.7279, 2.7552, 5.7279, 2.8894, 5.6285, 2.8894
+          ],
+          "span": {
+            "offset": 760,
+            "length": 2
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "semua",
+          "boundingBox": [
+            5.7528, 2.7552, 6.0959, 2.7502, 6.0909, 2.8795, 5.7528, 2.8894
+          ],
+          "span": {
+            "offset": 763,
+            "length": 5
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "cawangan",
+          "boundingBox": [
+            6.1207, 2.7502, 6.6428, 2.7403, 6.6378, 2.8696, 6.1158, 2.8795
+          ],
+          "span": {
+            "offset": 769,
+            "length": 8
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "kami",
+          "boundingBox": [
+            6.6677, 2.7403, 6.9014, 2.7353, 6.8964, 2.8646, 6.6627, 2.8696
+          ],
+          "span": {
+            "offset": 778,
+            "length": 4
+          },
+          "confidence": 0.968
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            6.9262, 2.7353, 7.0257, 2.7353, 7.0207, 2.8646, 6.9212, 2.8646
+          ],
+          "span": {
+            "offset": 783,
+            "length": 2
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "seluruh",
+          "boundingBox": [
+            7.0505, 2.7303, 7.4135, 2.7253, 7.4135, 2.8546, 7.0455, 2.8646
+          ],
+          "span": {
+            "offset": 786,
+            "length": 7
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Selangor.",
+          "boundingBox": [
+            7.4383, 2.7253, 7.8908, 2.7154, 7.8858, 2.8447, 7.4383, 2.8546
+          ],
+          "span": {
+            "offset": 794,
+            "length": 9
+          },
+          "confidence": 0.899
+        },
+        {
+          "content": "PENGAKUAN",
+          "boundingBox": [
+            0.4574, 3.168, 1.253, 3.163, 1.253, 3.2923, 0.4574, 3.2973
+          ],
+          "span": {
+            "offset": 804,
+            "length": 9
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "PEMOHON",
+          "boundingBox": [
+            1.3077, 3.163, 1.9441, 3.163, 1.9441, 3.2923, 1.3077, 3.2923
+          ],
+          "span": {
+            "offset": 814,
+            "length": 7
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "Nama",
+          "boundingBox": [
+            0.3182, 3.4713, 0.6066, 3.4713, 0.6016, 3.5807, 0.3132, 3.5857
+          ],
+          "span": {
+            "offset": 822,
+            "length": 4
+          },
+          "confidence": 0.923
+        },
+        {
+          "content": "Pemohon",
+          "boundingBox": [
+            0.6364, 3.4713, 1.1237, 3.4663, 1.1237, 3.5708, 0.6364, 3.5807
+          ],
+          "span": {
+            "offset": 827,
+            "length": 7
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "KUMUTHA",
+          "boundingBox": [
+            1.4121, 3.4564, 2.7198, 3.4564, 2.7247, 3.6305, 1.4121, 3.6255
+          ],
+          "span": {
+            "offset": 835,
+            "length": 7
+          },
+          "confidence": 0.731
+        },
+        {
+          "content": "GOUNDAR",
+          "boundingBox": [
+            3.028, 3.4514, 4.291, 3.4365, 4.2959, 3.6205, 3.033, 3.6305
+          ],
+          "span": {
+            "offset": 843,
+            "length": 7
+          },
+          "confidence": 0.988
+        },
+        {
+          "content": "A/L",
+          "boundingBox": [
+            4.6042, 3.4315, 5.0766, 3.4216, 5.0865, 3.6056, 4.6092, 3.6155
+          ],
+          "span": {
+            "offset": 851,
+            "length": 3
+          },
+          "confidence": 0.554
+        },
+        {
+          "content": "RAMADASS",
+          "boundingBox": [
+            5.365, 3.4166, 6.8566, 3.3719, 6.8665, 3.5559, 5.3699, 3.6006
+          ],
+          "span": {
+            "offset": 855,
+            "length": 8
+          },
+          "confidence": 0.922
+        },
+        {
+          "content": "No.",
+          "boundingBox": [
+            0.2983, 4.5058, 0.4674, 4.5058, 0.4724, 4.6301, 0.3033, 4.6301
+          ],
+          "span": {
+            "offset": 864,
+            "length": 3
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "K/P",
+          "boundingBox": [
+            0.4922, 4.5058, 0.6812, 4.5008, 0.6812, 4.6301, 0.4972, 4.6301
+          ],
+          "span": {
+            "offset": 868,
+            "length": 3
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "(baru)/Polis/Tentera/No.",
+          "boundingBox": [
+            0.711, 4.5008, 1.9093, 4.4859, 1.9093, 4.6251, 0.711, 4.6301
+          ],
+          "span": {
+            "offset": 872,
+            "length": 24
+          },
+          "confidence": 0.97
+        },
+        {
+          "content": "Pasport",
+          "boundingBox": [
+            1.9342, 4.4859, 2.3419, 4.4809, 2.3469, 4.6201, 1.9391, 4.6251
+          ],
+          "span": {
+            "offset": 897,
+            "length": 7
+          },
+          "confidence": 0.015
+        },
+        {
+          "content": ":",
+          "boundingBox": [
+            2.3667, 4.4809, 2.4413, 4.4809, 2.4463, 4.6201, 2.3717, 4.6201
+          ],
+          "span": {
+            "offset": 905,
+            "length": 1
+          },
+          "confidence": 0.922
+        },
+        {
+          "content": "990102102666",
+          "boundingBox": [
+            2.5805, 4.4312, 4.9125, 4.3914, 4.9175, 4.5953, 2.5805, 4.64
+          ],
+          "span": {
+            "offset": 907,
+            "length": 12
+          },
+          "confidence": 0.99
+        },
+        {
+          "content": "Adakah",
+          "boundingBox": [
+            0.3033, 4.8141, 0.6762, 4.8091, 0.6762, 4.9384, 0.3033, 4.9384
+          ],
+          "span": {
+            "offset": 920,
+            "length": 6
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "anda",
+          "boundingBox": [
+            0.7011, 4.8091, 0.9596, 4.8091, 0.9596, 4.9384, 0.7011, 4.9384
+          ],
+          "span": {
+            "offset": 927,
+            "length": 4
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "(pemohon)",
+          "boundingBox": [
+            0.9845, 4.8091, 1.5414, 4.8041, 1.5414, 4.9334, 0.9895, 4.9384
+          ],
+          "span": {
+            "offset": 932,
+            "length": 9
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "mempunyai",
+          "boundingBox": [
+            1.5662, 4.8041, 2.1629, 4.7992, 2.1629, 4.9285, 1.5662, 4.9334
+          ],
+          "span": {
+            "offset": 942,
+            "length": 9
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "hubungan",
+          "boundingBox": [
+            2.1877, 4.7992, 2.6999, 4.7892, 2.6999, 4.9235, 2.1927, 4.9285
+          ],
+          "span": {
+            "offset": 952,
+            "length": 8
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "kekeluargaan",
+          "boundingBox": [
+            2.7247, 4.7892, 3.4109, 4.7793, 3.4109, 4.9136, 2.7247, 4.9235
+          ],
+          "span": {
+            "offset": 961,
+            "length": 12
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "dengan",
+          "boundingBox": [
+            3.4358, 4.7793, 3.8087, 4.7693, 3.8087, 4.9036, 3.4358, 4.9136
+          ],
+          "span": {
+            "offset": 974,
+            "length": 6
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "kakitangan",
+          "boundingBox": [
+            3.8335, 4.7693, 4.3705, 4.7594, 4.3705, 4.8937, 3.8335, 4.9036
+          ],
+          "span": {
+            "offset": 981,
+            "length": 10
+          },
+          "confidence": 0.954
+        },
+        {
+          "content": "Lembaga",
+          "boundingBox": [
+            4.3954, 4.7594, 4.8727, 4.7445, 4.8727, 4.8787, 4.3954, 4.8937
+          ],
+          "span": {
+            "offset": 992,
+            "length": 7
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "Zakat",
+          "boundingBox": [
+            4.8976, 4.7445, 5.176, 4.7395, 5.176, 4.8738, 4.8976, 4.8787
+          ],
+          "span": {
+            "offset": 1000,
+            "length": 5
+          },
+          "confidence": 0.72
+        },
+        {
+          "content": "Selangor",
+          "boundingBox": [
+            5.2009, 4.7395, 5.6484, 4.7246, 5.6484, 4.8589, 5.2009, 4.8738
+          ],
+          "span": {
+            "offset": 1006,
+            "length": 8
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "(MAIS)?",
+          "boundingBox": [
+            5.6732, 4.7246, 6.1058, 4.7097, 6.1058, 4.8439, 5.6732, 4.8589
+          ],
+          "span": {
+            "offset": 1015,
+            "length": 7
+          },
+          "confidence": 0.979
+        },
+        {
+          "content": "Ya",
+          "boundingBox": [
+            0.5967, 5.023, 0.716, 5.0279, 0.711, 5.1374, 0.5917, 5.1324
+          ],
+          "span": {
+            "offset": 1023,
+            "length": 2
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "Tidak",
+          "boundingBox": [
+            1.2082, 5.008, 1.4867, 5.008, 1.4867, 5.1274, 1.2082, 5.1274
+          ],
+          "span": {
+            "offset": 1026,
+            "length": 5
+          },
+          "confidence": 0.998
+        },
+        {
+          "content": "Jika",
+          "boundingBox": [
+            0.363, 5.4159, 0.5569, 5.4159, 0.5569, 5.5452, 0.363, 5.5452
+          ],
+          "span": {
+            "offset": 1032,
+            "length": 4
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "YA,",
+          "boundingBox": [
+            0.5917, 5.4159, 0.7657, 5.4159, 0.7657, 5.5452, 0.5917, 5.5452
+          ],
+          "span": {
+            "offset": 1037,
+            "length": 3
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "sila",
+          "boundingBox": [
+            0.7906, 5.4159, 0.9696, 5.4109, 0.9696, 5.5402, 0.7906, 5.5452
+          ],
+          "span": {
+            "offset": 1041,
+            "length": 4
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "nyatakan",
+          "boundingBox": [
+            0.9944, 5.4109, 1.4568, 5.4059, 1.4568, 5.5352, 0.9944, 5.5402
+          ],
+          "span": {
+            "offset": 1046,
+            "length": 8
+          },
+          "confidence": 0.948
+        },
+        {
+          "content": "di",
+          "boundingBox": [
+            1.4867, 5.4059, 1.5762, 5.4059, 1.5762, 5.5302, 1.4867, 5.5302
+          ],
+          "span": {
+            "offset": 1055,
+            "length": 2
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "bawah",
+          "boundingBox": [
+            1.601, 5.4059, 1.9491, 5.4009, 1.9491, 5.5203, 1.601, 5.5302
+          ],
+          "span": {
+            "offset": 1058,
+            "length": 5
+          },
+          "confidence": 0.999
+        },
+        {
+          "content": ":",
+          "boundingBox": [
+            1.9789, 5.4009, 2.0286, 5.4009, 2.0336, 5.5203, 1.9789, 5.5203
+          ],
+          "span": {
+            "offset": 1064,
+            "length": 1
+          },
+          "confidence": 0.717
+        },
+        {
+          "content": "No.",
+          "boundingBox": [
+            0.363, 5.7341, 0.537, 5.7391, 0.532, 5.8436, 0.363, 5.8386
+          ],
+          "span": {
+            "offset": 1066,
+            "length": 3
+          },
+          "confidence": 0.97
+        },
+        {
+          "content": "Nama",
+          "boundingBox": [
+            1.5762, 5.7142, 1.8795, 5.7093, 1.8795, 5.8237, 1.5762, 5.8237
+          ],
+          "span": {
+            "offset": 1070,
+            "length": 4
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Kakitangan",
+          "boundingBox": [
+            1.9093, 5.7093, 2.5209, 5.7093, 2.5209, 5.8187, 1.9093, 5.8237
+          ],
+          "span": {
+            "offset": 1075,
+            "length": 10
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "Jawatan",
+          "boundingBox": [
+            4.0473, 5.6745, 4.465, 5.6695, 4.465, 5.764, 4.0523, 5.769
+          ],
+          "span": {
+            "offset": 1086,
+            "length": 7
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Pejabat",
+          "boundingBox": [
+            5.6235, 5.6247, 6.0213, 5.6148, 6.0263, 5.7192, 5.6235, 5.7341
+          ],
+          "span": {
+            "offset": 1094,
+            "length": 7
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "Hubungan",
+          "boundingBox": [
+            7.1152, 5.5849, 7.6472, 5.5899, 7.6472, 5.6944, 7.1152, 5.6944
+          ],
+          "span": {
+            "offset": 1102,
+            "length": 8
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "1",
+          "boundingBox": [
+            0.4127, 6.137, 0.4624, 6.132, 0.4773, 6.2265, 0.4276, 6.2364
+          ],
+          "span": {
+            "offset": 1111,
+            "length": 1
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "MUTHU",
+          "boundingBox": [
+            0.6762, 6.0773, 1.3673, 6.0574, 1.3673, 6.2961, 0.6812, 6.2862
+          ],
+          "span": {
+            "offset": 1113,
+            "length": 5
+          },
+          "confidence": 0.968
+        },
+        {
+          "content": "A/L",
+          "boundingBox": [
+            1.4916, 6.0574, 1.8994, 6.0524, 1.8944, 6.3011, 1.4916, 6.3011
+          ],
+          "span": {
+            "offset": 1119,
+            "length": 3
+          },
+          "confidence": 0.966
+        },
+        {
+          "content": "GOUNDAR",
+          "boundingBox": [
+            2.148, 6.0524, 3.0181, 6.0624, 3.0082, 6.3011, 2.143, 6.3011
+          ],
+          "span": {
+            "offset": 1123,
+            "length": 7
+          },
+          "confidence": 0.921
+        },
+        {
+          "content": "GURU",
+          "boundingBox": [
+            3.6993, 6.0226, 4.2562, 6.0126, 4.2611, 6.2364, 3.6993, 6.2464
+          ],
+          "span": {
+            "offset": 1131,
+            "length": 4
+          },
+          "confidence": 0.692
+        },
+        {
+          "content": "SMK",
+          "boundingBox": [
+            5.0865, 5.9729, 5.539, 5.953, 5.5489, 6.1917, 5.1014, 6.2066
+          ],
+          "span": {
+            "offset": 1136,
+            "length": 3
+          },
+          "confidence": 0.966
+        },
+        {
+          "content": "INTAN",
+          "boundingBox": [
+            5.6683, 5.948, 6.424, 5.9032, 6.4191, 6.1618, 5.6732, 6.1867
+          ],
+          "span": {
+            "offset": 1140,
+            "length": 5
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "ABANG",
+          "boundingBox": [
+            6.8218, 5.9281, 7.5825, 5.9032, 7.5975, 6.1668, 6.8367, 6.1917
+          ],
+          "span": {
+            "offset": 1146,
+            "length": 5
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "2.",
+          "boundingBox": [
+            0.3978, 6.5647, 0.4773, 6.5547, 0.4922, 6.6691, 0.4127, 6.6791
+          ],
+          "span": {
+            "offset": 1152,
+            "length": 2
+          },
+          "confidence": 0.965
+        },
+        {
+          "content": "IMAN",
+          "boundingBox": [
+            0.8105, 6.4801, 1.5414, 6.4503, 1.5513, 6.7288, 0.8304, 6.7487
+          ],
+          "span": {
+            "offset": 1155,
+            "length": 4
+          },
+          "confidence": 0.996
+        },
+        {
+          "content": "HAZLIN",
+          "boundingBox": [
+            1.7154, 6.4503, 2.5358, 6.4503, 2.5358, 6.694, 1.7204, 6.7238
+          ],
+          "span": {
+            "offset": 1160,
+            "length": 6
+          },
+          "confidence": 0.923
+        },
+        {
+          "content": "GURU",
+          "boundingBox": [
+            3.58, 6.4204, 4.0274, 6.4204, 4.0225, 6.6691, 3.58, 6.6641
+          ],
+          "span": {
+            "offset": 1167,
+            "length": 4
+          },
+          "confidence": 0.726
+        },
+        {
+          "content": "BESAR",
+          "boundingBox": [
+            4.0772, 6.4204, 4.7534, 6.4304, 4.7385, 6.6791, 4.0722, 6.6741
+          ],
+          "span": {
+            "offset": 1172,
+            "length": 5
+          },
+          "confidence": 0.991
+        },
+        {
+          "content": "SMK",
+          "boundingBox": [
+            5.0766, 6.3807, 5.4594, 6.3757, 5.4644, 6.5945, 5.0766, 6.5945
+          ],
+          "span": {
+            "offset": 1178,
+            "length": 3
+          },
+          "confidence": 0.962
+        },
+        {
+          "content": "INTAN",
+          "boundingBox": [
+            5.6086, 6.3707, 6.3644, 6.3458, 6.3693, 6.5647, 5.6136, 6.5945
+          ],
+          "span": {
+            "offset": 1182,
+            "length": 5
+          },
+          "confidence": 0.997
+        },
+        {
+          "content": "BAPA",
+          "boundingBox": [
+            6.782, 6.3309, 7.3787, 6.3061, 7.3886, 6.5547, 6.792, 6.5796
+          ],
+          "span": {
+            "offset": 1188,
+            "length": 4
+          },
+          "confidence": 0.995
+        },
+        {
+          "content": "3",
+          "boundingBox": [
+            0.3978, 6.9078, 0.4624, 6.9078, 0.4674, 7.0073, 0.3978, 7.0123
+          ],
+          "span": {
+            "offset": 1193,
+            "length": 1
+          },
+          "confidence": 0.982
+        },
+        {
+          "content": "4.",
+          "boundingBox": [
+            0.4027, 7.3305, 0.4823, 7.3305, 0.4823, 7.4201, 0.4027, 7.4201
+          ],
+          "span": {
+            "offset": 1195,
+            "length": 2
+          },
+          "confidence": 0.904
+        },
+        {
+          "content": "5",
+          "boundingBox": [
+            0.3928, 7.7185, 0.4624, 7.7185, 0.4624, 7.8229, 0.3978, 7.8229
+          ],
+          "span": {
+            "offset": 1198,
+            "length": 1
+          },
+          "confidence": 0.982
+        },
+        {
+          "content": "6",
+          "boundingBox": [
+            0.4027, 8.1064, 0.4674, 8.1064, 0.4624, 8.2158, 0.4027, 8.2158
+          ],
+          "span": {
+            "offset": 1200,
+            "length": 1
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "7.",
+          "boundingBox": [
+            0.4127, 8.4943, 0.4922, 8.4943, 0.4972, 8.6037, 0.4177, 8.6087
+          ],
+          "span": {
+            "offset": 1202,
+            "length": 2
+          },
+          "confidence": 0.564
+        },
+        {
+          "content": "8.",
+          "boundingBox": [
+            0.4276, 8.8921, 0.5072, 8.8921, 0.5072, 8.9916, 0.4276, 8.9916
+          ],
+          "span": {
+            "offset": 1205,
+            "length": 2
+          },
+          "confidence": 0.209
+        },
+        {
+          "content": "9",
+          "boundingBox": [
+            0.4475, 9.2801, 0.4972, 9.2801, 0.5022, 9.3696, 0.4525, 9.3696
+          ],
+          "span": {
+            "offset": 1208,
+            "length": 1
+          },
+          "confidence": 0.862
+        },
+        {
+          "content": "10.",
+          "boundingBox": [
+            0.4574, 9.653, 0.5917, 9.658, 0.5867, 9.7475, 0.4525, 9.7426
+          ],
+          "span": {
+            "offset": 1210,
+            "length": 3
+          },
+          "confidence": 0.965
+        },
+        {
+          "content": "Tarih22.03.2020",
+          "boundingBox": [
+            0.4773, 10.7223, 2.6651, 10.7372, 2.68, 10.9113, 0.4773, 10.8615
+          ],
+          "span": {
+            "offset": 1214,
+            "length": 15
+          },
+          "confidence": 0.668
+        },
+        {
+          "content": "Tandatangan",
+          "boundingBox": [
+            4.1169, 10.7472, 4.7434, 10.7372, 4.7484, 10.8615, 4.1219, 10.8615
+          ],
+          "span": {
+            "offset": 1230,
+            "length": 11
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": "Asnaf/Pemohon",
+          "boundingBox": [
+            4.7733, 10.7372, 5.5688, 10.7223, 5.5688, 10.8267, 4.7733, 10.8566
+          ],
+          "span": {
+            "offset": 1242,
+            "length": 13
+          },
+          "confidence": 0.994
+        },
+        {
+          "content": ":",
+          "boundingBox": [
+            5.6036, 10.7223, 5.6434, 10.7223, 5.6434, 10.8267, 5.5986, 10.8267
+          ],
+          "span": {
+            "offset": 1256,
+            "length": 1
+          },
+          "confidence": 0.963
+        },
+        {
+          "content": "www.zakatselangor.com.my",
+          "boundingBox": [
+            6.255, 11.1152, 7.9107, 11.0853, 7.9107, 11.2047, 6.2599, 11.2296
+          ],
+          "span": {
+            "offset": 1258,
+            "length": 24
+          },
+          "confidence": 0.993
+        }
+      ],
+      "selectionMarks": [
+        {
+          "state": "selected",
+          "boundingBox": [
+            0.3322, 4.9705, 0.5634, 4.9705, 0.5634, 5.2003, 0.3322, 5.2003
+          ],
+          "span": {
+            "offset": 1283,
+            "length": 10
+          },
+          "confidence": 1
+        },
+        {
+          "state": "unselected",
+          "boundingBox": [
+            0.9359, 4.964, 1.1671, 4.964, 1.1671, 5.1879, 0.9359, 5.1879
+          ],
+          "span": {
+            "offset": 1294,
+            "length": 12
+          },
+          "confidence": 1
+        }
+      ],
+      "lines": [
+        {
+          "content": "VERSI: 01/2019",
+          "boundingBox": [
+            7.1251, 0.5073, 7.9008, 0.5122, 7.9008, 0.6217, 7.1251, 0.6167
+          ],
+          "spans": [
+            {
+              "offset": 0,
+              "length": 14
+            }
+          ]
+        },
+        {
+          "content": "LEMBAGA",
+          "boundingBox": [
+            3.9578, 0.8305, 4.4004, 0.8305, 4.4004, 0.92, 3.9578, 0.92
+          ],
+          "spans": [
+            {
+              "offset": 15,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "content": "ZAKAT SELANGOR",
+          "boundingBox": [
+            3.9081, 0.9101, 5.2755, 0.8952, 5.2755, 1.0295, 3.9081, 1.0394
+          ],
+          "spans": [
+            {
+              "offset": 23,
+              "length": 14
+            }
+          ]
+        },
+        {
+          "content": "MAJLIS AGAMLA ISLAM SELANGOR",
+          "boundingBox": [
+            4.2611, 1.0444, 5.2804, 1.0344, 5.2804, 1.119, 4.2611, 1.1339
+          ],
+          "spans": [
+            {
+              "offset": 38,
+              "length": 28
+            }
+          ]
+        },
+        {
+          "content": "AKUAN KONFLIK KEPENTINGAN",
+          "boundingBox": [
+            2.3717, 1.5268, 6.1307, 1.4969, 6.1356, 1.6959, 2.3717, 1.7257
+          ],
+          "spans": [
+            {
+              "offset": 67,
+              "length": 25
+            }
+          ]
+        },
+        {
+          "content": "LEMBAGA ZAKAT SELANGOR (MAIS)",
+          "boundingBox": [
+            3.2518, 1.7804, 5.2655, 1.7655, 5.2655, 1.8749, 3.2518, 1.8948
+          ],
+          "spans": [
+            {
+              "offset": 93,
+              "length": 29
+            }
+          ]
+        },
+        {
+          "content": "Bangunan Zakat Selangor, 3-0-1, Presint ALAMi, Pusat Perniagaan Worldwide 2,",
+          "boundingBox": [
+            2.2424, 1.9197, 6.245, 1.8749, 6.25, 1.9992, 2.2424, 2.044
+          ],
+          "spans": [
+            {
+              "offset": 123,
+              "length": 76
+            }
+          ]
+        },
+        {
+          "content": "Persiaran Akuatik, Seksyen 13, 40100 Shah Alam, Selangor Darul Ehsan.",
+          "boundingBox": [
+            2.4264, 2.049, 6.071, 2.0092, 6.071, 2.1385, 2.4264, 2.1683
+          ],
+          "spans": [
+            {
+              "offset": 200,
+              "length": 69
+            }
+          ]
+        },
+        {
+          "content": "Tel: 03-8314 2222 . Faks: 03-8314 2233/2244 . http://www.zakatselangor.com.my . Talian Zakat Selangor: 1 300 88 4343",
+          "boundingBox": [
+            1.1983, 2.1733, 7.2643, 2.1136, 7.2643, 2.2578, 1.1983, 2.3026
+          ],
+          "spans": [
+            {
+              "offset": 270,
+              "length": 116
+            }
+          ]
+        },
+        {
+          "content": "PENTING : Sebelum melengkapkan maklumat anda, sila rujuk Nolis Perlindungan Data Peribadi kami (\"Notis\"). Dengan memberikan data peribadi",
+          "boundingBox": [
+            0.5121, 2.5264, 7.9306, 2.4468, 7.9306, 2.596, 0.5121, 2.6607
+          ],
+          "spans": [
+            {
+              "offset": 387,
+              "length": 137
+            }
+          ]
+        },
+        {
+          "content": "serta menandatangani borang ini. anda menyatakan kebenaran dan persetujuan anda kepada kami terhadap terma-terma yang terkandung di dalam",
+          "boundingBox": [
+            0.5121, 2.6657, 7.9256, 2.5811, 7.9256, 2.7253, 0.5171, 2.795
+          ],
+          "spans": [
+            {
+              "offset": 525,
+              "length": 137
+            }
+          ]
+        },
+        {
+          "content": "Notis tersebut. Notis tersebut boleh didapati di laman web kami di www.zakatselangor.com.my atau di semua cawangan kami di seluruh Selangor.",
+          "boundingBox": [
+            0.5121, 2.795, 7.8858, 2.7104, 7.8908, 2.8596, 0.5121, 2.9193
+          ],
+          "spans": [
+            {
+              "offset": 663,
+              "length": 140
+            }
+          ]
+        },
+        {
+          "content": "PENGAKUAN PEMOHON",
+          "boundingBox": [
+            0.4525, 3.163, 1.9839, 3.158, 1.9839, 3.2873, 0.4525, 3.2923
+          ],
+          "spans": [
+            {
+              "offset": 804,
+              "length": 17
+            }
+          ]
+        },
+        {
+          "content": "Nama Pemohon",
+          "boundingBox": [
+            0.3083, 3.4713, 1.1486, 3.4614, 1.1486, 3.5708, 0.3083, 3.5807
+          ],
+          "spans": [
+            {
+              "offset": 822,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "content": "KUMUTHA GOUNDAR A/L RAMADASS",
+          "boundingBox": [
+            1.3574, 3.4465, 6.8815, 3.3669, 6.8815, 3.5807, 1.3574, 3.6305
+          ],
+          "spans": [
+            {
+              "offset": 835,
+              "length": 28
+            }
+          ]
+        },
+        {
+          "content": "No. K/P (baru)/Polis/Tentera/No. Pasport :",
+          "boundingBox": [
+            0.2934, 4.4958, 2.4562, 4.4759, 2.4562, 4.6152, 0.2934, 4.6301
+          ],
+          "spans": [
+            {
+              "offset": 864,
+              "length": 42
+            }
+          ]
+        },
+        {
+          "content": "990102102666",
+          "boundingBox": [
+            2.496, 4.4312, 4.9175, 4.3914, 4.9224, 4.5903, 2.496, 4.6351
+          ],
+          "spans": [
+            {
+              "offset": 907,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "content": "Adakah anda (pemohon) mempunyai hubungan kekeluargaan dengan kakitangan Lembaga Zakat Selangor (MAIS)?",
+          "boundingBox": [
+            0.2983, 4.8091, 6.1058, 4.7097, 6.1058, 4.8638, 0.2983, 4.9384
+          ],
+          "spans": [
+            {
+              "offset": 920,
+              "length": 102
+            }
+          ]
+        },
+        {
+          "content": "Ya",
+          "boundingBox": [
+            0.5768, 5.023, 0.721, 5.0279, 0.721, 5.1374, 0.5768, 5.1274
+          ],
+          "spans": [
+            {
+              "offset": 1023,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "content": "Tidak",
+          "boundingBox": [
+            1.1983, 5.013, 1.4916, 5.008, 1.4916, 5.1274, 1.2033, 5.1224
+          ],
+          "spans": [
+            {
+              "offset": 1026,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "content": "Jika YA, sila nyatakan di bawah :",
+          "boundingBox": [
+            0.358, 5.4159, 2.0286, 5.4009, 2.0336, 5.5203, 0.358, 5.5452
+          ],
+          "spans": [
+            {
+              "offset": 1032,
+              "length": 33
+            }
+          ]
+        },
+        {
+          "content": "No.",
+          "boundingBox": [
+            0.363, 5.7341, 0.542, 5.7441, 0.542, 5.8386, 0.3679, 5.8386
+          ],
+          "spans": [
+            {
+              "offset": 1066,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "content": "Nama Kakitangan",
+          "boundingBox": [
+            1.5712, 5.7093, 2.5408, 5.7043, 2.5408, 5.8137, 1.5712, 5.8187
+          ],
+          "spans": [
+            {
+              "offset": 1070,
+              "length": 15
+            }
+          ]
+        },
+        {
+          "content": "Jawatan",
+          "boundingBox": [
+            4.0424, 5.6695, 4.4849, 5.6645, 4.4899, 5.759, 4.0424, 5.764
+          ],
+          "spans": [
+            {
+              "offset": 1086,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "content": "Pejabat",
+          "boundingBox": [
+            5.6235, 5.6247, 6.0263, 5.6148, 6.0263, 5.7242, 5.6235, 5.7341
+          ],
+          "spans": [
+            {
+              "offset": 1094,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "content": "Hubungan",
+          "boundingBox": [
+            7.1052, 5.5849, 7.672, 5.5849, 7.6671, 5.6944, 7.1052, 5.6944
+          ],
+          "spans": [
+            {
+              "offset": 1102,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "content": "1",
+          "boundingBox": [
+            0.4077, 6.1419, 0.4674, 6.132, 0.4724, 6.2315, 0.4177, 6.2364
+          ],
+          "spans": [
+            {
+              "offset": 1111,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "content": "MUTHU A/L GOUNDAR",
+          "boundingBox": [
+            0.6663, 6.0524, 3.033, 6.0475, 3.033, 6.2961, 0.6663, 6.3011
+          ],
+          "spans": [
+            {
+              "offset": 1113,
+              "length": 17
+            }
+          ]
+        },
+        {
+          "content": "GURU",
+          "boundingBox": [
+            3.6645, 6.0226, 4.2711, 6.0126, 4.2711, 6.2364, 3.6695, 6.2464
+          ],
+          "spans": [
+            {
+              "offset": 1131,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "content": "SMK INTAN",
+          "boundingBox": [
+            5.0865, 5.9629, 6.4191, 5.9032, 6.424, 6.1519, 5.0965, 6.2066
+          ],
+          "spans": [
+            {
+              "offset": 1136,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "content": "ABANG",
+          "boundingBox": [
+            6.777, 5.9231, 7.6223, 5.9032, 7.6323, 6.1668, 6.787, 6.1867
+          ],
+          "spans": [
+            {
+              "offset": 1146,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "content": "2.",
+          "boundingBox": [
+            0.3878, 6.5647, 0.4873, 6.5547, 0.4873, 6.6691, 0.3928, 6.6791
+          ],
+          "spans": [
+            {
+              "offset": 1152,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "content": "IMAN HAZLIN",
+          "boundingBox": [
+            0.7657, 6.4702, 2.5607, 6.4453, 2.5656, 6.6989, 0.7757, 6.7437
+          ],
+          "spans": [
+            {
+              "offset": 1155,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "content": "GURU BESAR",
+          "boundingBox": [
+            3.575, 6.4155, 4.7534, 6.4254, 4.7534, 6.6741, 3.575, 6.6592
+          ],
+          "spans": [
+            {
+              "offset": 1167,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "content": "SMK INTAN",
+          "boundingBox": [
+            5.0716, 6.3757, 6.3842, 6.3409, 6.3942, 6.5696, 5.0766, 6.5945
+          ],
+          "spans": [
+            {
+              "offset": 1178,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "content": "BAPA",
+          "boundingBox": [
+            6.782, 6.3309, 7.3837, 6.3061, 7.3886, 6.5547, 6.7969, 6.5796
+          ],
+          "spans": [
+            {
+              "offset": 1188,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "content": "3",
+          "boundingBox": [
+            0.3829, 6.9078, 0.4724, 6.9078, 0.4724, 7.0073, 0.3928, 7.0123
+          ],
+          "spans": [
+            {
+              "offset": 1193,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "content": "4.",
+          "boundingBox": [
+            0.3978, 7.3305, 0.4873, 7.3305, 0.4773, 7.4201, 0.3928, 7.4201
+          ],
+          "spans": [
+            {
+              "offset": 1195,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "content": "5",
+          "boundingBox": [
+            0.3878, 7.7185, 0.4773, 7.7185, 0.4773, 7.8179, 0.3928, 7.8229
+          ],
+          "spans": [
+            {
+              "offset": 1198,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "content": "6",
+          "boundingBox": [
+            0.3928, 8.1064, 0.4773, 8.1113, 0.4724, 8.2158, 0.3928, 8.2158
+          ],
+          "spans": [
+            {
+              "offset": 1200,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "content": "7.",
+          "boundingBox": [
+            0.3978, 8.4943, 0.4972, 8.4943, 0.5022, 8.6037, 0.4027, 8.6087
+          ],
+          "spans": [
+            {
+              "offset": 1202,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "content": "8.",
+          "boundingBox": [
+            0.4226, 8.8921, 0.5121, 8.8921, 0.5121, 8.9916, 0.4226, 8.9916
+          ],
+          "spans": [
+            {
+              "offset": 1205,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "content": "9",
+          "boundingBox": [
+            0.4425, 9.2801, 0.527, 9.2801, 0.527, 9.3646, 0.4475, 9.3696
+          ],
+          "spans": [
+            {
+              "offset": 1208,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "content": "10.",
+          "boundingBox": [
+            0.4475, 9.653, 0.5917, 9.658, 0.5917, 9.7475, 0.4425, 9.7426
+          ],
+          "spans": [
+            {
+              "offset": 1210,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "content": "Tarih22.03.2020",
+          "boundingBox": [
+            0.4773, 10.7173, 2.7098, 10.7372, 2.7098, 10.9262, 0.4724, 10.9013
+          ],
+          "spans": [
+            {
+              "offset": 1214,
+              "length": 15
+            }
+          ]
+        },
+        {
+          "content": "Tandatangan Asnaf/Pemohon :",
+          "boundingBox": [
+            4.112, 10.7472, 5.6434, 10.7223, 5.6434, 10.8367, 4.112, 10.8665
+          ],
+          "spans": [
+            {
+              "offset": 1230,
+              "length": 27
+            }
+          ]
+        },
+        {
+          "content": "www.zakatselangor.com.my",
+          "boundingBox": [
+            6.25, 11.1102, 7.9256, 11.0804, 7.9256, 11.1997, 6.255, 11.2296
+          ],
+          "spans": [
+            {
+              "offset": 1258,
+              "length": 24
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "rowCount": 11,
+      "columnCount": 5,
+      "cells": [
+        {
+          "kind": "columnHeader",
+          "rowIndex": 0,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "No.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.2882, 5.5946, 0.5957, 5.5867, 0.6038, 5.9727, 0.2963, 5.9806
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1066,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "kind": "columnHeader",
+          "rowIndex": 0,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "Nama Kakitangan",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.5957, 5.5867, 3.4935, 5.5394, 3.4935, 5.9175, 0.6038, 5.9727
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1070,
+              "length": 15
+            }
+          ]
+        },
+        {
+          "kind": "columnHeader",
+          "rowIndex": 0,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "Jawatan",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4935, 5.5394, 5.0314, 5.5079, 5.0314, 5.8782, 3.4935, 5.9175
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1086,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "kind": "columnHeader",
+          "rowIndex": 0,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "Pejabat",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 5.5079, 6.6098, 5.4686, 6.6098, 5.8388, 5.0314, 5.8782
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1094,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "kind": "columnHeader",
+          "rowIndex": 0,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "Hubungan",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 5.4686, 8.1558, 5.4449, 8.1558, 5.8151, 6.6098, 5.8388
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1102,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "1",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.2963, 5.9806, 0.6038, 5.9727, 0.6038, 6.3744, 0.3043, 6.3823
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1111,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "MUTHU A/L GOUNDAR",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6038, 5.9727, 3.4935, 5.9175, 3.4854, 6.3114, 0.6038, 6.3744
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1113,
+              "length": 17
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "GURU",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4935, 5.9175, 5.0314, 5.8782, 5.0314, 6.272, 3.4854, 6.3114
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1131,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "SMK INTAN",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 5.8782, 6.6098, 5.8388, 6.6098, 6.2326, 5.0314, 6.272
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1136,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "ABANG",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 5.8388, 8.1558, 5.8151, 8.1558, 6.209, 6.6098, 6.2326
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1146,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "2.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3043, 6.3823, 0.6038, 6.3744, 0.6119, 6.7683, 0.3043, 6.7761
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1152,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "IMAN HAZLIN",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6038, 6.3744, 3.4854, 6.3114, 3.4854, 6.6974, 0.6119, 6.7683
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1155,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "GURU BESAR",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4854, 6.3114, 5.0314, 6.272, 5.0314, 6.658, 3.4854, 6.6974
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1167,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "SMK INTAN",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 6.272, 6.6098, 6.2326, 6.6098, 6.6186, 5.0314, 6.658
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1178,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "BAPA",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 6.2326, 8.1558, 6.209, 8.1558, 6.595, 6.6098, 6.6186
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1188,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 3,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "3",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3043, 6.7761, 0.6119, 6.7683, 0.6119, 7.1621, 0.3124, 7.1779
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1193,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 3,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6119, 6.7683, 3.4854, 6.6974, 3.4773, 7.0833, 0.6119, 7.1621
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 3,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4854, 6.6974, 5.0314, 6.658, 5.0314, 7.044, 3.4773, 7.0833
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 3,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 6.658, 6.6098, 6.6186, 6.6098, 7.0125, 5.0314, 7.044
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 3,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 6.6186, 8.1558, 6.595, 8.1558, 6.9888, 6.6098, 7.0125
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 4,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "4.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3124, 7.1779, 0.6119, 7.1621, 0.62, 7.556, 0.3205, 7.5638
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1195,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 4,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6119, 7.1621, 3.4773, 7.0833, 3.4773, 7.4693, 0.62, 7.556
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 4,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4773, 7.0833, 5.0314, 7.044, 5.0314, 7.4378, 3.4773, 7.4693
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 4,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 7.044, 6.6098, 7.0125, 6.6098, 7.3984, 5.0314, 7.4378
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 4,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 7.0125, 8.1558, 6.9888, 8.1558, 7.3748, 6.6098, 7.3984
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 5,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "5",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3205, 7.5638, 0.62, 7.556, 0.62, 7.9498, 0.3205, 7.9577
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1198,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 5,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.62, 7.556, 3.4773, 7.4693, 3.4692, 7.8632, 0.62, 7.9498
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 5,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4773, 7.4693, 5.0314, 7.4378, 5.0314, 7.8238, 3.4692, 7.8632
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 5,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 7.4378, 6.6098, 7.3984, 6.6098, 7.7923, 5.0314, 7.8238
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 5,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 7.3984, 8.1558, 7.3748, 8.1558, 7.7608, 6.6098, 7.7923
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 6,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "6",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3205, 7.9577, 0.62, 7.9498, 0.6281, 8.3437, 0.3286, 8.3515
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1200,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 6,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.62, 7.9498, 3.4692, 7.8632, 3.4692, 8.257, 0.6281, 8.3437
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 6,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4692, 7.8632, 5.0314, 7.8238, 5.0233, 8.2176, 3.4692, 8.257
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 6,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0314, 7.8238, 6.6098, 7.7923, 6.6098, 8.1861, 5.0233, 8.2176
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 6,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 7.7923, 8.1558, 7.7608, 8.1639, 8.1625, 6.6098, 8.1861
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 7,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "7.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3286, 8.3515, 0.6281, 8.3437, 0.6281, 8.7375, 0.3367, 8.7375
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1202,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 7,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6281, 8.3437, 3.4692, 8.257, 3.4611, 8.6587, 0.6281, 8.7375
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 7,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4692, 8.257, 5.0233, 8.2176, 5.0233, 8.6194, 3.4611, 8.6587
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 7,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0233, 8.2176, 6.6098, 8.1861, 6.6098, 8.5879, 5.0233, 8.6194
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 7,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 8.1861, 8.1639, 8.1625, 8.1639, 8.5563, 6.6098, 8.5879
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 8,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "8.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3367, 8.7375, 0.6281, 8.7375, 0.6281, 9.1235, 0.3367, 9.1235
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1205,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 8,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6281, 8.7375, 3.4611, 8.6587, 3.4611, 9.0605, 0.6281, 9.1235
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 8,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4611, 8.6587, 5.0233, 8.6194, 5.0233, 9.0211, 3.4611, 9.0605
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 8,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0233, 8.6194, 6.6098, 8.5879, 6.6098, 8.9896, 5.0233, 9.0211
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 8,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 8.5879, 8.1639, 8.5563, 8.1639, 8.9502, 6.6098, 8.9896
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 9,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "9",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3367, 9.1235, 0.6281, 9.1235, 0.6362, 9.5016, 0.3448, 9.5095
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1208,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 9,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6281, 9.1235, 3.4611, 9.0605, 3.453, 9.4543, 0.6362, 9.5016
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 9,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.4611, 9.0605, 5.0233, 9.0211, 5.0233, 9.4149, 3.453, 9.4543
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 9,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0233, 9.0211, 6.6098, 8.9896, 6.6098, 9.3756, 5.0233, 9.4149
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 9,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 8.9896, 8.1639, 8.9502, 8.1639, 9.3362, 6.6098, 9.3756
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 10,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "10.",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3448, 9.5095, 0.6362, 9.5016, 0.6362, 9.8718, 0.3529, 9.8718
+              ]
+            }
+          ],
+          "spans": [
+            {
+              "offset": 1210,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "kind": "content",
+          "rowIndex": 10,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.6362, 9.5016, 3.453, 9.4543, 3.453, 9.8403, 0.6362, 9.8718
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 10,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.453, 9.4543, 5.0233, 9.4149, 5.0233, 9.8088, 3.453, 9.8403
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 10,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.0233, 9.4149, 6.6098, 9.3756, 6.6098, 9.7694, 5.0233, 9.8088
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 10,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.6098, 9.3756, 8.1639, 9.3362, 8.1639, 9.73, 6.6098, 9.7694
+              ]
+            }
+          ],
+          "spans": []
+        }
+      ],
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "boundingBox": [
+            0.2697, 5.5582, 8.1128, 5.4309, 8.1652, 9.7786, 0.3203, 9.9059
+          ]
+        }
+      ],
+      "spans": [
+        {
+          "offset": 1066,
+          "length": 147
+        }
+      ]
+    },
+    {
+      "rowCount": 3,
+      "columnCount": 39,
+      "cells": [
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3419, 3.6961, 0.5406, 3.6884, 0.5406, 3.9042, 0.3339, 3.9119
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.5406, 3.6884, 0.7393, 3.6884, 0.7393, 3.9042, 0.5406, 3.9042
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.7393, 3.6884, 0.938, 3.6884, 0.938, 3.9042, 0.7393, 3.9042
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.938, 3.6884, 1.1288, 3.6807, 1.1368, 3.8965, 0.938, 3.9042
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.1288, 3.6807, 1.3434, 3.6807, 1.3434, 3.8965, 1.1368, 3.8965
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 5,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.3434, 3.6807, 1.5421, 3.6807, 1.5421, 3.8965, 1.3434, 3.8965
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 6,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.5421, 3.6807, 1.7488, 3.673, 1.7488, 3.8888, 1.5421, 3.8965
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 7,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.7488, 3.673, 1.9475, 3.673, 1.9475, 3.8888, 1.7488, 3.8888
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 8,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.9475, 3.673, 2.1542, 3.673, 2.1542, 3.8888, 1.9475, 3.8888
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 9,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.1542, 3.673, 2.3529, 3.673, 2.3529, 3.8811, 2.1542, 3.8888
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 10,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.3529, 3.673, 2.5516, 3.673, 2.5516, 3.8811, 2.3529, 3.8811
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 11,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.5516, 3.673, 2.7583, 3.673, 2.7583, 3.8811, 2.5516, 3.8811
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 12,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.7583, 3.673, 2.957, 3.6653, 2.957, 3.8734, 2.7583, 3.8811
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 13,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.957, 3.6653, 3.1557, 3.6653, 3.1557, 3.8734, 2.957, 3.8734
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 14,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.1557, 3.6653, 3.3544, 3.6653, 3.3544, 3.8657, 3.1557, 3.8734
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 15,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.3544, 3.6653, 3.5531, 3.6653, 3.5531, 3.8657, 3.3544, 3.8657
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 16,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.5531, 3.6653, 3.7439, 3.6576, 3.7439, 3.8657, 3.5531, 3.8657
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 17,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.7439, 3.6576, 3.9267, 3.6576, 3.9347, 3.858, 3.7439, 3.8657
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 18,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.9267, 3.6576, 4.1493, 3.6576, 4.1413, 3.858, 3.9347, 3.858
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 19,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.1493, 3.6576, 4.348, 3.6499, 4.3401, 3.8503, 4.1413, 3.858
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 20,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.348, 3.6499, 4.5388, 3.6421, 4.5388, 3.8503, 4.3401, 3.8503
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 21,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.5388, 3.6421, 4.7295, 3.6421, 4.7295, 3.8426, 4.5388, 3.8503
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 22,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.7295, 3.6421, 4.9283, 3.6344, 4.9283, 3.8426, 4.7295, 3.8426
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 23,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.9283, 3.6344, 5.127, 3.6344, 5.127, 3.8349, 4.9283, 3.8426
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 24,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.127, 3.6344, 5.3257, 3.6267, 5.3257, 3.8349, 5.127, 3.8349
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 25,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.3257, 3.6267, 5.7072, 3.619, 5.7152, 3.8272, 5.3257, 3.8349
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 27,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.7072, 3.619, 5.9139, 3.6113, 5.9139, 3.8194, 5.7152, 3.8272
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 28,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.9139, 3.6113, 6.1126, 3.6036, 6.1126, 3.8194, 5.9139, 3.8194
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 29,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.1126, 3.6036, 6.3113, 3.6036, 6.3113, 3.8117, 6.1126, 3.8194
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 30,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.3113, 3.6036, 6.51, 3.5959, 6.51, 3.8117, 6.3113, 3.8117
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 31,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.51, 3.5959, 6.7088, 3.5959, 6.7088, 3.8117, 6.51, 3.8117
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 32,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.7088, 3.5959, 6.9075, 3.5882, 6.9075, 3.804, 6.7088, 3.8117
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 33,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.9075, 3.5882, 7.0903, 3.5882, 7.0982, 3.804, 6.9075, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 34,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.0903, 3.5882, 7.2811, 3.5882, 7.289, 3.804, 7.0982, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 35,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.2811, 3.5882, 7.4877, 3.5805, 7.4877, 3.804, 7.289, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 36,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.4877, 3.5805, 7.6706, 3.5805, 7.6785, 3.804, 7.4877, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 37,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.6706, 3.5805, 7.8613, 3.5805, 7.8693, 3.804, 7.6785, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 0,
+          "columnIndex": 38,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.8613, 3.5805, 8.0441, 3.5805, 8.0521, 3.804, 7.8693, 3.804
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3339, 3.9119, 0.5406, 3.9042, 0.5406, 4.1355, 0.3339, 4.1432
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.5406, 3.9042, 0.7393, 3.9042, 0.7393, 4.1355, 0.5406, 4.1355
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.7393, 3.9042, 0.938, 3.9042, 0.938, 4.1278, 0.7393, 4.1355
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.938, 3.9042, 1.1368, 3.8965, 1.1368, 4.1278, 0.938, 4.1278
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.1368, 3.8965, 1.3434, 3.8965, 1.3434, 4.1201, 1.1368, 4.1278
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 5,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.3434, 3.8965, 1.5421, 3.8965, 1.5421, 4.1201, 1.3434, 4.1201
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 6,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.5421, 3.8965, 1.7488, 3.8888, 1.7409, 4.1124, 1.5421, 4.1201
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 7,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.7488, 3.8888, 1.9475, 3.8888, 1.9475, 4.1124, 1.7409, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 8,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.9475, 3.8888, 2.1542, 3.8888, 2.1542, 4.1124, 1.9475, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 9,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.1542, 3.8888, 2.3529, 3.8811, 2.3529, 4.1124, 2.1542, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 10,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.3529, 3.8811, 2.5516, 3.8811, 2.5516, 4.1124, 2.3529, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 11,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.5516, 3.8811, 2.7583, 3.8811, 2.7583, 4.1124, 2.5516, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 12,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.7583, 3.8811, 2.957, 3.8734, 2.957, 4.1047, 2.7583, 4.1124
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 13,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.957, 3.8734, 3.1557, 3.8734, 3.1557, 4.1047, 2.957, 4.1047
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 14,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.1557, 3.8734, 3.3544, 3.8657, 3.3544, 4.1047, 3.1557, 4.1047
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 15,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.3544, 3.8657, 3.7439, 3.8657, 3.7439, 4.097, 3.3544, 4.1047
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 17,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.7439, 3.8657, 3.9347, 3.858, 3.9347, 4.097, 3.7439, 4.097
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 18,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.9347, 3.858, 4.1413, 3.858, 4.1413, 4.097, 3.9347, 4.097
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 19,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.1413, 3.858, 4.3401, 3.8503, 4.3401, 4.0892, 4.1413, 4.097
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 20,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.3401, 3.8503, 4.5388, 3.8503, 4.5388, 4.0815, 4.3401, 4.0892
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 21,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.5388, 3.8503, 4.7295, 3.8426, 4.7295, 4.0815, 4.5388, 4.0815
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 22,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.7295, 3.8426, 5.127, 3.8349, 5.127, 4.0738, 4.7295, 4.0815
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 24,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.127, 3.8349, 5.3257, 3.8349, 5.3257, 4.0661, 5.127, 4.0738
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 25,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.3257, 3.8349, 5.7152, 3.8272, 5.7152, 4.0584, 5.3257, 4.0661
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 27,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.7152, 3.8272, 5.9139, 3.8194, 5.9139, 4.0507, 5.7152, 4.0584
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 28,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.9139, 3.8194, 6.3113, 3.8117, 6.3113, 4.043, 5.9139, 4.0507
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 30,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.3113, 3.8117, 6.51, 3.8117, 6.51, 4.043, 6.3113, 4.043
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 31,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.51, 3.8117, 6.7088, 3.8117, 6.7088, 4.043, 6.51, 4.043
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 32,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.7088, 3.8117, 6.9075, 3.804, 6.9075, 4.0353, 6.7088, 4.043
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 33,
+          "rowSpan": 1,
+          "columnSpan": 3,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.9075, 3.804, 7.4877, 3.804, 7.4877, 4.0353, 6.9075, 4.0353
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 36,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.4877, 3.804, 7.6785, 3.804, 7.6785, 4.0353, 7.4877, 4.0353
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 37,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.6785, 3.804, 7.8693, 3.804, 7.8693, 4.0353, 7.6785, 4.0353
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 1,
+          "columnIndex": 38,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.8693, 3.804, 8.0521, 3.804, 8.0521, 4.0276, 7.8693, 4.0353
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 0,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.3339, 4.1432, 0.5406, 4.1355, 0.5406, 4.3667, 0.3339, 4.3745
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 1,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.5406, 4.1355, 0.7393, 4.1355, 0.7393, 4.3667, 0.5406, 4.3667
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 2,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.7393, 4.1355, 0.938, 4.1278, 0.938, 4.3667, 0.7393, 4.3667
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 3,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.938, 4.1278, 1.1368, 4.1278, 1.1368, 4.359, 0.938, 4.3667
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 4,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.1368, 4.1278, 1.3434, 4.1201, 1.3355, 4.359, 1.1368, 4.359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 5,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.3434, 4.1201, 1.5421, 4.1201, 1.5421, 4.359, 1.3355, 4.359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 6,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.5421, 4.1201, 1.7409, 4.1124, 1.7409, 4.3513, 1.5421, 4.359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 7,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.7409, 4.1124, 1.9475, 4.1124, 1.9475, 4.3513, 1.7409, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 8,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                1.9475, 4.1124, 2.1542, 4.1124, 2.1542, 4.3513, 1.9475, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 9,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.1542, 4.1124, 2.3529, 4.1124, 2.3529, 4.3513, 2.1542, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 10,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.3529, 4.1124, 2.5516, 4.1124, 2.5437, 4.3513, 2.3529, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 11,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.5516, 4.1124, 2.7583, 4.1124, 2.7583, 4.3513, 2.5437, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 12,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.7583, 4.1124, 2.957, 4.1047, 2.957, 4.3436, 2.7583, 4.3513
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 13,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                2.957, 4.1047, 3.1557, 4.1047, 3.1478, 4.3436, 2.957, 4.3436
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 14,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.1557, 4.1047, 3.3544, 4.1047, 3.3465, 4.3436, 3.1478, 4.3436
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 15,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.3544, 4.1047, 3.5531, 4.1047, 3.5531, 4.3436, 3.3465, 4.3436
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 16,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.5531, 4.1047, 3.7439, 4.097, 3.7439, 4.3359, 3.5531, 4.3436
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 17,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.7439, 4.097, 3.9347, 4.097, 3.9347, 4.3359, 3.7439, 4.3359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 18,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                3.9347, 4.097, 4.1413, 4.097, 4.1413, 4.3359, 3.9347, 4.3359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 19,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.1413, 4.097, 4.3401, 4.0892, 4.3401, 4.3282, 4.1413, 4.3359
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 20,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.3401, 4.0892, 4.5388, 4.0815, 4.5388, 4.3205, 4.3401, 4.3282
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 21,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.5388, 4.0815, 4.7295, 4.0815, 4.7295, 4.3205, 4.5388, 4.3205
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 22,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.7295, 4.0815, 4.9283, 4.0738, 4.9283, 4.3128, 4.7295, 4.3205
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 23,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                4.9283, 4.0738, 5.127, 4.0738, 5.127, 4.3128, 4.9283, 4.3128
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 24,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.127, 4.0738, 5.3257, 4.0661, 5.3257, 4.3051, 5.127, 4.3128
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 25,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.3257, 4.0661, 5.7152, 4.0584, 5.7152, 4.2974, 5.3257, 4.3051
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 27,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.7152, 4.0584, 5.9139, 4.0507, 5.9139, 4.2897, 5.7152, 4.2974
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 28,
+          "rowSpan": 1,
+          "columnSpan": 2,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                5.9139, 4.0507, 6.3113, 4.043, 6.3113, 4.282, 5.9139, 4.2897
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 30,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.3113, 4.043, 6.51, 4.043, 6.51, 4.2742, 6.3113, 4.282
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 31,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.51, 4.043, 6.7088, 4.043, 6.7088, 4.2742, 6.51, 4.2742
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 32,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.7088, 4.043, 6.9075, 4.0353, 6.9075, 4.2665, 6.7088, 4.2742
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 33,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                6.9075, 4.0353, 7.0982, 4.0353, 7.0982, 4.2665, 6.9075, 4.2665
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 34,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.0982, 4.0353, 7.289, 4.0353, 7.289, 4.2588, 7.0982, 4.2665
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 35,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.289, 4.0353, 7.4877, 4.0353, 7.4877, 4.2588, 7.289, 4.2588
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 36,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.4877, 4.0353, 7.6785, 4.0353, 7.6864, 4.2511, 7.4877, 4.2588
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 37,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.6785, 4.0353, 7.8693, 4.0353, 7.8772, 4.2511, 7.6864, 4.2511
+              ]
+            }
+          ],
+          "spans": []
+        },
+        {
+          "kind": "content",
+          "rowIndex": 2,
+          "columnIndex": 38,
+          "rowSpan": 1,
+          "columnSpan": 1,
+          "content": "",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                7.8693, 4.0353, 8.0521, 4.0276, 8.0521, 4.2511, 7.8772, 4.2511
+              ]
+            }
+          ],
+          "spans": []
+        }
+      ],
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "boundingBox": [
+            0.3143, 3.5795, 8.0564, 3.5164, 8.0695, 4.3672, 0.3274, 4.433
+          ]
+        }
+      ],
+      "spans": []
+    }
+  ],
+  "keyValuePairs": [],
+  "entities": [],
+  "languages": [],
+  "styles": [
+    {
+      "isHandwritten": true,
+      "spans": [
+        {
+          "offset": 835,
+          "length": 28
+        },
+        {
+          "offset": 907,
+          "length": 12
+        },
+        {
+          "offset": 1113,
+          "length": 38
+        },
+        {
+          "offset": 1155,
+          "length": 37
+        }
+      ],
+      "confidence": 1
+    },
+    {
+      "isHandwritten": true,
+      "spans": [
+        {
+          "offset": 1214,
+          "length": 15
+        }
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "documents": [
+    {
+      "docType": "zakat-second:zakat-second",
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "boundingBox": [0, 0, 8.3333, 0, 8.3333, 11.4583, 0, 11.4583]
+        }
+      ],
+      "spans": [
+        {
+          "offset": 0,
+          "length": 1306
+        }
+      ],
+      "fields": {
+        "family_is_from_MAIS": {
+          "kind": "selectionMark",
+          "value": "selected",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.33, 4.97, 0.5650000000000001, 4.97, 0.5650000000000001, 5.2,
+                0.33, 5.2
+              ]
+            }
+          ],
+          "content": "selected",
+          "spans": [
+            {
+              "offset": 1283,
+              "length": 10
+            }
+          ],
+          "confidence": 0.95
+        },
+        "date": {
+          "kind": "string",
+          "value": "Tarih22.03.2020",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [
+                0.47500000000000003, 10.72, 2.68, 10.72, 2.68, 10.91,
+                0.47500000000000003, 10.91
+              ]
+            }
+          ],
+          "content": "Tarih22.03.2020",
+          "spans": [
+            {
+              "offset": 1214,
+              "length": 15
+            }
+          ],
+          "confidence": 0.787
+        },
+        "applicant_name": {
+          "kind": "string",
+          "value": "KUMUTHA GOUNDAR A/L RAMADASS",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [1.41, 3.37, 6.865, 3.37, 6.865, 3.63, 1.41, 3.63]
+            }
+          ],
+          "content": "KUMUTHA GOUNDAR A/L RAMADASS",
+          "spans": [
+            {
+              "offset": 835,
+              "length": 28
+            }
+          ],
+          "confidence": 0.882
+        },
+        "IC": {
+          "kind": "string",
+          "value": "990102102666",
+          "boundingRegions": [
+            {
+              "pageNumber": 1,
+              "boundingBox": [2.58, 4.39, 4.92, 4.39, 4.92, 4.64, 2.58, 4.64]
+            }
+          ],
+          "content": "990102102666",
+          "spans": [
+            {
+              "offset": 907,
+              "length": 12
+            }
+          ],
+          "confidence": 0.95
+        },
+        "family_list_from_MAIS": {
+          "kind": "array",
+          "values": [
+            {
+              "kind": "object",
+              "properties": {
+                "name": {
+                  "kind": "string",
+                  "value": "MUTHU A/L GOUNDAR",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        0.675, 6.05, 3.02, 6.05, 3.02, 6.3, 0.675, 6.3
+                      ]
+                    }
+                  ],
+                  "content": "MUTHU A/L GOUNDAR",
+                  "spans": [
+                    {
+                      "offset": 1113,
+                      "length": 17
+                    }
+                  ]
+                },
+                "job_position": {
+                  "kind": "string",
+                  "value": "GURU",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        3.7, 6.015000000000001, 4.26, 6.015000000000001, 4.26,
+                        6.245, 3.7, 6.245
+                      ]
+                    }
+                  ],
+                  "content": "GURU",
+                  "spans": [
+                    {
+                      "offset": 1131,
+                      "length": 4
+                    }
+                  ]
+                },
+                "office": {
+                  "kind": "string",
+                  "value": "SMK INTAN",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        5.085, 5.905, 6.425, 5.905, 6.425, 6.205, 5.085, 6.205
+                      ]
+                    }
+                  ],
+                  "content": "SMK INTAN",
+                  "spans": [
+                    {
+                      "offset": 1136,
+                      "length": 9
+                    }
+                  ]
+                },
+                "relationship": {
+                  "kind": "string",
+                  "value": "ABANG",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        6.82, 5.905, 7.6000000000000005, 5.905,
+                        7.6000000000000005, 6.19, 6.82, 6.19
+                      ]
+                    }
+                  ],
+                  "content": "ABANG",
+                  "spans": [
+                    {
+                      "offset": 1146,
+                      "length": 5
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "kind": "object",
+              "properties": {
+                "name": {
+                  "kind": "string",
+                  "value": "IMAN HAZLIN",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        0.81, 6.45, 2.535, 6.45, 2.535, 6.75, 0.81, 6.75
+                      ]
+                    }
+                  ],
+                  "content": "IMAN HAZLIN",
+                  "spans": [
+                    {
+                      "offset": 1155,
+                      "length": 11
+                    }
+                  ]
+                },
+                "job_position": {
+                  "kind": "string",
+                  "value": "GURU BESAR",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        3.58, 6.42, 4.755, 6.42, 4.755, 6.68, 3.58, 6.68
+                      ]
+                    }
+                  ],
+                  "content": "GURU BESAR",
+                  "spans": [
+                    {
+                      "offset": 1167,
+                      "length": 10
+                    }
+                  ]
+                },
+                "office": {
+                  "kind": "string",
+                  "value": "SMK INTAN",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        5.075, 6.345, 6.37, 6.345, 6.37, 6.595, 5.075, 6.595
+                      ]
+                    }
+                  ],
+                  "content": "SMK INTAN",
+                  "spans": [
+                    {
+                      "offset": 1178,
+                      "length": 9
+                    }
+                  ]
+                },
+                "relationship": {
+                  "kind": "string",
+                  "value": "BAPA",
+                  "boundingRegions": [
+                    {
+                      "pageNumber": 1,
+                      "boundingBox": [
+                        6.78, 6.305, 7.390000000000001, 6.305,
+                        7.390000000000001, 6.58, 6.78, 6.58
+                      ]
+                    }
+                  ],
+                  "content": "BAPA",
+                  "spans": [
+                    {
+                      "offset": 1188,
+                      "length": 4
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "confidence": 0.95
+    }
+  ]
+}
