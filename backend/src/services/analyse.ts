@@ -2,20 +2,22 @@ const {
   DocumentAnalysisClient,
   AzureKeyCredential,
 } = require("@azure/ai-form-recognizer");
-// const { DefaultAzureCredential } = require("@azure/identity");
+import {
+  ConflictApplicationInterface,
+  defaultConflictApplication,
+} from "../models/Application/conflict";
 
 const fs = require("fs");
 
 const endpoint = "https://formrecognizer-instance.cognitiveservices.azure.com/";
 const apiKey = "b3b946325c194c32afecab1a7bd3e35a";
 
-const formUrl = "./LZS_TEST.pdf";
+// const formUrl = "./LZS_TEST.pdf";
 
 interface ProgressStatus {
   status: string;
 }
-async function main() {
-  // const credential = new DefaultAzureCredential(endpoint, new AzureKeyCredential(apiKey));
+async function runFormRecogniser(formUrl: string) {
   const client = new DocumentAnalysisClient(
     endpoint,
     new AzureKeyCredential(apiKey)
@@ -29,49 +31,39 @@ async function main() {
       console.log(`status: ${status}`);
     },
   });
-  // const poller = await client.beginAnalyzeDocuments("zakat-project", formUrl);
 
   const data = await poller.pollUntilDone();
-  const { pages, tables, styles, keyValuePairs, entities, documents } = data;
-  var jsonData = JSON.stringify(data);
-  fs.writeFile("test.json", jsonData, function (err: Error) {
-    if (err) {
-      console.log(err);
-    }
+  const { documents } = data;
+  const { fields } = documents[0];
+  const { family_list_from_MAIS } = fields;
+  // construct object
+  let result: ConflictApplicationInterface = Object.keys(fields).reduce(
+    (acc, cur) => {
+      return { ...acc, [cur]: (fields as any)[cur].value };
+    },
+    defaultConflictApplication
+  );
+
+  // handle table
+  const table = family_list_from_MAIS.values;
+  // console.log("family_list_from_MAIS.values[0]", table);
+  const familyListFromMAIS = table.map((row: { properties: object }) => {
+    return Object.keys(row.properties).reduce((acc, cur) => {
+      return { ...acc, [cur]: (row.properties as any)[cur].value };
+    }, {});
   });
-  console.log("documents", documents);
-  console.log("tables", tables);
-  console.log("pages", pages);
-  console.log("styles", styles);
+  result.family_list_from_MAIS = familyListFromMAIS;
 
-  if (keyValuePairs.length <= 0) {
-    console.log("No key-value pairs were extracted from the document.");
-  } else {
-    console.log("Key-Value Pairs:");
-    for (const { key, value, confidence } of keyValuePairs) {
-      console.log("- Key  :", `"${key.content}"`);
-      console.log(
-        "  Value:",
-        `"${value?.content ?? "<undefined>"}" (${confidence})`
-      );
-    }
-  }
-
-  if (entities.length <= 0) {
-    console.log("No entities were extracted from the document.");
-  } else {
-    console.log("Entities:");
-    for (const entity of entities) {
-      console.log(
-        `- "${entity.content}" ${entity.category} - ${
-          entity.subCategory ?? "<none>"
-        } (${entity.confidence})`
-      );
-    }
-  }
+  console.log(`output for ${formUrl} is`, result);
+  return result;
+  // uncomment below to save js object into json
+  // to avoid unnecessary analysis
+  // var jsonData = JSON.stringify(data);
+  // fs.writeFile("test.json", jsonData, function (err: Error) {
+  //   if (err) {
+  //     console.log(err);
+  //   }
+  // });
 }
 
-main().catch((error) => {
-  console.error("An error occurred:", error);
-  process.exit(1);
-});
+export default runFormRecogniser;

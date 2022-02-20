@@ -9,10 +9,17 @@ import {
   exportCSV,
   exportSelectedCSV,
 } from "../services/application";
+import runFormRecogniser from "../services/analyse";
+import {
+  getConflictApplicationById,
+  getAllConflictApplications,
+  createConflictApplication,
+} from "../services/conflict";
 import { FileObj } from "../models/FileObj";
 import * as path from "path";
 
 const express = require("express");
+const fs = require("fs");
 const router = express.Router();
 const multer = require("multer");
 const storage = multer.diskStorage({
@@ -79,23 +86,45 @@ router.post(
     }
   }
 );
-// Create multiple applications (bulk submission)
+// Create multiple applications from bulk submission
 router.post(
   "/bulk-create",
   upload.any(),
   async (req: Request & { file: any; files: any }, res: Response) => {
     try {
       const path = __dirname + "../../../../uploads/";
-      // console.log(req.files);
-      const fileName = req.files[0].filename;
-      await extract(path + fileName, { dir: path + fileName.split(".")[0] });
+      console.log(req.files);
+      const zipFileFileName = req.files[0].filename;
+      // unzip
+      const folderPath = path + zipFileFileName.split(".")[0];
+      await extract(path + zipFileFileName, { dir: folderPath });
       console.log("Extraction complete");
+      // save to database
+      // console.log(folderPath)
+      const files = await fs.promises.readdir(folderPath);
+      console.log("files", files);
+      const promises = files.map(async (file: File) => {
+        console.log(file);
+        const output = await runFormRecogniser(folderPath + "\\" + file);
+        return createConflictApplication(output);
+      });
+      const results = await Promise.all(promises);
+      console.log("results", results);
       res.status(201).send({ status: true, message: "Created" });
     } catch (err: any) {
       res.status(400).send({ message: err.message });
     }
   }
 );
+// Get all conflict application from bulk submission
+router.get("/conflict-forms", async (req: Request, res: Response) => {
+  try {
+    const applications = await getAllConflictApplications();
+    return res.status(200).send({ data: applications });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
 
 // Download one document from the application
 router.get("/form/download/:formId", (req: Request, res: Response) => {

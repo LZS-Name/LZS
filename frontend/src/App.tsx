@@ -4,7 +4,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // Pages
 import Home from "./pages/Home";
-import HomeAdmin from "./pages/HomeAdmin";
 import ViewForm from "./pages/ViewForm";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Analytics from "./pages/Analytics/Analytics";
