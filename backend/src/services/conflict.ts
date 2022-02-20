@@ -7,7 +7,7 @@ async function getConflictApplicationById(_id: string) {
   return ConflictApplication.findById(_id).exec();
 }
 function getAllConflictApplications() {
-  return ConflictApplication.find({}).exec();
+  return ConflictApplication.find().exec();
 }
 
 async function createConflictApplication(

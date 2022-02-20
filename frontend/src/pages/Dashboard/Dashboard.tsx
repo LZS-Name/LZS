@@ -28,6 +28,9 @@ function Dashboard() {
     })
       .then((res) => res.json())
       .then((json) => setApplications(json.data));
+    fetch("/api/application/conflict-forms")
+      .then((res) => res.json())
+      .then((json) => console.log(json));
   }, []);
 
   const formik = useFormik({
