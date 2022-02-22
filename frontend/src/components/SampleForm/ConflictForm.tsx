@@ -117,12 +117,12 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
                 <FormControlLabel
                   value="selected"
                   control={<Radio />}
-                  label="Ya"
+                  label="Male"
                 />
                 <FormControlLabel
                   value="unselected"
                   control={<Radio />}
-                  label="Tidak"
+                  label="Female"
                 />
               </RadioGroup>
             </FormControl>

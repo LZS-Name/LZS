@@ -58,6 +58,38 @@ router.get("/form/conflict/:form_id", async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message });
   }
 });
+
+// Download one document from the application
+router.get(
+  "/form/download/:folderPath/:file",
+  (req: Request, res: Response) => {
+    try {
+      const folderPath = req.params.folderPath;
+      const file = req.params.file;
+      // console.log("folderPath", folderPath);
+      // console.log("file", file);
+      const directoryPath = __dirname + "../../../../uploads/";
+      const filePath = directoryPath + folderPath + "/" + file;
+      res.sendFile(path.resolve(filePath));
+    } catch (err: any) {
+      res.status(400).send({ message: err.message });
+    }
+  }
+);
+// Download one document from the application
+router.get("/form/download/:file", (req: Request, res: Response) => {
+  try {
+    const file = req.params.file;
+    // console.log("folderPath", folderPath);
+    // console.log("file", file);
+    const directoryPath = __dirname + "../../../../uploads/";
+    const filePath = directoryPath + file;
+    res.sendFile(path.resolve(filePath));
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
 // Getting Application Detail by form id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
   try {
@@ -143,19 +175,6 @@ router.post(
     }
   }
 );
-
-// Download one document from the application
-router.get("/form/download/:formPath", (req: Request, res: Response) => {
-  try {
-    const formPath = req.params.formPath;
-    console.log("formPath", formPath);
-    const directoryPath = __dirname + "../../../../uploads/";
-    const filePath = directoryPath + formPath;
-    res.sendFile(path.resolve(filePath));
-  } catch (err: any) {
-    res.status(400).send({ message: err.message });
-  }
-});
 
 // Getting Filtered Application [ADMIN]
 router.post("/filter", async (req: Request, res: Response) => {

@@ -13,6 +13,7 @@ import { useNavigate } from "react-router";
 import RoleController from "../RoleController";
 import { useUserContext } from "../../contexts/UserContext";
 import { Grid } from "@mui/material";
+import routes from "../../pages/routes";
 
 interface SideBarListProps {
   toggleDrawer?: (
@@ -30,7 +31,7 @@ const userList = [
 ];
 const adminList = [
   {
-    link: "/admin/dashboard",
+    link: routes.dashboard.replace(":formType", "registration"),
     label: "Dashboard",
     icon: <DashboardIcon />,
   },

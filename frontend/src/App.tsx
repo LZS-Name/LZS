@@ -18,6 +18,8 @@ function App() {
     { path: routes.viewForm, element: <ViewForm /> },
     { path: routes.viewConflictForm, element: <ViewConflictForm /> },
     { path: routes.viewForm, element: <Analytics /> },
+    // weird no-match route for react-router v6
+    { path: "*", element: <Home /> },
   ]);
   return (
     <>

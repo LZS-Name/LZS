@@ -13,7 +13,7 @@ const endpoint = "https://formrecognizer-instance.cognitiveservices.azure.com/";
 const apiKey = "b3b946325c194c32afecab1a7bd3e35a";
 
 // const formUrl = "./LZS_TEST.pdf";
-
+type FormWithoutDocumentPath = Omit<ConflictApplicationInterface, "document">;
 interface ProgressStatus {
   status: string;
 }
@@ -37,7 +37,7 @@ async function runFormRecogniser(formUrl: string) {
   const { fields } = documents[0];
   const { family_list_from_MAIS } = fields;
   // construct object
-  let result: ConflictApplicationInterface = Object.keys(fields).reduce(
+  let result: FormWithoutDocumentPath = Object.keys(fields).reduce(
     (acc, cur) => {
       return { ...acc, [cur]: (fields as any)[cur].value };
     },

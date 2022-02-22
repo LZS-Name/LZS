@@ -1,4 +1,5 @@
 const downloadFile = (url: string, fileName = "") => {
+  console.log("url", url);
   fetch(url)
     .then((x) => x.blob())
     .then((b) => {
