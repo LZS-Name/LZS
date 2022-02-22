@@ -21,9 +21,24 @@ async function createConflictApplication(
     throw err;
   }
 }
+async function updateConflictApplication(
+  _id: string,
+  update: ConflictApplicationInterface
+) {
+  try {
+    const application = await ConflictApplication.findOneAndUpdate(
+      { _id: _id },
+      update
+    );
+  } catch (err) {
+    console.log("Error [CREATE CONFLICT APPLICATION]: ", err);
+    throw err;
+  }
+}
 
 export {
   getConflictApplicationById,
   getAllConflictApplications,
   createConflictApplication,
+  updateConflictApplication,
 };

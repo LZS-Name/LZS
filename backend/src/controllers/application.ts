@@ -14,6 +14,7 @@ import {
   getConflictApplicationById,
   getAllConflictApplications,
   createConflictApplication,
+  updateConflictApplication,
 } from "../services/conflict";
 import { FileObj } from "../models/FileObj";
 import * as path from "path";
@@ -126,7 +127,16 @@ router.get("/:submitter_id", async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message });
   }
 });
-
+// Creating one
+router.post("/conflict/update/:formId", async (req: Request, res: Response) => {
+  console.log("updating");
+  try {
+    await updateConflictApplication(req.params.formId, req.body);
+    res.status(200).send({ status: true, message: "Updated" });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
 // Creating one
 router.post(
   "/create",

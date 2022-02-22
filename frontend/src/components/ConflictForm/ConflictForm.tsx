@@ -14,13 +14,13 @@ import {
   RadioGroup,
 } from "@mui/material";
 import downloadFile from "../../utils/downloadFile";
+import { useState } from "react";
 
 interface SampleFormProps {
   formValues: ConflictApplication;
   formId: string | undefined;
 }
 const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
-  const formDisabled = formId !== undefined;
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -28,18 +28,21 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
       IC: formValues.IC,
       date: formValues.date,
       family_is_from_MAIS: formValues.family_is_from_MAIS,
-      document: undefined,
+      document: formValues.document,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
       // submit to update form
       console.log("formValues", values);
       // construct formData
-      const body = new FormData();
+      console.log(JSON.stringify(values));
 
-      fetch("/api/application/conflict/update", {
+      fetch(`/api/application/conflict/update/${formId}`, {
         method: "POST",
-        body: body,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
       })
         .then((res) => res.json())
         .then((res) => {
@@ -48,6 +51,11 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
         .catch((err) => console.log);
     },
   });
+  const [editing, setEditing] = useState(false);
+
+  const toggleEditing = () => {
+    setEditing((prev) => !prev);
+  };
 
   const {
     applicant_name: name,
@@ -55,6 +63,7 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
     date,
     family_is_from_MAIS,
   } = formik.values;
+
   const { handleChange, handleSubmit, touched, errors } = formik;
   return (
     <Card
@@ -78,7 +87,7 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
               value={name}
               error={touched.applicant_name && Boolean(errors.applicant_name)}
               helperText={touched.applicant_name && errors.applicant_name}
-              disabled={formDisabled}
+              disabled={!editing}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -90,7 +99,7 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
               value={ic_number}
               error={touched.IC && Boolean(errors.IC)}
               helperText={touched.IC && errors.IC}
-              disabled={formDisabled}
+              disabled={!editing}
             />
           </Grid>
 
@@ -103,12 +112,15 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
               value={date}
               error={touched.date && Boolean(errors.date)}
               helperText={touched.date && errors.date}
-              disabled={formDisabled}
+              disabled={!editing}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <FormControl>
-              <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+              <FormLabel id="demo-radio-buttons-group-label">
+                Adakah anda (pemohon) mempunyai hubungan kekeluargaan denga
+                kakitangan Lembaga Zakat Selangor (MAIS)?
+              </FormLabel>
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue={family_is_from_MAIS}
@@ -117,17 +129,17 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
                 <FormControlLabel
                   value="selected"
                   control={<Radio />}
-                  label="Male"
+                  label="Ya"
                 />
                 <FormControlLabel
                   value="unselected"
                   control={<Radio />}
-                  label="Female"
+                  label="Tidak"
                 />
               </RadioGroup>
             </FormControl>
           </Grid>
-          <Grid item xs={12} container justifyContent="flex-end">
+          <Grid item xs={12} container justifyContent="flex-start">
             <Button
               variant="contained"
               onClick={() =>
@@ -138,6 +150,15 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
               }
             >
               Muat Turun File
+            </Button>
+          </Grid>
+          <Grid item xs={12} container justifyContent="flex-end">
+            <Button
+              variant="contained"
+              onClick={toggleEditing}
+              type={editing ? "button" : "submit"}
+            >
+              {editing ? "Hantar" : "Edit"}
             </Button>
           </Grid>
         </Grid>

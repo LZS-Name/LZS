@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
-import ConflictForm from "../../components/SampleForm/ConflictForm";
+import ConflictForm from "../../components/ConflictForm";
 import { useParams } from "react-router-dom";
 
 const ViewConflictForm = () => {
