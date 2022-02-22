@@ -23,7 +23,7 @@ export default function BasicSelect() {
   const handleChange = (event: SelectChangeEvent) => {
     if (event.target.value === "admin") {
       setUserIsAdminFn(true);
-      navigate(routes.dashboard.replace(":formType", "application"));
+      navigate(routes.dashboard.replace(":formType", "registration"));
     } else {
       setUserIsAdminFn(false);
       navigate("/");

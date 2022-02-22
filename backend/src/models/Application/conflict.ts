@@ -12,6 +12,7 @@ interface ConflictApplicationInterface {
   family_is_from_MAIS: string;
   family_list_from_MAIS: ConflictFamilyMember[];
   date: string;
+  document: string;
 }
 const defaultConflictApplication = {
   applicant_name: "",
@@ -46,6 +47,10 @@ const conflictApplicationSchema =
         ],
       },
       date: {
+        type: String,
+        required: true,
+      },
+      document: {
         type: String,
         required: true,
       },

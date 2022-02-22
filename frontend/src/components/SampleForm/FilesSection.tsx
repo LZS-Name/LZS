@@ -5,6 +5,7 @@ import FormHelperText from "@mui/material/FormHelperText";
 
 import { FormikErrors, FormikTouched } from "formik";
 import ApplicationModel from "../../models/application.model";
+import downloadFile from "../../utils/downloadFile";
 
 interface FilesSectionProps {
   formDisabled: boolean;
@@ -29,19 +30,12 @@ const FilesSection = ({
         <Grid item xs={12} container justifyContent="flex-end">
           <Button
             variant="contained"
-            onClick={() => {
-              fetch(`/api/application/form/download/${formValues.payslip}`)
-                .then((x) => x.blob())
-                .then((b) => {
-                  const url = window.URL.createObjectURL(b);
-                  var a = document.createElement("a");
-                  document.body.appendChild(a);
-                  a.href = url;
-                  a.download = formValues.payslip;
-                  a.click();
-                })
-                .catch((err) => console.log);
-            }}
+            onClick={() =>
+              downloadFile(
+                `/api/application/form/download/${formValues.payslip}`,
+                formValues.payslip
+              )
+            }
           >
             Download Slip Gaji
           </Button>

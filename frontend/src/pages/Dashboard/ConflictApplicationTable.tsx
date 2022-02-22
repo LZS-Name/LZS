@@ -14,8 +14,10 @@ import Paper from "@mui/material/Paper";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { visuallyHidden } from "@mui/utils";
-import Application from "../../models/application.model";
+import ConflictApplication from "../../models/conflict.model";
 import { useNavigate } from "react-router-dom";
+import routes from "../routes";
+
 import ConflictApplicationData from "../../models/conflict.model";
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -163,7 +165,7 @@ const EnhancedTableToolbar = () => {
 export default function ApplicationTable({
   applications,
 }: {
-  applications: Application[];
+  applications: ConflictApplication[];
 }) {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] =
@@ -176,18 +178,7 @@ export default function ApplicationTable({
   let navigate = useNavigate();
 
   React.useEffect(() => {
-    const applicationData: ConflictApplicationData[] = applications.map(
-      (application: any) => {
-        return {
-          _id: application._id,
-          applicant_name: application.applicant_name,
-          IC: application.IC,
-          date: application.date,
-          family_is_from_MAIS: application.family_is_from_MAIS,
-        };
-      }
-    );
-    setRows(applicationData);
+    setRows(applications);
   }, [applications, selected]);
 
   const handleRequestSort = (
@@ -200,7 +191,7 @@ export default function ApplicationTable({
   };
 
   const handleClick = (event: React.MouseEvent<unknown>, _id: string) => {
-    navigate(`/admin/application/${_id}`);
+    navigate(routes.viewConflictForm.replace(":formId", _id));
   };
 
   const handleChangePage = (event: unknown, newPage: number) => {
@@ -217,8 +208,6 @@ export default function ApplicationTable({
   const handleChangeDense = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDense(event.target.checked);
   };
-
-  const isSelected = (_id: string) => selected.indexOf(_id) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =

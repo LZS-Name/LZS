@@ -4,6 +4,8 @@ interface ConflictApplication {
   IC: string;
   date: string;
   family_is_from_MAIS: string;
+  // document? :string;
+  document: string;
 }
 
 export default ConflictApplication;

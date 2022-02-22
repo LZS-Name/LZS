@@ -43,7 +43,21 @@ const upload = multer({
   storage: storage,
 });
 const extract = require("extract-zip");
-
+// Get Conflict Form by form id
+router.get("/form/conflict/:form_id", async (req: Request, res: Response) => {
+  try {
+    console.log("getConflictApplicationById, form_id", req.params.form_id);
+    const application = await getConflictApplicationById(req.params.form_id);
+    if (application == null) {
+      return res
+        .status(404)
+        .send({ status: false, message: "Cannot find application" });
+    }
+    return res.status(200).send({ data: application });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
 // Getting Application Detail by form id
 router.get("/form/:form_id", async (req: Request, res: Response) => {
   try {
@@ -51,7 +65,7 @@ router.get("/form/:form_id", async (req: Request, res: Response) => {
     if (application == null) {
       return res
         .status(404)
-        .send({ status: false, message: "Cannot find application" });
+        .send({ status: false, message: "Cannot find conflict application" });
     }
     return res.status(200).send({ data: application });
   } catch (err: any) {
@@ -115,8 +129,11 @@ router.post(
       console.log("files", files);
       const promises = files.map(async (file: File) => {
         console.log(file);
-        const output = await runFormRecogniser(folderPath + "\\" + file);
-        return createConflictApplication(output);
+        const output = await runFormRecogniser(folderPath + "/" + file);
+        return createConflictApplication({
+          ...output,
+          document: zipFileFileName.split(".")[0] + "/" + file,
+        });
       });
       const results = await Promise.all(promises);
       console.log("results", results);
@@ -128,12 +145,12 @@ router.post(
 );
 
 // Download one document from the application
-router.get("/form/download/:formId", (req: Request, res: Response) => {
+router.get("/form/download/:formPath", (req: Request, res: Response) => {
   try {
-    const formId = req.params.formId;
-    // console.log("formId", formId);
+    const formPath = req.params.formPath;
+    console.log("formPath", formPath);
     const directoryPath = __dirname + "../../../../uploads/";
-    const filePath = directoryPath + formId;
+    const filePath = directoryPath + formPath;
     res.sendFile(path.resolve(filePath));
   } catch (err: any) {
     res.status(400).send({ message: err.message });

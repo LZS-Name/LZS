@@ -8,6 +8,8 @@ import * as yup from "yup";
 import ApplicationTable from "./ApplicationTable";
 import ConflictApplicationTable from "./ConflictApplicationTable";
 import Application from "../../models/application.model";
+import ConflictApplicationData from "../../models/conflict.model";
+
 import ApplicationSelector from "./ApplicationSelector";
 import routes from "../routes";
 
@@ -27,9 +29,12 @@ const validationSchema = yup.object({
 
 function Dashboard() {
   const location = useLocation();
-  const [applications, setApplications] = useState<Application[]>([]);
+  const [applications, setApplications] = useState<
+    Application[] | ConflictApplicationData[]
+  >([]);
 
   useEffect(() => {
+    // TODO: not efficient, can save in state and add a refresh button
     if (location.pathname.startsWith(formMap.registration)) {
       fetch("/api/application/filter", {
         method: "POST",
@@ -48,6 +53,7 @@ function Dashboard() {
         .then((res) => res.json())
         .then((json) => setApplications(json.data));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   const formik = useFormik({
@@ -162,13 +168,15 @@ function Dashboard() {
             </form>
 
             <ApplicationTable
-              applications={applications}
+              applications={applications as unknown as Application[]}
               application_type={application_type}
               status={status}
             />
           </>
         ) : (
-          <ConflictApplicationTable applications={applications} />
+          <ConflictApplicationTable
+            applications={applications as unknown as ConflictApplicationData[]}
+          />
         )}
       </>
     </PageLayout>
