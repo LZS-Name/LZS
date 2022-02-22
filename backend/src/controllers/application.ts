@@ -59,6 +59,16 @@ router.get("/form/:form_id", async (req: Request, res: Response) => {
   }
 });
 
+// Get all conflict application from bulk submission
+router.get("/conflict-forms", async (req: Request, res: Response) => {
+  try {
+    const applications = await getAllConflictApplications();
+    return res.status(200).send({ data: applications });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
 // Getting Application by sumitter id
 router.get("/:submitter_id", async (req: Request, res: Response) => {
   try {
@@ -116,15 +126,6 @@ router.post(
     }
   }
 );
-// Get all conflict application from bulk submission
-router.get("/conflict-forms", async (req: Request, res: Response) => {
-  try {
-    const applications = await getAllConflictApplications();
-    return res.status(200).send({ data: applications });
-  } catch (err: any) {
-    res.status(400).send({ message: err.message });
-  }
-});
 
 // Download one document from the application
 router.get("/form/download/:formId", (req: Request, res: Response) => {

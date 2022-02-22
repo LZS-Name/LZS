@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../contexts/UserContext";
+import routes from "../../pages/routes";
 
 export default function BasicSelect() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function BasicSelect() {
   const handleChange = (event: SelectChangeEvent) => {
     if (event.target.value === "admin") {
       setUserIsAdminFn(true);
-      navigate("/admin/dashboard");
+      navigate(routes.dashboard.replace(":formType", "application"));
     } else {
       setUserIsAdminFn(false);
       navigate("/");
