@@ -79,6 +79,15 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       }
     };
 
+  const approveApplication = () => {
+    const _id = "";
+    const adminId = "";
+    fetch("/api/application/approve", {
+      method: "POST",
+      body: JSON.stringify({ _id, adminId }),
+    });
+  };
+
   const { name, ic_number, submitter_relationship, income, application_type } =
     formik.values;
   const {

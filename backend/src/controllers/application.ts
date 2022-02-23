@@ -44,6 +44,7 @@ const upload = multer({
   storage: storage,
 });
 const extract = require("extract-zip");
+
 // Get Conflict Form by form id
 router.get("/form/conflict/:form_id", async (req: Request, res: Response) => {
   try {
@@ -127,7 +128,7 @@ router.get("/:submitter_id", async (req: Request, res: Response) => {
     res.status(400).send({ message: err.message });
   }
 });
-// Creating one
+// Update one conflict form
 router.post("/conflict/update/:formId", async (req: Request, res: Response) => {
   console.log("updating");
   try {
@@ -226,8 +227,21 @@ router.post("/download-selected", async (req: Request, res: Response) => {
 // Approve Application [ADMIN]
 router.post("/approve", async (req: Request, res: Response) => {
   try {
-    approveApplication(req.body._id, req.body.adminId);
-    res.status(200).send({ status: true, message: "Approved" });
+    const returnCode = await approveApplication(
+      req.body.formId,
+      req.body.adminId
+    );
+    if (returnCode === -1) {
+      return res
+        .status(404)
+        .send({ status: false, message: "Cannot find admin or application" });
+    } else if (returnCode === 400) {
+      return res
+        .status(404)
+        .send({ status: false, message: "Cannot perform update operation" });
+    } else {
+      res.status(200).send({ status: true, message: "Approved" });
+    }
   } catch (err: any) {
     res.status(400).send({ message: err.message });
   }

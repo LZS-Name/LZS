@@ -27,7 +27,7 @@ const FilesSection = ({
   if (formDisabled && formValues !== undefined) {
     return (
       <>
-        <Grid item xs={12} container justifyContent="flex-end">
+        <Grid item xs={12} container justifyContent="flex-start">
           <Button
             variant="contained"
             onClick={() =>
@@ -38,6 +38,11 @@ const FilesSection = ({
             }
           >
             Download Slip Gaji
+          </Button>
+        </Grid>
+        <Grid item xs={12} container justifyContent="flex-end">
+          <Button variant="contained" type="button">
+            Sahkan
           </Button>
         </Grid>
       </>

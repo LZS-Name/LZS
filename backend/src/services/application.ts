@@ -1,5 +1,8 @@
 import ApplicationConstant from "../constant/application.constant";
 import { Application, ApplicationInterface } from "../models/Application";
+import { AdminModel } from "../models/Admin";
+import AdminConstant from "../constant/admin.constant";
+
 const { Parser } = require("json2csv");
 
 async function getApplicationByFormId(form_id: string) {
@@ -89,15 +92,31 @@ function formatIcNumberWithDashes(ic_number: string) {
   )}-${ic_number.substring(8, 12)}`;
 }
 
-async function approveApplication(_id: string, adminId: string) {
-  const application = await Application.findById(_id).exec();
+async function approveApplication(formId: string, adminId: string) {
+  const application = await Application.findById(formId).exec();
+  const admin = await AdminModel.findById(adminId).exec();
+  // console.log("admin", admin);
+  // console.log("application", application);
+  if (!admin || !application) return -1;
   let status;
-  if (application?.first_approver === adminId) {
+  if (
+    admin.level === AdminConstant.level.ADMIN &&
+    application.status === ApplicationConstant.status.PENDING_FIRST_APPROVAL
+  ) {
     status = ApplicationConstant.status.PENDING_SECOND_APPROVAL;
-  } else {
+    const first_approver = adminId;
+    return Application.updateOne({ formId }, { status, first_approver });
+  } else if (
+    admin.level === AdminConstant.level.SUPER_ADMIN &&
+    application.status === ApplicationConstant.status.PENDING_SECOND_APPROVAL
+  ) {
     status = ApplicationConstant.status.APPROVED;
+    const second_approver = adminId;
+    return Application.updateOne({ formId }, { status, second_approver });
+  } else {
+    // may be the form status === APPROVED
+    return 400;
   }
-  return Application.updateOne({ _id }, { status });
 }
 
 function rejectApplication(_id: string) {
