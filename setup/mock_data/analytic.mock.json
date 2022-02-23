@@ -1,0 +1,59 @@
+[
+  {
+    "total_distributed_amount": "10000000",
+    "total_collected_amount": "9000000",
+    "total_transaction": "100000",
+    "total_asnaf": "100",
+    "month": "0",
+    "year": 2022,
+    "gender": [
+      { "name": "male", "value": 150 },
+      { "name": "female", "value": 130 }
+    ],
+    "location": [
+      { "name": "Rawang", "value": 10 },
+      { "name": "Selayang", "value": 110 },
+      { "name": "Setapak", "value": 70 },
+      { "name": "Shah Alam", "value": 40 },
+      { "name": "Petaling Jaya", "value": 80 }
+    ]
+  },
+  {
+    "total_distributed_amount": "2000000",
+    "total_collected_amount": "9000000",
+    "total_transaction": "10000",
+    "total_asnaf": "300",
+    "month": "11",
+    "year": 2021,
+    "gender": [
+      { "name": "male", "value": 190 },
+      { "name": "female", "value": 110 }
+    ],
+    "location": [
+      { "name": "Rawang", "value": 20 },
+      { "name": "Selayang", "value": 10 },
+      { "name": "Setapak", "value": 10 },
+      { "name": "Shah Alam", "value": 40 },
+      { "name": "Petaling Jaya", "value": 10 }
+    ]
+  },
+  {
+    "total_distributed_amount": "10000000",
+    "total_collected_amount": "9000000",
+    "total_transaction": "100000",
+    "total_asnaf": "100",
+    "month": "10",
+    "year": 2021,
+    "gender": [
+      { "name": "male", "value": 150 },
+      { "name": "female", "value": 110 }
+    ],
+    "location": [
+      { "name": "Rawang", "value": 10 },
+      { "name": "Selayang", "value": 15 },
+      { "name": "Setapak", "value": 70 },
+      { "name": "Shah Alam", "value": 40 },
+      { "name": "Petaling Jaya", "value": 80 }
+    ]
+  }
+]

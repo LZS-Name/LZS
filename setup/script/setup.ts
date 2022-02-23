@@ -1,10 +1,12 @@
 require("dotenv").config();
 
+import { Analytic, AnalyticInterface } from "../../backend/src/models/Analytic";
 import {
   Application,
   ApplicationInterface,
 } from "../../backend/src/models/Application";
 import application_mock from "../mock_data/application.mock.json";
+import analytic_mock from "../mock_data/analytic.mock.json";
 const mongoose = require("mongoose");
 
 // Database Connection
@@ -23,5 +25,11 @@ let applications = application_mock.map((application: ApplicationInterface) => {
   return application;
 });
 Application.insertMany(applications).then(() => {
+  // mongoose.disconnect();
+});
+
+//Analytic
+Analytic.collection.drop();
+Analytic.insertMany(analytic_mock).then(() => {
   mongoose.disconnect();
 });
