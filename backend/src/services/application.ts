@@ -105,14 +105,20 @@ async function approveApplication(formId: string, adminId: string) {
   ) {
     status = ApplicationConstant.status.PENDING_SECOND_APPROVAL;
     const first_approver = adminId;
-    return Application.updateOne({ formId }, { status, first_approver });
+    return await Application.updateOne(
+      { _id: formId },
+      { status, first_approver }
+    );
   } else if (
     admin.level === AdminConstant.level.SUPER_ADMIN &&
     application.status === ApplicationConstant.status.PENDING_SECOND_APPROVAL
   ) {
     status = ApplicationConstant.status.APPROVED;
     const second_approver = adminId;
-    return Application.updateOne({ formId }, { status, second_approver });
+    return await Application.updateOne(
+      { _id: formId },
+      { status, second_approver }
+    );
   } else {
     // may be the form status === APPROVED
     return 400;

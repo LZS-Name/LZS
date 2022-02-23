@@ -15,6 +15,7 @@ interface FilesSectionProps {
     fieldKey: string
   ) => (event: React.ChangeEvent<HTMLInputElement>) => void;
   formValues: ApplicationModel | undefined;
+  approveApplication: () => void;
 }
 const FilesSection = ({
   formValues,
@@ -30,19 +31,9 @@ const FilesSection = ({
         <Grid item xs={12} container justifyContent="flex-start">
           <Button
             variant="contained"
-            onClick={() =>
-              downloadFile(
-                `/api/application/form/download/${formValues.payslip}`,
-                formValues.payslip
-              )
-            }
+            onClick={() => downloadFile(formValues.payslip)}
           >
             Download Slip Gaji
-          </Button>
-        </Grid>
-        <Grid item xs={12} container justifyContent="flex-end">
-          <Button variant="contained" type="button">
-            Sahkan
           </Button>
         </Grid>
       </>
@@ -111,11 +102,6 @@ const FilesSection = ({
             </FormHelperText>
           )}
         </FormControl>
-      </Grid>
-      <Grid item xs={12} container justifyContent="flex-end">
-        <Button variant="contained" type="submit" disabled={formDisabled}>
-          Hantar
-        </Button>
       </Grid>
     </>
   );

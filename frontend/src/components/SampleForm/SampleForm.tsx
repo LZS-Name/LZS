@@ -7,6 +7,11 @@ import { useFormik } from "formik";
 import validationSchema from "./validation";
 import FilesSection from "./FilesSection";
 import ApplicationModel from "../../models/application.model";
+import { useUserContext } from "../../contexts/UserContext";
+import { Button, Chip, Paper } from "@mui/material";
+import { Box } from "@mui/system";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { useState } from "react";
 
 interface SampleFormProps {
   formValues:
@@ -16,11 +21,14 @@ interface SampleFormProps {
         ic_number?: undefined;
         submitter_relationship?: undefined;
         income?: undefined;
+        first_approver?: undefined;
+        second_approver?: undefined;
       };
   formId: string | undefined;
 }
 const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
   const formDisabled = formId !== undefined;
+  const { userRole } = useUserContext();
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
@@ -32,6 +40,8 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       marriage_cert: undefined,
       additional_document: undefined,
       application_type: "Created by front end",
+      first_approver: formValues.first_approver || undefined,
+      second_approver: formValues.second_approver || undefined,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -80,16 +90,45 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     };
 
   const approveApplication = () => {
-    const _id = "";
-    const adminId = "";
-    fetch("/api/application/approve", {
-      method: "POST",
-      body: JSON.stringify({ _id, adminId }),
-    });
+    if (userRole === "user") return;
+    if (formValues.first_approver && formValues.second_approver) return;
+    if (window.confirm("Betulkah anda ingin sahkan aplikasi ini?")) {
+      const normalAdminId = "6215b519f827f831254406c1";
+      const superAdminId = "6215b54df827f831254406c2";
+      const adminId = userRole === "admin" ? normalAdminId : superAdminId;
+      fetch("/api/application/approve", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ formId, adminId }),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log("res", res);
+          const { setFieldValue } = formik;
+          if (userRole === "admin") {
+            setFieldValue("first_approver", adminId);
+          } else {
+            setFieldValue("second_approver", adminId);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
-  const { name, ic_number, submitter_relationship, income, application_type } =
-    formik.values;
+  const {
+    name,
+    ic_number,
+    submitter_relationship,
+    income,
+    application_type,
+    first_approver,
+    second_approver,
+  } = formik.values;
+  console.log(formik.values);
   const {
     handleChange,
     handleBlur,
@@ -110,6 +149,43 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     >
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <Grid container spacing={2}>
+          {first_approver && second_approver && (
+            <Grid item xs={12} container justifyContent="flex-end">
+              <Chip
+                label="Telah Disahkan"
+                color="primary"
+                icon={<CheckCircleIcon />}
+                sx={{ color: "common.white" }}
+              />
+            </Grid>
+          )}
+          {userRole === "admin" && first_approver && !second_approver && (
+            <Grid item xs={12} container justifyContent="flex-end">
+              <Chip
+                label="Aplikasi ini perlu disahkan oleh Super Admin"
+                color="info"
+                variant="outlined"
+              />
+            </Grid>
+          )}
+          {userRole === "super_admin" && !first_approver && (
+            <Grid item xs={12} container justifyContent="flex-end">
+              <Chip
+                label="Aplikasi ini perlu disahkan oleh Admin Biasa"
+                color="info"
+                variant="outlined"
+              />
+            </Grid>
+          )}
+          {userRole === "super_admin" && first_approver && !second_approver && (
+            <Grid item xs={12} container justifyContent="flex-end">
+              <Chip
+                label="Aplikasi ini telah disahkan oleh Admin Biasa"
+                color="info"
+                variant="outlined"
+              />
+            </Grid>
+          )}
           <Grid item xs={12}>
             <TextField
               fullWidth
@@ -126,6 +202,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              fullWidth
               id="ic_number"
               name="ic_number"
               label="IC"
@@ -157,6 +234,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
 
           <Grid item xs={6}>
             <TextField
+              fullWidth
               id="income"
               name="income"
               label="Income"
@@ -170,6 +248,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           </Grid>
           <Grid item xs={6}>
             <TextField
+              fullWidth
               id="application_type"
               name="application_type"
               label="Application Type"
@@ -189,7 +268,32 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
             errors={errors}
             touched={touched}
             onFileSubmit={onFileSubmit}
+            approveApplication={approveApplication}
           />
+          {formDisabled && formValues ? (
+            <>
+              {((!first_approver && userRole === "admin") ||
+                (!second_approver &&
+                  first_approver &&
+                  userRole === "super_admin")) && (
+                <Grid item xs={12} container justifyContent="flex-end">
+                  <Button
+                    variant="contained"
+                    type="button"
+                    onClick={approveApplication}
+                  >
+                    Sahkan
+                  </Button>
+                </Grid>
+              )}
+            </>
+          ) : (
+            <Grid item xs={12} container justifyContent="flex-end">
+              <Button variant="contained" type="submit" disabled={formDisabled}>
+                Hantar
+              </Button>
+            </Grid>
+          )}
         </Grid>
       </form>
     </Card>

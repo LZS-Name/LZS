@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 interface AppContextInterface {
-  userIsAdmin: boolean;
-  setUserIsAdminFn: (value: boolean) => void;
+  userRole: string;
+  setUserRole: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const UserContext = React.createContext<AppContextInterface>(
@@ -10,14 +10,10 @@ const UserContext = React.createContext<AppContextInterface>(
 );
 
 const UserProvider = ({ children }: { children: JSX.Element }) => {
-  const [userIsAdmin, setUserIsAdmin] = React.useState(false);
-
-  const setUserIsAdminFn = (value: boolean) => {
-    setUserIsAdmin(value);
-  };
+  const [userRole, setUserRole] = React.useState("user");
 
   return (
-    <UserContext.Provider value={{ userIsAdmin, setUserIsAdminFn }}>
+    <UserContext.Provider value={{ userRole, setUserRole }}>
       {children}
     </UserContext.Provider>
   );

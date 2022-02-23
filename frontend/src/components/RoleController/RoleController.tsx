@@ -1,31 +1,31 @@
-import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../../contexts/UserContext";
 import routes from "../../pages/routes";
+import { useEffect } from "react";
 
 export default function BasicSelect() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const { userIsAdmin, setUserIsAdminFn } = useUserContext();
+  const { userRole, setUserRole } = useUserContext();
 
   useEffect(() => {
-    if (location.pathname.startsWith("/admin")) {
-      setUserIsAdminFn(true);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const userRoleFromStorage = window.sessionStorage.getItem("userRole");
+    if (userRoleFromStorage) setUserRole(userRoleFromStorage);
   }, []);
 
   const handleChange = (event: SelectChangeEvent) => {
-    if (event.target.value === "admin") {
-      setUserIsAdminFn(true);
+    setUserRole(event.target.value);
+    window.sessionStorage.setItem("userRole", event.target.value);
+    if (
+      event.target.value === "admin" ||
+      event.target.value === "super_admin"
+    ) {
       navigate(routes.dashboard.replace(":formType", "registration"));
     } else {
-      setUserIsAdminFn(false);
       navigate("/");
     }
   };
@@ -37,12 +37,13 @@ export default function BasicSelect() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={userIsAdmin ? "admin" : "user"}
+          value={userRole}
           label="Role"
           onChange={handleChange}
         >
           <MenuItem value={"user"}>User</MenuItem>
           <MenuItem value={"admin"}>Admin</MenuItem>
+          <MenuItem value={"super_admin"}>Super Admin</MenuItem>
         </Select>
       </FormControl>
     </Box>

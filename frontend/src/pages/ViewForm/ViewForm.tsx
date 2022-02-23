@@ -3,21 +3,26 @@ import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import SampleForm from "../../components/SampleForm";
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useUserContext } from "../../contexts/UserContext";
 
 const ViewForm = () => {
   const { formId } = useParams();
+  const location = useLocation();
+  const { setUserRole } = useUserContext();
   const [formValues, setFormValues] = useState({});
 
   useEffect(() => {
     fetch(`/api/application/form/${formId}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         setFormValues(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formId]);
 
   return (

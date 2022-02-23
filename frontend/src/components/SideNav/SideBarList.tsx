@@ -48,8 +48,8 @@ const adminList = [
 ];
 const SideBarList = ({ toggleDrawer = () => () => {} }: SideBarListProps) => {
   const navigate = useNavigate();
-  const { userIsAdmin } = useUserContext();
-  const navigations = !userIsAdmin ? userList : adminList;
+  const { userRole } = useUserContext();
+  const navigations = userRole === "user" ? userList : adminList;
 
   return (
     <>

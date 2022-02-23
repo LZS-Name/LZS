@@ -17,7 +17,7 @@ function App() {
     { path: routes.dashboard, element: <Dashboard /> },
     { path: routes.viewForm, element: <ViewForm /> },
     { path: routes.viewConflictForm, element: <ViewConflictForm /> },
-    { path: routes.viewForm, element: <Analytics /> },
+    { path: routes.analytics, element: <Analytics /> },
     // weird no-match route for react-router v6
     { path: "*", element: <Home /> },
   ]);

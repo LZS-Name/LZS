@@ -240,6 +240,7 @@ router.post("/approve", async (req: Request, res: Response) => {
         .status(404)
         .send({ status: false, message: "Cannot perform update operation" });
     } else {
+      // await returnCode;
       res.status(200).send({ status: true, message: "Approved" });
     }
   } catch (err: any) {
