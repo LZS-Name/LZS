@@ -3,6 +3,7 @@ import { Application } from "express";
 const express = require("express");
 const mongoose = require("mongoose");
 const apiRouter = require("./src/controllers");
+const path = require("path");
 
 const app: Application = express();
 const port = process.env.PORT || 3001;
@@ -20,6 +21,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/", apiRouter);
+
+// All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+});
 
 try {
   app.listen(port, (): void => {
