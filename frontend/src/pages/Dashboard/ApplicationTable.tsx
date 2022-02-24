@@ -21,6 +21,7 @@ import Application from "../../models/application.model";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { formatDateToDateMonthYear } from "../../utils/formatDate";
+import statusConstant from "../../constant/status.constant";
 
 interface Data {
   _id: string;
@@ -28,7 +29,7 @@ interface Data {
   approval_date: number;
   application_type: string;
   name: string;
-  status: number;
+  status: string;
 }
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -305,7 +306,6 @@ export default function ApplicationTable({
       };
     });
     setRows(applicationData);
-    console.log(selected);
   }, [applications, selected]);
 
   const handleRequestSort = (
@@ -437,7 +437,13 @@ export default function ApplicationTable({
                       <TableCell align="right">
                         {formatDateToDateMonthYear(row.approval_date)}
                       </TableCell>
-                      <TableCell align="right">{row.status}</TableCell>
+                      <TableCell align="right">
+                        {
+                          statusConstant.options.find(
+                            (element) => element.value === row.status
+                          )?.title
+                        }
+                      </TableCell>
                     </TableRow>
                   );
                 })}

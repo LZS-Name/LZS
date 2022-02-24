@@ -10,6 +10,7 @@ import ReceiptIcon from "@mui/icons-material/Receipt";
 import HttpResponseModel from "../../models/http-response.model";
 import AnalyticInterface from "../../models/analytic.model";
 import ForecastResultInterface from "../../models/forecast.model";
+import mapperConstant from "../../constant/mapper.constant";
 
 function Analytics() {
   const [analyticData, setAnalyticData] = useState<AnalyticInterface>();
@@ -63,6 +64,11 @@ function Analytics() {
         }
       })
       .catch((error) => console.log(error));
+  };
+
+  const genderMapper = (value: string) => {
+    return mapperConstant.gender.find((element) => element.value == value)
+      ?.title;
   };
 
   return (
@@ -130,7 +136,9 @@ function Analytics() {
                 title="Demografik Penerima"
                 description="Jantina"
                 chart={{
-                  labels: analyticData?.gender.map((data: any) => data.name),
+                  labels: analyticData?.gender.map((data: any) =>
+                    genderMapper(data.name)
+                  ),
                   datasets: {
                     label: "Projects",
                     data: analyticData?.gender.map((data: any) => data.value),

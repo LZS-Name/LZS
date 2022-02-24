@@ -12,6 +12,7 @@ import ConflictApplicationData from "../../models/conflict.model";
 
 import ApplicationSelector from "./ApplicationSelector";
 import routes from "../routes";
+import statusConstant from "../../constant/status.constant";
 
 const formKey = {
   registration: "registration",
@@ -140,19 +141,7 @@ function Dashboard() {
                 <Grid item xs={12} md={6} xl={4}>
                   <BasicSelect
                     label="Status"
-                    options={[
-                      { title: "Semua", value: "ALL" },
-                      { title: "Lulus", value: "APPROVED" },
-                      { title: "Gagal", value: "REJECTED" },
-                      {
-                        title: "Pending Kelulusan 1",
-                        value: "PENDING_FIRST_APPROVAL",
-                      },
-                      {
-                        title: "Pending Kelulusan 2",
-                        value: "PENDING_SECOND_APPROVAL",
-                      },
-                    ]}
+                    options={statusConstant.options}
                     value={status}
                     handleChange={handleChange}
                     handleBlur={handleBlur}
@@ -161,7 +150,7 @@ function Dashboard() {
                 </Grid>
                 <Grid item xs={12} md={6} xl={4}>
                   <Button variant="contained" type="submit">
-                    Filter
+                    Tapis
                   </Button>
                 </Grid>
               </Grid>
