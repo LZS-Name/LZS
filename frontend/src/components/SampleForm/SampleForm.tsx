@@ -19,6 +19,7 @@ interface SampleFormProps {
         ic_number?: undefined;
         submitter_relationship?: undefined;
         income?: undefined;
+        application_type?: undefined;
         first_approver?: undefined;
         second_approver?: undefined;
       };
@@ -37,7 +38,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       payslip: undefined,
       marriage_cert: undefined,
       additional_document: undefined,
-      application_type: "",
+      application_type: formValues.application_type || "",
       first_approver: formValues.first_approver || undefined,
       second_approver: formValues.second_approver || undefined,
     },
@@ -48,6 +49,11 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       const body = new FormData();
       Object.keys(values).forEach((key) => {
         if (key === "first_approver" || key === "second_approver") return;
+        if (
+          (key === "marriage_cert" && !values.marriage_cert) ||
+          (key === "additional_document" && !values.additional_document)
+        )
+          return;
         // let backend get the field as key + datetime + file name
         const value = (values as any)[key];
         if (
@@ -74,7 +80,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
         .then((res) => res.json())
         .then((res) => {
           alert("Borang telah dihantar");
-          window.location.reload();
+          // window.location.reload();
         })
         .catch((err) => console.log);
     },
@@ -128,7 +134,6 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     first_approver,
     second_approver,
   } = formik.values;
-  console.log(formik.values);
   const {
     handleChange,
     handleBlur,

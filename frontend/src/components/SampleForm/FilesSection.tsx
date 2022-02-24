@@ -36,6 +36,33 @@ const FilesSection = ({
             Download Slip Gaji
           </Button>
         </Grid>
+        {formValues.marriage_cert && (
+          <Grid item xs={12} container justifyContent="flex-start">
+            <Button
+              variant="contained"
+              onClick={() =>
+                downloadFile(formValues.marriage_cert, formValues.marriage_cert)
+              }
+            >
+              Download Sijil Perkahwinan
+            </Button>
+          </Grid>
+        )}
+        {formValues.additional_document && (
+          <Grid item xs={12} container justifyContent="flex-start">
+            <Button
+              variant="contained"
+              onClick={() =>
+                downloadFile(
+                  formValues.additional_document,
+                  formValues.additional_document
+                )
+              }
+            >
+              Download Borang Lain
+            </Button>
+          </Grid>
+        )}
       </>
     );
   }
