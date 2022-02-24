@@ -7,8 +7,7 @@
     "start": "ts-node-dev ./backend/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "setup": "npx ts-node ./setup/script/setup.ts",
-    "build": "tsc"
+    "setup": "npx ts-node ./setup/script/setup.ts"
   },
   "author": "",
   "license": "ISC",
