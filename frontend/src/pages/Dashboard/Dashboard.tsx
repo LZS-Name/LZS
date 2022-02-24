@@ -13,6 +13,7 @@ import ConflictApplicationData from "../../models/conflict.model";
 import ApplicationSelector from "./ApplicationSelector";
 import routes from "../routes";
 import statusConstant from "../../constant/status.constant";
+import applicationTypeConstant from "../../constant/application-type.constant";
 
 const formKey = {
   registration: "registration",
@@ -97,41 +98,7 @@ function Dashboard() {
                 <Grid item xs={12} md={6} xl={4}>
                   <BasicSelect
                     label="Jenis Permohonan"
-                    options={[
-                      { title: "Semua", value: "ALL" },
-                      {
-                        title: "BANTUAN SEWA RUMAH ASNAF MUALLAF",
-                        value: "BANTUAN SEWA RUMAH ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN PERUBATAN ASNAF MUALLAF",
-                        value: "BANTUAN PERUBATAN ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN KEWANGAN BULANAN ASNAF MUALLAF",
-                        value: "BANTUAN KEWANGAN BULANAN ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN KEPERLUAN PENDIDIKAN MUALLAF",
-                        value: "BANTUAN KEPERLUAN PENDIDIKAN MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN KEPERLUAN HIDUP ASNAF MUALLAF",
-                        value: "BANTUAN KEPERLUAN HIDUP ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN HUTANG PERUBATAN ASNAF MUALLAF",
-                        value: "BANTUAN HUTANG PERUBATAN ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN DIALISIS ASNAF MUALLAF",
-                        value: "BANTUAN DIALISIS ASNAF MUALLAF",
-                      },
-                      {
-                        title: "BANTUAN SEWA RUMAH ASNAF GHARIM",
-                        value: "BANTUAN SEWA RUMAH ASNAF GHARIM",
-                      },
-                    ]}
+                    options={applicationTypeConstant.options}
                     value={application_type}
                     handleChange={handleChange}
                     handleBlur={handleBlur}
