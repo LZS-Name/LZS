@@ -9,13 +9,16 @@ import PeopleIcon from "@mui/icons-material/People";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 import HttpResponseModel from "../../models/http-response.model";
 import AnalyticInterface from "../../models/analytic.model";
+import ForecastResultInterface from "../../models/forecast.model";
 
 function Analytics() {
   const [analyticData, setAnalyticData] = useState<AnalyticInterface>();
+  const [forecastData, setForecastData] = useState<ForecastResultInterface>();
   const [method, setMethod] = useState<string>("yearly");
 
   useEffect(() => {
     fetchAnalyticData();
+    fetchForecastData();
   }, [method]);
 
   const handleChange = (
@@ -44,6 +47,22 @@ function Analytics() {
       })
       .catch((error) => console.log(error));
   };
+  const fetchForecastData = () => {
+    fetch("/api/forecast/data", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res: HttpResponseModel) => {
+        if (res.status) {
+          console.log(res);
+          setForecastData(res.data);
+        }
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <PageLayout title={"Analytics"}>
@@ -59,7 +78,7 @@ function Analytics() {
           <ToggleButton value="yearly">Tahunan</ToggleButton>
         </ToggleButtonGroup>
         <Grid container spacing={2}>
-          <Grid item xs={4} md={3}>
+          <Grid item xs={6} md={3}>
             <DataBox
               title={`RM ${analyticData?.total_distributed_amount}`}
               description={"Pengagihan"}
@@ -124,21 +143,29 @@ function Analytics() {
         <Grid container spacing={2}>
           <Grid item xs={6} md={4}>
             <DataBox
-              title={"RM 92.6K"}
+              title={
+                forecastData
+                  ? forecastData.receiverTotalNumber
+                  : "Processing..."
+              }
               description={"Jumlah Bilangan Penerima"}
               icon={<PeopleIcon sx={{ mr: 2 }} />}
             ></DataBox>
           </Grid>
-          <Grid item xs={6} md={4}>
+          {/* <Grid item xs={6} md={4}>
             <DataBox
               title={"RM 92.6K"}
               description={"Jumlah Zakat Untuk Individu"}
               icon={<AttachMoneyIcon sx={{ mr: 2 }} />}
             ></DataBox>
-          </Grid>
+          </Grid> */}
           <Grid item xs={6} md={4}>
             <DataBox
-              title={"RM 92.6K"}
+              title={
+                forecastData
+                  ? forecastData.notReceivingZakatInFuture
+                  : "Processing..."
+              }
               description={"Jumlah Bilangan Penerima Yang Tidak Layak"}
               icon={<PeopleIcon sx={{ mr: 2 }} />}
             ></DataBox>
