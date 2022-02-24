@@ -19,6 +19,7 @@ function Analytics() {
   useEffect(() => {
     fetchAnalyticData();
     fetchForecastData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [method]);
 
   const handleChange = (
