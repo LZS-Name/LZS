@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const apiRouter = require("./src/controllers");
 
 const app: Application = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 // Database Connection
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
