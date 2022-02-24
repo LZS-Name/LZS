@@ -72,7 +72,7 @@ function Analytics() {
   };
 
   return (
-    <PageLayout title={"Analytics"}>
+    <PageLayout title={"Analisis"}>
       <>
         <ToggleButtonGroup
           color="primary"

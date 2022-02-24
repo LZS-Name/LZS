@@ -36,7 +36,7 @@ const adminList = [
   },
   {
     link: routes.analytics,
-    label: "Analytics",
+    label: "Analisis",
     icon: <EqualizerIcon />,
   },
 ];
