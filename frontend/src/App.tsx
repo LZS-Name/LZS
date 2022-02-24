@@ -19,7 +19,7 @@ function App() {
     { path: routes.viewConflictForm, element: <ViewConflictForm /> },
     { path: routes.analytics, element: <Analytics /> },
     // weird no-match route for react-router v6
-    { path: "*", element: <Home /> },
+    // { path: "*", element: <Home /> },
   ]);
   return (
     <>

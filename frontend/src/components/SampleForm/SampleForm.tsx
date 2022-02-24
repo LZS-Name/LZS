@@ -8,10 +8,8 @@ import validationSchema from "./validation";
 import FilesSection from "./FilesSection";
 import ApplicationModel from "../../models/application.model";
 import { useUserContext } from "../../contexts/UserContext";
-import { Button, Chip, Paper } from "@mui/material";
-import { Box } from "@mui/system";
+import { Button, Chip } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useState } from "react";
 
 interface SampleFormProps {
   formValues:
@@ -32,14 +30,14 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
   const formik = useFormik({
     enableReinitialize: true,
     initialValues: {
-      name: formValues.name || "test name",
-      ic_number: formValues.ic_number || "111222333444",
-      submitter_relationship: formValues.submitter_relationship || "SELF",
+      name: formValues.name || "",
+      ic_number: formValues.ic_number || "",
+      submitter_relationship: formValues.submitter_relationship || "",
       income: formValues.income || 0,
       payslip: undefined,
       marriage_cert: undefined,
       additional_document: undefined,
-      application_type: "Created by front end",
+      application_type: "",
       first_approver: formValues.first_approver || undefined,
       second_approver: formValues.second_approver || undefined,
     },
