@@ -251,7 +251,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           variant="subtitle1"
           component="div"
         >
-          {numSelected} selected
+          {numSelected} dipilih
         </Typography>
       ) : (
         <Typography
@@ -260,7 +260,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           id="tableTitle"
           component="div"
         >
-          Application
+          Aplikasi
         </Typography>
       )}
       {numSelected > 0 ? (
@@ -269,7 +269,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
         </Tooltip>
       ) : (
         <Tooltip title="Export all applications in the system">
-          <Button onClick={handleExportAll}>Export All</Button>
+          <Button onClick={handleExportAll}>Export Semua</Button>
         </Tooltip>
       )}
     </Toolbar>

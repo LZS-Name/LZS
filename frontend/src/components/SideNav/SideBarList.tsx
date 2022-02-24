@@ -5,7 +5,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-import PaidIcon from "@mui/icons-material/Paid";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { useNavigate } from "react-router";
@@ -25,7 +24,7 @@ interface SideBarListProps {
 const userList = [
   {
     link: "/",
-    label: "Home",
+    label: "Aplikasi",
     icon: <HomeIcon />,
   },
 ];
@@ -36,12 +35,7 @@ const adminList = [
     icon: <DashboardIcon />,
   },
   {
-    link: "/",
-    label: "Payment",
-    icon: <PaidIcon />,
-  },
-  {
-    link: "/admin/analytics",
+    link: routes.analytics,
     label: "Analytics",
     icon: <EqualizerIcon />,
   },

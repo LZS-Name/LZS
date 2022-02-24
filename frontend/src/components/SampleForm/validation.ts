@@ -1,16 +1,16 @@
 import * as yup from "yup";
 
 const validationSchema = yup.object({
-  name: yup.string().required("Name is required"),
+  name: yup.string().required("Nama diperlukan"),
   ic_number: yup
     .string()
-    .length(12, "IC should be of 12 characters length")
-    .required("IC is required"),
-  submitter_relationship: yup.string().required("Submitter is required"),
-  income: yup.number().moreThan(-1).required("Income is required"),
+    .length(12, "IC hendaklah sepanjang 12 aksara")
+    .required("IC diperlukan"),
+  submitter_relationship: yup.string().required("Submitter diperlukan"),
+  income: yup.number().moreThan(-1).required("Pandapatan diperlukan"),
   payslip: yup
     .mixed()
-    .test("fileSize", "1 PDF file is required", (value) => {
+    .test("fileSize", "1 PDF file diperlukan", (value) => {
       return value !== undefined;
     })
     .test("fileSize", "File Size is too large", (value) => {
