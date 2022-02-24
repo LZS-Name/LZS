@@ -24,7 +24,7 @@ interface SideBarListProps {
 const userList = [
   {
     link: "/",
-    label: "Home",
+    label: "Aplikasi",
     icon: <HomeIcon />,
   },
 ];

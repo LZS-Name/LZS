@@ -235,7 +235,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
               fullWidth
               id="income"
               name="income"
-              label="Income"
+              label="Pendapatan"
               variant="outlined"
               onChange={handleChange}
               value={income}
@@ -249,7 +249,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
               fullWidth
               id="application_type"
               name="application_type"
-              label="Application Type"
+              label="Jenis Aplikasi"
               variant="outlined"
               onChange={handleChange}
               value={application_type}
