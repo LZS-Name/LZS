@@ -162,7 +162,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           {userRole === "admin" && first_approver && !second_approver && (
             <Grid item xs={12} container justifyContent="flex-end">
               <Chip
-                label="Aplikasi ini perlu disahkan oleh Super Admin"
+                label="Aplikasi ini belum disahkan oleh Super Admin"
                 color="info"
                 variant="outlined"
               />
@@ -171,7 +171,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           {userRole === "super_admin" && !first_approver && (
             <Grid item xs={12} container justifyContent="flex-end">
               <Chip
-                label="Aplikasi ini perlu disahkan oleh Admin Biasa"
+                label="Aplikasi ini belum disahkan oleh Admin Biasa"
                 color="info"
                 variant="outlined"
               />
