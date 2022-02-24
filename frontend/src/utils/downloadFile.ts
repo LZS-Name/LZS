@@ -1,6 +1,5 @@
-const downloadFile = (url: string, fileName = "") => {
-  console.log("url", url);
-  fetch(url)
+const downloadFile = (path: string, fileName = "") => {
+  fetch(`/api/application/form/download/${path}`)
     .then((x) => x.blob())
     .then((b) => {
       const url = window.URL.createObjectURL(b);

@@ -31,7 +31,7 @@ const FilesSection = ({
         <Grid item xs={12} container justifyContent="flex-start">
           <Button
             variant="contained"
-            onClick={() => downloadFile(formValues.payslip)}
+            onClick={() => downloadFile(formValues.payslip, formValues.payslip)}
           >
             Download Slip Gaji
           </Button>

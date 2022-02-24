@@ -43,10 +43,11 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log("formValues", values);
+      // console.log("formValues", values);
       // construct formData
       const body = new FormData();
       Object.keys(values).forEach((key) => {
+        if (key === "first_approver" || key === "second_approver") return;
         // let backend get the field as key + datetime + file name
         const value = (values as any)[key];
         if (
@@ -73,6 +74,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
         .then((res) => res.json())
         .then((res) => {
           alert("Borang telah dihantar");
+          window.location.reload();
         })
         .catch((err) => console.log);
     },
