@@ -116,7 +116,7 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
             />
           </Grid>
           <Grid item xs={12}>
-            <FormControl>
+            <FormControl disabled={!editing}>
               <FormLabel id="demo-radio-buttons-group-label">
                 Adakah anda (pemohon) mempunyai hubungan kekeluargaan denga
                 kakitangan Lembaga Zakat Selangor (MAIS)?
