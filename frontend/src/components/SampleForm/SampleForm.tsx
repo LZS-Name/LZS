@@ -19,6 +19,7 @@ interface SampleFormProps {
         ic_number?: undefined;
         submitter_relationship?: undefined;
         income?: undefined;
+        application_type?: undefined;
         first_approver?: undefined;
         second_approver?: undefined;
       };
@@ -37,16 +38,22 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       payslip: undefined,
       marriage_cert: undefined,
       additional_document: undefined,
-      application_type: "",
+      application_type: formValues.application_type || "",
       first_approver: formValues.first_approver || undefined,
       second_approver: formValues.second_approver || undefined,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log("formValues", values);
+      // console.log("formValues", values);
       // construct formData
       const body = new FormData();
       Object.keys(values).forEach((key) => {
+        if (key === "first_approver" || key === "second_approver") return;
+        if (
+          (key === "marriage_cert" && !values.marriage_cert) ||
+          (key === "additional_document" && !values.additional_document)
+        )
+          return;
         // let backend get the field as key + datetime + file name
         const value = (values as any)[key];
         if (
@@ -73,6 +80,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
         .then((res) => res.json())
         .then((res) => {
           alert("Borang telah dihantar");
+          // window.location.reload();
         })
         .catch((err) => console.log);
     },
@@ -126,7 +134,6 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     first_approver,
     second_approver,
   } = formik.values;
-  console.log(formik.values);
   const {
     handleChange,
     handleBlur,
@@ -160,7 +167,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           {userRole === "admin" && first_approver && !second_approver && (
             <Grid item xs={12} container justifyContent="flex-end">
               <Chip
-                label="Aplikasi ini perlu disahkan oleh Super Admin"
+                label="Aplikasi ini belum disahkan oleh Super Admin"
                 color="info"
                 variant="outlined"
               />
@@ -169,7 +176,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           {userRole === "super_admin" && !first_approver && (
             <Grid item xs={12} container justifyContent="flex-end">
               <Chip
-                label="Aplikasi ini perlu disahkan oleh Admin Biasa"
+                label="Aplikasi ini belum disahkan oleh Admin Biasa"
                 color="info"
                 variant="outlined"
               />

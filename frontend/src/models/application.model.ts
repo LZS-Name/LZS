@@ -6,7 +6,7 @@ interface Application {
   submitter_relationship: string;
   income: number;
   payslip: string;
-  marriage_cert?: string;
+  marriage_cert: string;
   additional_document: string;
   application_type: string;
   approval_date?: number;

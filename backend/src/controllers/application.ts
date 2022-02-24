@@ -160,7 +160,7 @@ router.post(
   async (req: Request & { file: any; files: any }, res: Response) => {
     try {
       const path = __dirname + "../../../../uploads/";
-      console.log(req.files);
+      // console.log(req.files);
       const zipFileFileName = req.files[0].filename;
       // unzip
       const folderPath = path + zipFileFileName.split(".")[0];
@@ -169,9 +169,9 @@ router.post(
       // save to database
       // console.log(folderPath)
       const files = await fs.promises.readdir(folderPath);
-      console.log("files", files);
+      // console.log("files", files);
       const promises = files.map(async (file: File) => {
-        console.log(file);
+        // console.log(file);
         const output = await runFormRecogniser(folderPath + "/" + file);
         return createConflictApplication({
           ...output,
@@ -179,7 +179,7 @@ router.post(
         });
       });
       const results = await Promise.all(promises);
-      console.log("results", results);
+      // console.log("results", results);
       res.status(201).send({ status: true, message: "Created" });
     } catch (err: any) {
       res.status(400).send({ message: err.message });

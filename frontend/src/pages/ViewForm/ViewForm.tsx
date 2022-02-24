@@ -3,13 +3,9 @@ import PageLayout from "../../components/PageLayout";
 import Grid from "@mui/material/Grid";
 import SampleForm from "../../components/SampleForm";
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useUserContext } from "../../contexts/UserContext";
 
 const ViewForm = () => {
   const { formId } = useParams();
-  const location = useLocation();
-  const { setUserRole } = useUserContext();
   const [formValues, setFormValues] = useState({});
 
   useEffect(() => {

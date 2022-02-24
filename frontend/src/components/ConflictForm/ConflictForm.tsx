@@ -144,7 +144,7 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
               variant="contained"
               onClick={() =>
                 downloadFile(
-                  `/api/application/form/download/${formValues.document}`,
+                  `${formValues.document}`,
                   formValues.document.split("/")[1]
                 )
               }
