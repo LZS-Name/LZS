@@ -14,7 +14,7 @@ import {
   RadioGroup,
 } from "@mui/material";
 import downloadFile from "../../utils/downloadFile";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface SampleFormProps {
   formValues: ConflictApplication;

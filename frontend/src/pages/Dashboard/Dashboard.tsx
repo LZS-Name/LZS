@@ -58,6 +58,26 @@ function Dashboard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
+  // TO BE REMOVED: used to create forecast data in DB
+  // useEffect(() => {
+  //   const receiverTotalNumber = 52323;
+  //   const notReceivingZakatInFuture = 791;
+  //   const datetime = new Date();
+  //   fetch(`/api/forecast/create`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({receiverTotalNumber, notReceivingZakatInFuture, datetime}),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       alert("Borang telah dihantar");
+  //     })
+  //     .catch((err) => console.log);
+
+  // }, [])
+
   const formik = useFormik({
     initialValues: {
       application_type: "ALL",
