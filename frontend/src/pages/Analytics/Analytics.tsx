@@ -161,7 +161,7 @@ function Analytics() {
             </Grid>
           )}
         </Grid>
-        <Divider sx={{ my: 3 }}>Ramalan</Divider>
+        <Divider sx={{ my: 3 }}>Unjuran Tahun 2023</Divider>
         <Grid container spacing={2}>
           <Grid item xs={6} md={4}>
             <DataBox
