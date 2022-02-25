@@ -11,10 +11,11 @@ import HttpResponseModel from "../../models/http-response.model";
 import AnalyticInterface from "../../models/analytic.model";
 import ForecastResultInterface from "../../models/forecast.model";
 import mapperConstant from "../../constant/mapper.constant";
+import BarChatComponent from "../../components/BarChartComponent";
 
 function Analytics() {
   const [analyticData, setAnalyticData] = useState<AnalyticInterface>();
-  const [forecastData, setForecastData] = useState<ForecastResultInterface>();
+  const [forecastData, setForecastData] = useState<ForecastResultInterface[]>();
   const [method, setMethod] = useState<string>("yearly");
 
   useEffect(() => {
@@ -76,6 +77,12 @@ function Analytics() {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+  const notReceivingZakatInFutureArr = forecastData?.map(
+    (item) => item.notReceivingZakatInFuture
+  );
+  const receiverTotalNumberArr = forecastData?.map(
+    (item) => item.receiverTotalNumber
+  );
   return (
     <PageLayout title={"Analisis"}>
       <>
@@ -163,7 +170,7 @@ function Analytics() {
         </Grid>
         <Divider sx={{ my: 3 }}>Unjuran Tahun 2023</Divider>
         <Grid container spacing={2}>
-          <Grid item xs={6} md={4}>
+          {/* <Grid item xs={6} md={4}>
             <DataBox
               title={
                 forecastData
@@ -173,24 +180,37 @@ function Analytics() {
               description={"Jumlah Bilangan Penerima"}
               icon={<PeopleIcon sx={{ mr: 2 }} />}
             ></DataBox>
-          </Grid>
-          {/* <Grid item xs={6} md={4}>
-            <DataBox
-              title={"RM 92.6K"}
-              description={"Jumlah Zakat Untuk Individu"}
-              icon={<AttachMoneyIcon sx={{ mr: 2 }} />}
-            ></DataBox>
           </Grid> */}
-          <Grid item xs={6} md={4}>
-            <DataBox
-              title={
-                forecastData
-                  ? forecastData.notReceivingZakatInFuture
-                  : "Processing..."
-              }
-              description={"Jumlah Bilangan Penerima Yang Tidak Layak"}
-              icon={<PeopleIcon sx={{ mr: 2 }} />}
-            ></DataBox>
+          <Grid item xs={6}>
+            {receiverTotalNumberArr && (
+              <BarChatComponent
+                labels={["2021", "2022"]}
+                description={"Jumlah Bilangan Penerima"}
+                icon={<PeopleIcon sx={{ mr: 2 }} />}
+                title="Jumlah Bilangan Penerima"
+                dataset={receiverTotalNumberArr}
+                increasingPercent={
+                  (receiverTotalNumberArr[1] - receiverTotalNumberArr[0]) /
+                  receiverTotalNumberArr[0]
+                }
+              />
+            )}
+          </Grid>
+          <Grid item xs={6}>
+            {notReceivingZakatInFutureArr && (
+              <BarChatComponent
+                labels={["2021", "2022"]}
+                description={"Jumlah Bilangan Penerima Yang Tidak Layak"}
+                icon={<PeopleIcon sx={{ mr: 2 }} />}
+                title="Jumlah Bilangan Penerima Yang Tidak Layak"
+                dataset={notReceivingZakatInFutureArr}
+                increasingPercent={
+                  (notReceivingZakatInFutureArr[1] -
+                    notReceivingZakatInFutureArr[0]) /
+                  notReceivingZakatInFutureArr[0]
+                }
+              />
+            )}
           </Grid>
         </Grid>
       </>
