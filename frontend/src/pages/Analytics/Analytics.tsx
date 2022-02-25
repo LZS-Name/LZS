@@ -71,6 +71,11 @@ function Analytics() {
       ?.title;
   };
 
+  const numberWithCommas = (value: number) => {
+    if (!value) return value;
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <PageLayout title={"Analisis"}>
       <>
@@ -85,34 +90,42 @@ function Analytics() {
           <ToggleButton value="yearly">Tahunan</ToggleButton>
         </ToggleButtonGroup>
         <Grid container spacing={2}>
-          <Grid item xs={6} md={3}>
-            <DataBox
-              title={`RM ${analyticData?.total_distributed_amount}`}
-              description={"Pengagihan"}
-              icon={<AttachMoneyIcon sx={{ mr: 2 }} />}
-            ></DataBox>
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <DataBox
-              title={`${analyticData?.total_transaction}`}
-              description={"Jumlah Bilangan Transaksi"}
-              icon={<ReceiptIcon sx={{ mr: 2 }} />}
-            ></DataBox>
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <DataBox
-              title={`RM ${analyticData?.total_collected_amount}`}
-              description={"Jumlah Wang Dikumpulkan"}
-              icon={<AccountBalanceIcon sx={{ mr: 2 }} />}
-            ></DataBox>
-          </Grid>
-          <Grid item xs={6} md={3}>
-            <DataBox
-              title={`${analyticData?.total_asnaf}`}
-              description={"Jumlah Bilangan Asnaf"}
-              icon={<PeopleIcon sx={{ mr: 2 }} />}
-            ></DataBox>
-          </Grid>
+          {analyticData && (
+            <>
+              <Grid item xs={6} md={3}>
+                <DataBox
+                  title={`RM ${numberWithCommas(
+                    analyticData?.total_distributed_amount
+                  )}`}
+                  description={"Pengagihan"}
+                  icon={<AttachMoneyIcon sx={{ mr: 2 }} />}
+                ></DataBox>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <DataBox
+                  title={numberWithCommas(analyticData?.total_transaction)}
+                  description={"Jumlah Bilangan Transaksi"}
+                  icon={<ReceiptIcon sx={{ mr: 2 }} />}
+                ></DataBox>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <DataBox
+                  title={`RM ${numberWithCommas(
+                    analyticData?.total_collected_amount
+                  )}`}
+                  description={"Jumlah Wang Dikumpulkan"}
+                  icon={<AccountBalanceIcon sx={{ mr: 2 }} />}
+                ></DataBox>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <DataBox
+                  title={`${analyticData?.total_asnaf}`}
+                  description={"Jumlah Bilangan Asnaf"}
+                  icon={<PeopleIcon sx={{ mr: 2 }} />}
+                ></DataBox>
+              </Grid>
+            </>
+          )}
           {analyticData?.location && (
             <Grid item xs={6}>
               <PieChart
@@ -148,7 +161,7 @@ function Analytics() {
             </Grid>
           )}
         </Grid>
-        <Divider sx={{ my: 3 }}>Ramalan</Divider>
+        <Divider sx={{ my: 3 }}>Unjuran Tahun 2023</Divider>
         <Grid container spacing={2}>
           <Grid item xs={6} md={4}>
             <DataBox
