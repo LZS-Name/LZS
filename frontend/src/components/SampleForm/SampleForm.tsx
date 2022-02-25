@@ -10,6 +10,7 @@ import ApplicationModel from "../../models/application.model";
 import { useUserContext } from "../../contexts/UserContext";
 import { Button, Chip } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import applicationTypeConstant from "../../constant/application-type.constant";
 
 interface SampleFormProps {
   formValues:
@@ -219,6 +220,20 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
               disabled={formDisabled}
             />
           </Grid>
+          <Grid item xs={6}>
+            <TextField
+              fullWidth
+              id="income"
+              name="income"
+              label="Pendapatan"
+              variant="outlined"
+              onChange={handleChange}
+              value={income}
+              error={touched.income && Boolean(errors.income)}
+              helperText={touched.income && errors.income}
+              disabled={formDisabled}
+            />
+          </Grid>
           <Grid item xs={12}>
             <BasicSelect
               label="Orang yang menghantar borang ini"
@@ -236,34 +251,16 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
               disabled={formDisabled}
             />
           </Grid>
-
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              id="income"
-              name="income"
-              label="Pendapatan"
-              variant="outlined"
-              onChange={handleChange}
-              value={income}
-              error={touched.income && Boolean(errors.income)}
-              helperText={touched.income && errors.income}
-              disabled={formDisabled}
-            />
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              id="application_type"
-              name="application_type"
+          <Grid item xs={12}>
+            <BasicSelect
               label="Jenis Aplikasi"
-              variant="outlined"
-              onChange={handleChange}
+              options={applicationTypeConstant.options.slice(1)}
               value={application_type}
-              error={
-                touched.application_type && Boolean(errors.application_type)
-              }
-              helperText={touched.application_type && errors.application_type}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              name="application_type"
+              error={errors["application_type"]}
+              touched={touched["application_type"]}
               disabled={formDisabled}
             />
           </Grid>
