@@ -35,10 +35,6 @@ function configs(labels, datasets) {
         legend: {
           position: "top",
         },
-        title: {
-          display: true,
-          text: "Chart.js Pie Chart",
-        },
       },
     },
   };
