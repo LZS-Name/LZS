@@ -19,7 +19,13 @@ import Switch from "@mui/material/Switch";
 import { visuallyHidden } from "@mui/utils";
 import Application from "../../models/application.model";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 import { formatDateToDateMonthYear } from "../../utils/formatDate";
 import statusConstant from "../../constant/status.constant";
 
@@ -30,6 +36,7 @@ interface Data {
   application_type: string;
   name: string;
   status: string;
+  asnaf_status: string;
 }
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -110,6 +117,12 @@ const headCells: readonly HeadCell[] = [
     numeric: false,
     disablePadding: false,
     label: "Status",
+  },
+  {
+    id: "asnaf_status",
+    numeric: false,
+    disablePadding: false,
+    label: "Status Penerima",
   },
 ];
 
@@ -303,6 +316,7 @@ export default function ApplicationTable({
         application_type: application.application_type,
         approval_date: application.approval_date,
         status: application.status,
+        asnaf_status: application.is_asnaf ? "Asnaf" : "Bukan Asnaf",
       };
     });
     setRows(applicationData);
@@ -365,6 +379,20 @@ export default function ApplicationTable({
     setDense(event.target.checked);
   };
 
+  const handleChangeAsnafStatus = (event: any, _id: string) => {
+    fetch("/api/application/change-asnaf-status", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id,
+        is_asnaf: event.target.value === "Asnaf",
+      }),
+    });
+    event.stopPropagation();
+  };
+
   const isSelected = (_id: string) => selected.indexOf(_id) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
@@ -405,14 +433,16 @@ export default function ApplicationTable({
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row._id)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
                       key={row._id}
                       selected={isItemSelected}
                     >
-                      <TableCell padding="checkbox">
+                      <TableCell
+                        padding="checkbox"
+                        onClick={(event) => handleClick(event, row._id)}
+                      >
                         <Checkbox
                           color="primary"
                           checked={isItemSelected}
@@ -423,6 +453,7 @@ export default function ApplicationTable({
                         />
                       </TableCell>
                       <TableCell
+                        onClick={(event) => handleClick(event, row._id)}
                         component="th"
                         id={labelId}
                         scope="row"
@@ -430,19 +461,60 @@ export default function ApplicationTable({
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">{row.ic_number}</TableCell>
-                      <TableCell align="right">
+                      <TableCell
+                        align="right"
+                        onClick={(event) => handleClick(event, row._id)}
+                      >
+                        {row.ic_number}
+                      </TableCell>
+                      <TableCell
+                        align="right"
+                        onClick={(event) => handleClick(event, row._id)}
+                      >
                         {row.application_type}
                       </TableCell>
-                      <TableCell align="right">
+                      <TableCell
+                        align="right"
+                        onClick={(event) => handleClick(event, row._id)}
+                      >
                         {formatDateToDateMonthYear(row.approval_date)}
                       </TableCell>
-                      <TableCell align="right">
+                      <TableCell
+                        align="right"
+                        onClick={(event) => handleClick(event, row._id)}
+                      >
                         {
                           statusConstant.options.find(
                             (element) => element.value === row.status
                           )?.title
                         }
+                      </TableCell>
+                      <TableCell align="right">
+                        <FormControl fullWidth>
+                          <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={row.asnaf_status}
+                            onChange={(e) => {
+                              setRows((ori: Data[]) => {
+                                const target = ori.find(
+                                  (data: Data) => data?._id === row._id
+                                );
+                                if (target && target.asnaf_status) {
+                                  target.asnaf_status = e.target.value;
+                                }
+                                console.log(ori);
+                                return [...ori];
+                              });
+                              handleChangeAsnafStatus(e, row._id);
+                            }}
+                          >
+                            <MenuItem value={"Asnaf"}>Asnaf</MenuItem>
+                            <MenuItem value={"Bukan Asnaf"}>
+                              Bukan Asnaf
+                            </MenuItem>
+                          </Select>
+                        </FormControl>
                       </TableCell>
                     </TableRow>
                   );

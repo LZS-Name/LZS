@@ -17,6 +17,7 @@ interface ApplicationInterface {
   status?: string;
   bank_name?: string;
   bank_account_no?: string;
+  is_asnaf: boolean;
 }
 
 const applicationSchema = new mongoose.Schema<ApplicationInterface>(
@@ -75,6 +76,9 @@ const applicationSchema = new mongoose.Schema<ApplicationInterface>(
     },
     bank_account_no: {
       type: String,
+    },
+    is_asnaf: {
+      type: Boolean,
     },
   },
   { timestamps: true }

@@ -132,6 +132,10 @@ function rejectApplication(_id: string) {
   );
 }
 
+function changeAsnafStatus(_id: string, is_asnaf: boolean) {
+  return Application.updateOne({ _id }, { is_asnaf });
+}
+
 export {
   getApplicationByFormId,
   getApplicationsBySubmitterId,
@@ -141,4 +145,5 @@ export {
   rejectApplication,
   exportCSV,
   exportSelectedCSV,
+  changeAsnafStatus,
 };

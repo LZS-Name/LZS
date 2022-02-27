@@ -11,7 +11,8 @@
     "application_type": "BANTUAN SEWA RUMAH ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Kumutha Goundar a/l Ramadass",
@@ -25,7 +26,8 @@
     "application_type": "BANTUAN SEWA RUMAH ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Tay Thew Jie",
@@ -39,7 +41,8 @@
     "application_type": "BANTUAN PERUBATAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Eddie Teh Keu Leet",
@@ -53,7 +56,8 @@
     "application_type": "BANTUAN PERUBATAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Noor Arissa Muqriz",
@@ -67,7 +71,8 @@
     "application_type": "BANTUAN PERUBATAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Loo Lak Mong",
@@ -81,7 +86,8 @@
     "application_type": "BANTUAN PERUBATAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Nurzafira Saifulzakher binti Ekhsan",
@@ -95,7 +101,8 @@
     "application_type": "BANTUAN PERUBATAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Nguei Yeu Sit",
@@ -109,7 +116,8 @@
     "application_type": "BANTUAN KEWANGAN BULANAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Hjh Iman Hazlin",
@@ -123,7 +131,8 @@
     "application_type": "BANTUAN KEWANGAN BULANAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   },
   {
     "name": "Nuur Lisa Norhisam binti Syed Syed",
@@ -137,6 +146,7 @@
     "application_type": "BANTUAN KEWANGAN BULANAN ASNAF MUALLAF",
     "status": "PENDING_FIRST_APPROVAL",
     "bank_name": "BANK ISLAM",
-    "bank_account_no": "XXXXXXXXXXXX"
+    "bank_account_no": "XXXXXXXXXXXX",
+    "is_asnaf": true
   }
 ]

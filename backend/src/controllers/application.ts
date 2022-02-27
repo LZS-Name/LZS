@@ -8,6 +8,7 @@ import {
   rejectApplication,
   exportCSV,
   exportSelectedCSV,
+  changeAsnafStatus,
 } from "../services/application";
 import runFormRecogniser from "../services/analyse";
 import {
@@ -253,6 +254,15 @@ router.post("/reject", async (req: Request, res: Response) => {
   try {
     rejectApplication(req.body._id);
     res.status(200).send({ status: true, message: "Rejected" });
+  } catch (err: any) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
+router.post("/change-asnaf-status", async (req: Request, res: Response) => {
+  try {
+    await changeAsnafStatus(req.body._id, req.body.is_asnaf);
+    res.status(200).send({ status: true, message: "Asnaf status is updated" });
   } catch (err: any) {
     res.status(400).send({ message: err.message });
   }
