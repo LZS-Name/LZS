@@ -389,7 +389,7 @@ export default function ApplicationTable({
         _id,
         is_asnaf: event.target.value === "Asnaf",
       }),
-    });
+    }).then(() => alert("Asnaf status is updated!"));
     event.stopPropagation();
   };
 
