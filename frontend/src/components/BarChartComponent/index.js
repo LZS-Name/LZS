@@ -58,6 +58,7 @@ export default function BarChatComponent({
     <Card pr={2} pl={icon ? 1 : 2} sx={{ height: "100%" }}>
       <Grid
         display="flex"
+        container
         direction="column"
         justifyContent={"space-between"}
         px={description ? 1 : 0}
@@ -78,11 +79,6 @@ export default function BarChatComponent({
           >
             {increasingPercent.toFixed(2)}%
           </Typography>
-        </Box>
-        <Box mb={2}>
-          {/* <Typography component="div" variant="button" color="text">
-            {description}
-          </Typography> */}
         </Box>
         <Bar options={options} data={data} />
       </Grid>

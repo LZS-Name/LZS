@@ -83,6 +83,9 @@ function Analytics() {
   const receiverTotalNumberArr = forecastData?.map(
     (item) => item.receiverTotalNumber
   );
+  const totalCollectedMoney = forecastData?.map(
+    (item) => item.totalCollectedMoney
+  );
   return (
     <PageLayout title={"Analisis"}>
       <>
@@ -134,7 +137,7 @@ function Analytics() {
             </>
           )}
           {analyticData?.location && (
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <PieChart
                 icon={{ color: "info", component: "leaderboard" }}
                 title="Demografik Penerima"
@@ -150,7 +153,7 @@ function Analytics() {
             </Grid>
           )}
           {analyticData?.gender && (
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <PieChart
                 icon={{ color: "info", component: "leaderboard" }}
                 title="Demografik Penerima"
@@ -181,33 +184,48 @@ function Analytics() {
               icon={<PeopleIcon sx={{ mr: 2 }} />}
             ></DataBox>
           </Grid> */}
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             {receiverTotalNumberArr && (
               <BarChatComponent
-                labels={["2021", "2022"]}
+                labels={["2022", "2023", "2024", "2025"]}
                 description={"Jumlah Bilangan Penerima"}
                 icon={<PeopleIcon sx={{ mr: 2 }} />}
                 title="Jumlah Bilangan Penerima"
                 dataset={receiverTotalNumberArr}
                 increasingPercent={
-                  (receiverTotalNumberArr[1] - receiverTotalNumberArr[0]) /
+                  (receiverTotalNumberArr[3] - receiverTotalNumberArr[0]) /
                   receiverTotalNumberArr[0]
                 }
               />
             )}
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             {notReceivingZakatInFutureArr && (
               <BarChatComponent
-                labels={["2021", "2022"]}
+                labels={["2022", "2023", "2024", "2025"]}
                 description={"Jumlah Bilangan Penerima Yang Tidak Layak"}
                 icon={<PeopleIcon sx={{ mr: 2 }} />}
-                title="Jumlah Bilangan Penerima Yang Tidak Layak"
+                title="Jumlah Bilangan Penerima Bukan Asnaf"
                 dataset={notReceivingZakatInFutureArr}
                 increasingPercent={
-                  (notReceivingZakatInFutureArr[1] -
+                  (notReceivingZakatInFutureArr[3] -
                     notReceivingZakatInFutureArr[0]) /
                   notReceivingZakatInFutureArr[0]
+                }
+              />
+            )}
+          </Grid>
+          <Grid item xs={12} md={6}>
+            {totalCollectedMoney && (
+              <BarChatComponent
+                labels={["2022", "2023", "2024", "2025"]}
+                description={"Jumlah Bilangan Penerima Yang Tidak Layak"}
+                icon={<PeopleIcon sx={{ mr: 2 }} />}
+                title="Jumlah Wang Yang Dikumpulkan"
+                dataset={totalCollectedMoney}
+                increasingPercent={
+                  (totalCollectedMoney[3] - totalCollectedMoney[0]) /
+                  totalCollectedMoney[0]
                 }
               />
             )}

@@ -60,9 +60,10 @@ function Dashboard() {
 
   // TO BE REMOVED: used to create forecast data in DB
   // useEffect(() => {
-  //   const receiverTotalNumber = 52323;
-  //   const notReceivingZakatInFuture = 791;
-  //   const datetime = new Date();
+  //   const receiverTotalNumber = 51679;
+  //   const notReceivingZakatInFuture = 812;
+  //   const totalCollectedMoney = 123411234;
+  //   const datetime = new Date(2025, 1,1);
   //   fetch(`/api/forecast/create`, {
   //     method: "POST",
   //     headers: {

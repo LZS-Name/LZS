@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 interface ForecastResultInterface {
   receiverTotalNumber: number;
   notReceivingZakatInFuture: number;
+  totalCollectedMoney: number;
   datetime: string;
 }
 
@@ -13,6 +14,10 @@ const forecastResultSchema = new mongoose.Schema<ForecastResultInterface>(
       required: true,
     },
     notReceivingZakatInFuture: {
+      type: Number,
+      required: true,
+    },
+    totalCollectedMoney: {
       type: Number,
       required: true,
     },
