@@ -15,6 +15,7 @@ interface Application {
   status?: string;
   bank_name?: string;
   bank_account_no?: string;
+  is_asnaf?: boolean;
 }
 
 export default Application;

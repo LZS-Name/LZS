@@ -23,6 +23,7 @@ interface SampleFormProps {
         application_type?: undefined;
         first_approver?: undefined;
         second_approver?: undefined;
+        is_asnaf?: undefined;
       };
   formId: string | undefined;
 }
@@ -42,6 +43,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
       application_type: formValues.application_type || "",
       first_approver: formValues.first_approver || undefined,
       second_approver: formValues.second_approver || undefined,
+      is_asnaf: formValues.is_asnaf || false,
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -126,6 +128,20 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     }
   };
 
+  const handleChangeAsnafStatus = (event: any) => {
+    fetch("/api/application/change-asnaf-status", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id: formId,
+        is_asnaf: event.target.value,
+      }),
+    }).then(() => alert("Asnaf status is updated!"));
+    event.stopPropagation();
+  };
+
   const {
     name,
     ic_number,
@@ -134,6 +150,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
     application_type,
     first_approver,
     second_approver,
+    is_asnaf,
   } = formik.values;
   const {
     handleChange,
@@ -264,6 +281,26 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
               disabled={formDisabled}
             />
           </Grid>
+          {(userRole === "admin" || userRole === "super_admin") && (
+            <Grid item xs={12}>
+              <BasicSelect
+                label="Status Penerima"
+                options={[
+                  { title: "Asnaf", value: "true" },
+                  { title: "Bukan Asnaf", value: "false" },
+                ]}
+                value={is_asnaf + ""}
+                handleChange={(e) => {
+                  handleChange(e);
+                  handleChangeAsnafStatus(e);
+                }}
+                handleBlur={handleBlur}
+                name="is_asnaf"
+                error={errors["is_asnaf"]}
+                touched={touched["is_asnaf"]}
+              />
+            </Grid>
+          )}
           <FilesSection
             formValues={formValues as ApplicationModel}
             formDisabled={formDisabled}
