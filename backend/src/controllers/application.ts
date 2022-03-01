@@ -170,7 +170,13 @@ router.post(
       // save to database
       // console.log(folderPath)
       const files = await fs.promises.readdir(folderPath);
-      // console.log("files", files);
+      console.log("files", files);
+      // make sure the file submitted is pdf
+      if (files.some((fileName: string) => !fileName.endsWith("pdf"))) {
+        res
+          .status(400)
+          .send({ status: false, message: "File in zip must be PDF" });
+      }
       const promises = files.map(async (file: File) => {
         // console.log(file);
         const output = await runFormRecogniser(folderPath + "/" + file);
@@ -183,7 +189,7 @@ router.post(
       // console.log("results", results);
       res.status(201).send({ status: true, message: "Created" });
     } catch (err: any) {
-      res.status(400).send({ message: err.message });
+      res.status(400).send({ status: false, message: err.message });
     }
   }
 );

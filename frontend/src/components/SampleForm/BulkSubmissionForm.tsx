@@ -56,7 +56,13 @@ const BulkSumissionForm = () => {
       })
         .then((res) => res.json())
         .then((res) => {
-          alert("Borang-borang telah dihantar");
+          if (!res.status && res.message === "File in zip must be PDF") {
+            alert("Borang dalam zip mestilah PDF");
+          } else if (!res.status) {
+            throw new Error("unknown error from server side");
+          } else {
+            alert("Borang-borang telah dihantar");
+          }
         })
         .catch((err) => {
           alert("Sila cuba hantar borang sekali lagi");
