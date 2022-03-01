@@ -9,6 +9,9 @@ const downloadFile = (path: string, fileName = "") => {
       a.download = fileName;
       a.click();
     })
-    .catch((err) => console.log);
+    .catch((err) => {
+      alert("Sila cuba sekali lagi");
+      console.log(err);
+    });
 };
 export default downloadFile;

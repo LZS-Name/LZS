@@ -98,7 +98,10 @@ function Dashboard() {
       })
         .then((res) => res.json())
         .then((json) => setApplications(json.data))
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          alert("Sila cuba sekali lagi");
+          console.log(err);
+        });
       console.log("formValues", values);
     },
   });

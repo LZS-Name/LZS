@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
@@ -6,6 +7,7 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import * as yup from "yup";
+import { Backdrop, CircularProgress } from "@mui/material";
 
 const validationSchema = yup.object({
   forms: yup
@@ -47,7 +49,7 @@ const BulkSumissionForm = () => {
         }
         body.append(key, (values as any)[key]);
       });
-
+      setLoading(true);
       fetch("/api/application/bulk-create", {
         method: "POST",
         body: body,
@@ -56,9 +58,14 @@ const BulkSumissionForm = () => {
         .then((res) => {
           alert("Borang-borang telah dihantar");
         })
-        .catch((err) => console.log);
+        .catch((err) => {
+          alert("Sila cuba hantar borang sekali lagi");
+          console.log(err);
+        })
+        .finally(() => setLoading(false));
     },
   });
+  const [loading, setLoading] = useState(false);
 
   const onFileSubmit =
     (fieldKey: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -111,6 +118,13 @@ const BulkSumissionForm = () => {
           </Grid>
         </Grid>
       </form>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={loading}
+        onClick={() => {}}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </Card>
   );
 };

@@ -48,7 +48,10 @@ const ConflictForm = ({ formValues, formId }: SampleFormProps) => {
         .then((res) => {
           alert("Borang telah dihantar");
         })
-        .catch((err) => console.log);
+        .catch((err) => {
+          alert("Sila cuba hantar borang sekali lagi");
+          console.log(err);
+        });
     },
   });
   const [editing, setEditing] = useState(false);

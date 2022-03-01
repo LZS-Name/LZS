@@ -85,7 +85,10 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           alert("Borang telah dihantar");
           // window.location.reload();
         })
-        .catch((err) => console.log);
+        .catch((err) => {
+          alert("Sila cuba hantar borang sekali lagi");
+          console.log(err);
+        });
     },
   });
 
@@ -123,6 +126,7 @@ const SampleForm = ({ formValues = {}, formId }: SampleFormProps) => {
           }
         })
         .catch((err) => {
+          alert("Sila cuba sekali lagi");
           console.log(err);
         });
     }
